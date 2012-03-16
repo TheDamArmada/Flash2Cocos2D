@@ -17,12 +17,14 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 - add the Grapefukrt exporting code on the first frame:
 
 	```actionscript
-	import com.grapefrukt.exporter.simple.SimpleExport;<br/>
-	import com.grapefrukt.exporter.extractors.*;<br/>
-	var export:SimpleExport = new SimpleExport(this, "robot"); // change robot for whatever name you want to use<br/>
-	export.textures.add(TextureExtractor.extract(new RobotCharacterMc)); // change RobotCharacterMc for whatever name you MovieClip is in the library<br/>
-	AnimationExtractor.extract(export.animations, new RobotCharacterMc);<br/>
-	export.export();<br/>
+	import com.grapefrukt.exporter.simple.SimpleExport;
+	import com.grapefrukt.exporter.extractors.*;
+	// change robot for whatever name you want to use
+	var export:SimpleExport = new SimpleExport(this, "robot"); 
+	// change RobotCharacterMc for whatever name you MovieClip is in the library
+	export.textures.add(TextureExtractor.extract(new RobotCharacterMc)); 
+	AnimationExtractor.extract(export.animations, new RobotCharacterMc);
+	export.export();
 	```
 
 - publish

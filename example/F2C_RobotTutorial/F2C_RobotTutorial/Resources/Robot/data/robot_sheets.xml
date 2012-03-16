@@ -1,0 +1,18 @@
+<Textures>
+  <TextureSheet name="robotcharactermc">
+    <Texture name="Head" width="110" height="102" path="robotcharactermc_Head.png" registrationPointX="16.00" registrationPointY="60.00" zIndex="13"/>
+    <Texture name="NeckTop" width="35" height="65" path="robotcharactermc_NeckTop.png" registrationPointX="20.00" registrationPointY="52.00" zIndex="12"/>
+    <Texture name="NeckBottom" width="26" height="57" path="robotcharactermc_NeckBottom.png" registrationPointX="13.00" registrationPointY="43.00" zIndex="11"/>
+    <Texture name="HandR" width="40" height="52" path="robotcharactermc_HandR.png" registrationPointX="19.00" registrationPointY="12.00" zIndex="10"/>
+    <Texture name="ForeArmR" width="26" height="58" path="robotcharactermc_ForeArmR.png" registrationPointX="13.00" registrationPointY="12.00" zIndex="9"/>
+    <Texture name="ArmR" width="73" height="29" path="robotcharactermc_ArmR.png" registrationPointX="59.00" registrationPointY="14.00" zIndex="8"/>
+    <Texture name="ShoulderR" width="29" height="28" path="robotcharactermc_ShoulderR.png" registrationPointX="15.00" registrationPointY="14.00" zIndex="7"/>
+    <Texture name="Leg" width="30" height="73" path="robotcharactermc_Leg.png" registrationPointX="15.00" registrationPointY="14.00" zIndex="6"/>
+    <Texture name="Body" width="75" height="114" path="robotcharactermc_Body.png" registrationPointX="38.00" registrationPointY="94.00" zIndex="5"/>
+    <Texture name="HandL" width="40" height="52" path="robotcharactermc_HandL.png" registrationPointX="19.00" registrationPointY="12.00" zIndex="4"/>
+    <Texture name="ForeArmL" width="26" height="58" path="robotcharactermc_ForeArmL.png" registrationPointX="13.00" registrationPointY="12.00" zIndex="3"/>
+    <Texture name="ArmL" width="73" height="29" path="robotcharactermc_ArmL.png" registrationPointX="59.00" registrationPointY="14.00" zIndex="2"/>
+    <Texture name="ShoulderL" width="29" height="28" path="robotcharactermc_ShoulderL.png" registrationPointX="15.00" registrationPointY="14.00" zIndex="1"/>
+    <Texture name="Wheel" width="78" height="77" path="robotcharactermc_Wheel.png" registrationPointX="39.00" registrationPointY="38.00"/>
+  </TextureSheet>
+</Textures>

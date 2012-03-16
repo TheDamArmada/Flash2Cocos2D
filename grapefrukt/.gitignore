@@ -1,0 +1,8 @@
+*.swf
+.settings
+.actionScriptProperties
+.project
+.flexLibProperties
+*.as3proj
+obj
+build/build.properties

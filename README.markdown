@@ -45,18 +45,18 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 FTCharacter is the main class to be used. It extends CCLayer and it's the responsible to load the XML files and textures.
 There are still a lot of methods exposed that shouldn't be. Hopefully we'll be able to clear the code a little bit in short time.
 <h3>Class Methods</h3>
--(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName</code><br/>	
+<code>-(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName</code><br/>	
 Reads and XML, loads texture and returns a FTCCharacter.<br/>
-IE:<code>FTCharacter *robot = [FTCharacter characterFromXMLFile:@"robot"]</code>
+IE: <code>FTCharacter *robot = [FTCharacter characterFromXMLFile:@"robot"]</code>
 <h3>Instance Methods</h3>
-<code>-(void) playAnimation:(NSString *)animation loop:(BOOL)loops wait:(BOOL)waits</code>
+<code>-(void) playAnimation:(NSString *)animation loop:(BOOL)loops wait:(BOOL)waits</code><br/>	
 Starts playing the specified **animation**. It will **loop** it if specified.
 The wait parameter indicates if this animation should **wait** for the previous one to finish before start playing.<br/>
-<code>-(void) stopAnimation</code>
+<code>-(void) stopAnimation</code><br/>	
 Stops the current animation being played.<br/>
-<code>-(void) pauseAnimation</code>
+<code>-(void) pauseAnimation</code><br/>	
 Pauses the current animation.<br/>
-<code>-(void) resumeAnimation</code>
+<code>-(void) resumeAnimation</code><br/>	
 Resumes the current paused animation.<br/>
-<code>-(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId</code>
+<code>-(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId</code><br/>	
 Sets the character to the specified **frame** for the specified **animation**.

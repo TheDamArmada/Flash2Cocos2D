@@ -51,17 +51,22 @@ IE: <code>FTCharacter *robot = [FTCharacter characterFromXMLFile:@"robot"]</code
 <h3>Instance Methods</h3>
 
 <code>-(void) playAnimation:(NSString *)animation loop:(BOOL)loops wait:(BOOL)waits</code>
+
 Starts playing the specified **animation**. It will **loop** it if specified.
 The wait parameter indicates if this animation should **wait** for the previous one to finish before start playing.
 
 <code>-(void) stopAnimation</code>
+
 Stops the current animation being played.
 
 <code>-(void) pauseAnimation</code>
+
 Pauses the current animation.
 
 <code>-(void) resumeAnimation</code>
+
 Resumes the current paused animation.
 
 <code>-(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId</code>
+
 Sets the character to the specified **frame** for the specified **animation**.

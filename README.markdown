@@ -48,7 +48,7 @@ FTCharacter is the main class to be used. It extends CCLayer and it's the respon
 There are still a lot of methods exposed that shouldn't be. Hopefully we'll be able to clear the code a little bit in short time.
 <h3>Class Methods</h3>
 
-<code>-(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName</code>
+```Objective-c -(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName```
 Reads and XML, loads texture and returns a FTCCharacter.<br/>
 IE: <code>FTCharacter *robot = [FTCharacter characterFromXMLFile:@"robot"]</code>
 

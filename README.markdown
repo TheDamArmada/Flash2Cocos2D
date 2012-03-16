@@ -47,9 +47,11 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 FTCharacter is the main class to be used. It extends CCLayer and it's the responsible to load the XML files and textures.
 There are still a lot of methods exposed that shouldn't be. Hopefully we'll be able to clear the code a little bit in short time.
 <h3>Class Methods</h3>
-<code>-(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName</code><br/>	
+
+<code>-(FTCharacter) characterFromXMLFile:(NSString *)xmlFileName</code>
 Reads and XML, loads texture and returns a FTCCharacter.<br/>
 IE: <code>FTCharacter *robot = [FTCharacter characterFromXMLFile:@"robot"]</code>
+
 <h3>Instance Methods</h3>
 
 <code>-(void) playAnimation:(NSString *)animation loop:(BOOL)loops wait:(BOOL)waits</code>

@@ -84,6 +84,14 @@
         
         float nAX           = [[TBXML valueOfAttributeNamed:@"registrationPointX" forElement:_texture] floatValue];
         float nAY           = [[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue] * -1;
+        
+        if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+            ([UIScreen mainScreen].scale == 2.0)) {
+            // Retina display
+            nAX /= 2.0;
+            nAY /= 2.0;
+        }
+        
         NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:_texture];
         int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:_texture] intValue];
         
@@ -176,7 +184,12 @@
                     fi.x = [[TBXML valueOfAttributeNamed:@"x" forElement:_frameInfo] floatValue];
                     fi.y = [[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue] * -1;
                     
-                    
+                    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+                        ([UIScreen mainScreen].scale == 2.0)) {
+                        // Retina display
+                        fi.x /= 2.0;
+                        fi.y /= 2.0;
+                    }
                     
                     fi.scaleX = [[TBXML valueOfAttributeNamed:@"scaleX" forElement:_frameInfo] floatValue];                
                     fi.scaleY = [[TBXML valueOfAttributeNamed:@"scaleY" forElement:_frameInfo] floatValue];

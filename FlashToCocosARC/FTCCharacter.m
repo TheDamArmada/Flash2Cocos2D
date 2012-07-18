@@ -31,7 +31,7 @@
 
 -(id) initFromXMLFile:(NSString *)_xmlfile {
     
-    self = [super init];
+    self = [self init];
     if (self) 
         [self createCharacterFromXML:_xmlfile];
     
@@ -48,6 +48,8 @@
         self.animationEventsTable = [[NSMutableDictionary alloc] init];
         
         currentAnimationId = @"";
+        currentAnimationLength = 0;
+        currentAnimationDelay = 0.0;
         
         [self scheduleUpdate];
                                       
@@ -70,7 +72,7 @@
     if (intFrame == currentAnimationLength) {
         
         if (![nextAnimationId isEqualToString:@""]) {            
-            [self playAnimation:nextAnimationId loop:nextAnimationDoesLoop wait:NO];
+            [self playAnimation:nextAnimationId loop:nextAnimationDoesLoop wait:NO delay:nextAnimationDelay];
             return;
             
         } 
@@ -129,18 +131,26 @@
 }
 
 
--(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId
+-(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId delay:(float)_delay
 {
+    [self unscheduleUpdate];
+    [self schedule:@selector(update:) interval:_delay];
+    
     NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
     currentAnimationId = _animationId;
     currentAnimEvent = [[self.animationEventsTable objectForKey:_animationId] eventsInfo];
     currentAnimationLength = [[self.animationEventsTable objectForKey:_animationId] frameCount];
+    currentAnimationDelay = _delay;
     intFrame = _frameIndex;
     _isPaused = YES;
     for (FTCSprite *sprite in self.childrenTable.allValues) {
         [sprite setCurrentAnimation:currentAnimationId forCharacter:self];
     }   
     [self playFrame];
+    
+    nextAnimationId = @"";
+    nextAnimationDoesLoop = NO;
+    nextAnimationDelay = 0.0f;
 }
 
 
@@ -148,8 +158,12 @@
 -(void) stopAnimation
 {
     currentAnimationLength = 0;
+    currentAnimationDelay = 0.0f;
     NSString *oldAnimId = currentAnimationId;
     currentAnimationId = @"";
+    
+    [self unschedule:@selector(update:)];
+    [self scheduleUpdate];
     
     if ([delegate respondsToSelector:@selector(onCharacter:endsAnimation:)])
         [delegate onCharacter:self endsAnimation:oldAnimId];    
@@ -159,18 +173,23 @@
 
 
 
--(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait
+-(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait delay:(float)_delay
 {
     if (_wait && currentAnimationLength>0) {
         nextAnimationId = _animId;
         nextAnimationDoesLoop = _isLoopable;
+        nextAnimationDelay = _delay;
         return;
     }
+    
+    [self unscheduleUpdate];
+    [self schedule:@selector(update:) interval:_delay];
     
     _isPaused = NO;
     
     nextAnimationId = @"";
     nextAnimationDoesLoop = NO;
+    nextAnimationDelay = 0.0f;
     
     
     intFrame = 0;
@@ -184,6 +203,7 @@
     
     currentAnimEvent = [[self.animationEventsTable objectForKey:_animId] eventsInfo];
     currentAnimationLength = [[self.animationEventsTable objectForKey:_animId] frameCount];
+    currentAnimationDelay = _delay;
     
 //    NSLog(@"PLAY ANIMATION - %@ CurrentAnimLength %i", _animId, currentAnimationLength);
     

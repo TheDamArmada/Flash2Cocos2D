@@ -29,6 +29,9 @@
     BOOL                        nextAnimationDoesLoop;
     BOOL                        _isPaused;
     
+    float                       currentAnimationDelay;
+    float                       nextAnimationDelay;
+    
 }
 
 @property (unsafe_unretained) id<FTCCharacterDelegate> delegate;
@@ -38,11 +41,11 @@
 
 
 +(FTCCharacter *) characterFromXMLFile:(NSString *)_xmlfile;
--(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait;
+-(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait delay:(float)_delay;
 -(void) stopAnimation;
 -(void) pauseAnimation;
 -(void) resumeAnimation;
--(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId;
+-(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId delay:(float)_delay;
 -(void) playFrame;
 
 

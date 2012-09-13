@@ -51,8 +51,8 @@
         currentAnimationLength = 0;
         currentAnimationDelay = 0.0;
         
-        _isRunningCustomScheduler = NO;
         [self scheduleUpdate];
+                                      
     }
     
     return self;
@@ -90,29 +90,6 @@
     
     [self playFrame];
     
-}
-
-- (void)startCustomSchedulerWithInterval:(float)_interval
-{
-    [self unscheduleUpdate];
-
-    if (_isRunningCustomScheduler) {
-        [self unschedule:@selector(update:)];
-        _isRunningCustomScheduler = NO;
-    }
-    
-    [self schedule:@selector(update:) interval:_interval];
-    _isRunningCustomScheduler = YES;
-}
-
-- (void)stopCustomScheduler
-{
-    if (_isRunningCustomScheduler) {
-        [self unschedule:@selector(update:)];
-        _isRunningCustomScheduler = NO;
-    }
-    
-    [self scheduleUpdate];
 }
 
 -(void) playFrame
@@ -156,9 +133,10 @@
 
 -(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId delay:(float)_delay
 {
-    [self startCustomSchedulerWithInterval:_delay];
+    [self unscheduleUpdate];
+    [self schedule:@selector(update:) interval:_delay];
     
-//    NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
+    NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
     currentAnimationId = _animationId;
     currentAnimEvent = [[self.animationEventsTable objectForKey:_animationId] eventsInfo];
     currentAnimationLength = [[self.animationEventsTable objectForKey:_animationId] frameCount];
@@ -169,6 +147,7 @@
         [sprite setCurrentAnimation:currentAnimationId forCharacter:self];
     }   
     [self playFrame];
+    
     nextAnimationId = @"";
     nextAnimationDoesLoop = NO;
     nextAnimationDelay = 0.0f;
@@ -183,7 +162,8 @@
     NSString *oldAnimId = currentAnimationId;
     currentAnimationId = @"";
     
-    [self stopCustomScheduler];
+    [self unschedule:@selector(update:)];
+    [self scheduleUpdate];
     
     if ([delegate respondsToSelector:@selector(onCharacter:endsAnimation:)])
         [delegate onCharacter:self endsAnimation:oldAnimId];    
@@ -202,7 +182,8 @@
         return;
     }
     
-    [self startCustomSchedulerWithInterval:_delay];
+    [self unscheduleUpdate];
+    [self schedule:@selector(update:) interval:_delay];
     
     _isPaused = NO;
     

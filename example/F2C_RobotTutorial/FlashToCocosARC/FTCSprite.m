@@ -16,19 +16,36 @@
 @synthesize animationsArr;
 
 
-
-- (id)init
++ (id)spriteWithSpriteFrameName:(NSString *)spriteFrameName
 {
-    self = [super init];
-    if (self) {
+    return [[self alloc] initWithSpriteFrameName:spriteFrameName];
+}
 
+- (id)initWithSpriteFrameName:(NSString *)spriteFrameName
+{
+    self = [super initWithSpriteFrameName:spriteFrameName];
+    if (self) {
         NSMutableDictionary *__animations = [[NSMutableDictionary alloc] init];
         [self setAnimationsArr:__animations];
-   
     }
-    
     return self;
 }
+
++ (id)spriteWithFile:(NSString *)filename
+{
+    return [[self alloc] initWithFile:filename];
+}
+
+- (id)initWithFile:(NSString *)filename
+{
+    self = [super initWithFile:filename];
+    if (self) {
+        NSMutableDictionary *__animations = [[NSMutableDictionary alloc] init];
+        [self setAnimationsArr:__animations];
+    }
+    return self;
+}
+
 
 -(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character
 {

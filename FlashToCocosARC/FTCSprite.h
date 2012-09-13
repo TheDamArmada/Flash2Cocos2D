@@ -26,6 +26,11 @@
 
 @property (strong) NSMutableDictionary   *animationsArr;
 
++ (id)spriteWithSpriteFrameName:(NSString *)spriteFrameName;
+- (id)initWithSpriteFrameName:(NSString *)spriteFrameName;
+
++ (id)spriteWithFile:(NSString *)filename;
+- (id)initWithFile:(NSString *)filename;
 
 // private
 -(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character;

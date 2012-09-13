@@ -32,6 +32,9 @@
     float                       currentAnimationDelay;
     float                       nextAnimationDelay;
     
+    BOOL                        _isRunningCustomScheduler;
+    
+    
 }
 
 @property (unsafe_unretained) id<FTCCharacterDelegate> delegate;
@@ -60,6 +63,9 @@
 // private
 -(void) setFirstPose;
 -(void) createCharacterFromXML:(NSString *)_xmlfile;
+
+- (void)startCustomSchedulerWithInterval:(float)_interval;
+- (void)stopCustomScheduler;
 
 @end
 

@@ -9,9 +9,9 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 <h2>Basic workflow:</h2>
 
 <h3>FLASH SIDE:</h3>
-- create your character in Flash 
-- create as many animations a needed
-- every animation has to have a keyframe labeled with an unique name. IE: "*dancing*", "*running*"...
+- create your character in one MovieClip in Flash.
+- create timeline animations.  must not be nested.  all tweens must be visible at once on the timeline.
+- every animation has to have a keyframe labeled with an unique name. IE: "*dancing*", "*running*".... there is a minimum of one label. 
 - to launch custom events during an animation, you can use keyframes labels prefixed with @. IE: "*@launchSound*"
 - select 'Export for Actionscript' for your character MovieClip
 - add the Grapefukrt exporting code on the first frame:

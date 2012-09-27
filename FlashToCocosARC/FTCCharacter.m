@@ -11,13 +11,13 @@
 #import "FTCEventInfo.h"
 
 @implementation FTCCharacter
+{
+    void (^onComplete) ();     
+}
 
 @synthesize childrenTable;
 @synthesize animationEventsTable;
 @synthesize delegate;
-
-
-
 
 
 
@@ -28,32 +28,57 @@
     return _c;
 }
 
++(FTCCharacter *) characterFromXMLFile:(NSString *)_xmlfile onCharacterComplete:(void(^)())completeHandler
+{
+    FTCCharacter *_c = [[FTCCharacter alloc] init];
+    [_c createCharacterFromXML:_xmlfile onCharacterComplete:completeHandler];
+    return _c;
+}
 
 -(id) initFromXMLFile:(NSString *)_xmlfile {
     
     self = [super init];
-    if (self) 
+    if (self)
+    {
+        [self initProperties];
         [self createCharacterFromXML:_xmlfile];
+    }
     
     return self;
 }
+
+-(id) initFromXMLFile:(NSString *)_xmlfile onCharacterComplete:(void (^)())completeHandler {
+    
+    self = [super init];
+    if (self)
+    {
+        [self initProperties];
+        [self createCharacterFromXML:_xmlfile onCharacterComplete:completeHandler];
+    }
+    
+    return self;
+}
+
 
 - (id)init
 {
     self = [super init];
     if (self) {
-
-        self.childrenTable = [[NSMutableDictionary alloc] init];
-        
-        self.animationEventsTable = [[NSMutableDictionary alloc] init];
-        
-        currentAnimationId = @"";
-        
-        [self scheduleUpdate];
-                                      
+        [self initProperties];
     }
     
     return self;
+}
+
+- (void) initProperties
+{
+    self.childrenTable = [[NSMutableDictionary alloc] init];
+    
+    self.animationEventsTable = [[NSMutableDictionary alloc] init];
+    
+    currentAnimationId = @"";
+    
+    [self scheduleUpdate];
 }
 
 
@@ -239,13 +264,23 @@
 
 -(void) createCharacterFromXML:(NSString *)_xmlfile
 {
-//    NSLog(@"Creating FTCharacter");
+    //    NSLog(@"Creating FTCharacter");
     
-    BOOL success = [[[FTCParser alloc] init] parseXML:_xmlfile toCharacter:self];
-    if (!success) {
-        NSLog(@"There was an error parsing %@", _xmlfile);
-    }
+    if ([[[FTCParser alloc] init] parseXML:_xmlfile toCharacter:self])
+        return;
+    
+    NSLog(@"FTCCharacter: There was an error parsing xmlFile: %@", _xmlfile);
+}
 
+
+
+
+
+
+-(void) createCharacterFromXML:(NSString *)_xmlfile onCharacterComplete:(void(^)())completeHandler
+{
+    onComplete = completeHandler;
+    return [self createCharacterFromXML:_xmlfile];
 }
 
 
@@ -256,6 +291,8 @@
     if ([self.delegate respondsToSelector:@selector(onCharacterCreated:)])
         [self.delegate onCharacterCreated:self];
     
+    if (onComplete)
+        onComplete();
 }
 
 

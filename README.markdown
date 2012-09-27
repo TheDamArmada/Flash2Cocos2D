@@ -27,6 +27,19 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	export.export();
 	```
 
+- update publish settings
+
+	required libraries
+
+	...path to library.../libs/as3swf/bin/as3swf.swc
+	...path to library.../libs/blooddy-read-only/blooddy_crypto/libs/blooddy_crypto.swc
+	...path to library.../libs/fzip/bin/fzip.swc
+
+	required source paths
+
+	...path to library.../libs/Flash2Cocos2D/grapefrukt/src
+	...path to library.../libs/blooddy-read-only/blooddy_crypto/src-as
+
 - publish
 - on the top left corner click on "*click to output*"
 - save the zip file

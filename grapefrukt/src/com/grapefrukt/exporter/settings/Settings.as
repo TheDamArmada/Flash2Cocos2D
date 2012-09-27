@@ -6,6 +6,11 @@ package com.grapefrukt.exporter.settings {
 	public class Settings {
 		
 		/**
+		 * Set any method with a convertPixelsToPoints parameter to true.  This causes coordinates to be multiplied by this amount.
+		 */
+		public static var conversionFactor:Number = .5;
+		
+		/**
 		 * Experimental property to change the global scale of all exports. Use with caution.
 		 */
 		public static var scaleFactor:Number = 1;

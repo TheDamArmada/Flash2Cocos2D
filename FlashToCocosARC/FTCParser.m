@@ -42,7 +42,7 @@
     NSString *baseFile = [NSString stringWithFormat:@"%@_sheets.xml", _xmlfile];
     
     NSError *error = nil;
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
     
     
     
@@ -80,10 +80,8 @@
         
         if (NghostNameRange.location != NSNotFound) continue;
         
-        
-        
         float nAX           = [[TBXML valueOfAttributeNamed:@"registrationPointX" forElement:_texture] floatValue];
-        float nAY           = [[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue] * -1;
+        float nAY           = -([[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue]);
         NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:_texture];
         int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:_texture] intValue];
         
@@ -92,11 +90,12 @@
         
         if (textureSheetExists)
             _sprite = [FTCSprite spriteWithSpriteFrameName:nImage];
-        else 
+        else
             _sprite = [FTCSprite spriteWithFile:nImage];
         
         // SET ANCHOR P
-        CGSize eSize = [_sprite boundingBoxInPixels].size;
+        CGSize eSize = [_sprite boundingBox].size;
+        
         CGPoint aP = CGPointMake(nAX/eSize.width, (eSize.height - (-nAY))/eSize.height);        
         
         [_sprite setAnchorPoint:aP];      
@@ -120,7 +119,7 @@
 
     
     NSError *error = nil;    
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
     
     
     TBXMLElement *_root = _xmlMaster.rootXMLElement;
@@ -133,7 +132,7 @@
     
     // set the character animation (it will be filled with events)
     
-
+    
         
     do {        
         
@@ -168,25 +167,22 @@
             if (_frameInfo) {
                 do {
                     
-                    FTCFrameInfo *fi = [FTCFrameInfo alloc];
+                    FTCFrameInfo *fi = [[FTCFrameInfo alloc] init];
                     
 
                     fi.index = [[TBXML valueOfAttributeNamed:@"index" forElement:_frameInfo] intValue];
                     
                     fi.x = [[TBXML valueOfAttributeNamed:@"x" forElement:_frameInfo] floatValue];
-                    fi.y = [[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue] * -1;
+                    fi.y = -([[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue]);
                     
-                    
-                    
+
                     fi.scaleX = [[TBXML valueOfAttributeNamed:@"scaleX" forElement:_frameInfo] floatValue];                
                     fi.scaleY = [[TBXML valueOfAttributeNamed:@"scaleY" forElement:_frameInfo] floatValue];
                     
                     fi.rotation = [[TBXML valueOfAttributeNamed:@"rotation" forElement:_frameInfo] floatValue];
                     
                     [__partFrames addObject:fi];
-                    
-
-                    
+                                        
                 } while ((_frameInfo = _frameInfo->nextSibling));
             }
             

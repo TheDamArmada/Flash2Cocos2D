@@ -12,28 +12,24 @@
 @implementation FTCSprite
 
 @synthesize name;
-@synthesize ignorePosition, ignoreRotation, ignoreScale;
-@synthesize animationsArr;
+@synthesize ignorePosition = _ignorePosition;
+@synthesize ignoreRotation = _ignoreRotation;
+@synthesize ignoreScale = _ignoreScale;
+@synthesize animationsArr = _animationsArr;
 
-
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-
-        NSMutableDictionary *__animations = [[NSMutableDictionary alloc] init];
-        [self setAnimationsArr:__animations];
-   
-    }
-    
-    return self;
-}
 
 -(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character
 {
     currentCharacter = _character;
     currentAnimationInfo = [self.animationsArr objectForKey:_framesId];
+}
+
+-(NSMutableDictionary*) animationsArr
+{
+    if (_animationsArr == nil)
+        _animationsArr = [[NSMutableDictionary alloc] init];
+
+    return _animationsArr;
 }
 
 -(void) setCurrentAnimationFramesInfo:(NSArray *)_framesInfoArr forCharacter:(FTCCharacter *)_character
@@ -45,13 +41,13 @@
 
 -(void) applyFrameInfo:(FTCFrameInfo *)_frameInfo
 {
-    if (!ignorePosition) 
+    if (!_ignorePosition)
         [self setPosition:CGPointMake(_frameInfo.x, _frameInfo.y)];   
     
-    if (!ignoreRotation) 
+    if (!_ignoreRotation)
         [self setRotation:_frameInfo.rotation];   
     
-    if (!ignoreScale) {
+    if (!_ignoreScale) {
         if (_frameInfo.scaleX!=0)   [self setScaleX:_frameInfo.scaleX];
         if (_frameInfo.scaleY!=0)   [self setScaleY:_frameInfo.scaleY];
     }

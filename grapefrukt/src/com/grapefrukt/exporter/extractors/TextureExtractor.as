@@ -57,10 +57,10 @@ package com.grapefrukt.exporter.extractors {
 		 * @param	returnClass		Ignore this. Used internally to return FontSheets when so needed. 
 		 * @return	A TextureSheet containing the DisplayObjectContainers children
 		 */
-		public static function extract(sheet:DisplayObjectContainer, ignore:Array = null, respectScale:Boolean = false, returnClass:Class = null):TextureSheet {
+		public static function extract(sheet:DisplayObjectContainer, ignore:Array = null, respectScale:Boolean = false, returnClass:Class = null, convertPixelsToPoints:Boolean= true):TextureSheet {
 			Logger.log("TextureExtractor", "extracting", ChildFinder.getName(sheet));
 			if (returnClass == null) returnClass = TextureSheet;		
-			return childrenToSheet(sheet, getChildren(sheet, ignore), respectScale, returnClass);
+			return childrenToSheet(sheet, getChildren(sheet, ignore), respectScale, returnClass, convertPixelsToPoints);
 		}
 		
 		/**
@@ -73,40 +73,42 @@ package com.grapefrukt.exporter.extractors {
 			return extract(classesToSheetSprite(sheetName, rest));
 		}
 		
-		private static function childrenToSheet(target:DisplayObjectContainer, children:Vector.<Child>, respectScale:Boolean, returnClass:Class):TextureSheet {
+		private static function childrenToSheet(target:DisplayObjectContainer, children:Vector.<Child>, respectScale:Boolean, returnClass:Class, convertPixelsToPoints:Boolean):TextureSheet {
 			var sheet:TextureSheet = new returnClass(ChildFinder.getName(target));
 			for each(var child:Child in children) {
 				if (child.frame != 0) MovieClip(target).gotoAndStop(child.frame);
 				
-				var t:BitmapTexture = extractSingle(child.name, target.getChildByName(child.name), respectScale);
+				var t:BitmapTexture = extractSingle(child.name, target.getChildByName(child.name), respectScale, convertPixelsToPoints);
 				
 				if(t) sheet.add(t);
 			}
 			return sheet;
 		}
 		
-		private static function extractSingle(name:String, target:DisplayObject, respectScale:Boolean):BitmapTexture {
+		private static function extractSingle(name:String, target:DisplayObject, respectScale:Boolean, convertPixelsToPoints:Boolean):BitmapTexture {
 			if (target as MovieClip && MovieClip(target).totalFrames > 1) {
-				return getAsTextureMultiframe(name, MovieClip(target), respectScale);
+				return getAsTextureMultiframe(name, MovieClip(target), respectScale, convertPixelsToPoints);
 			}
-			return getAsTextureSingle(name, target, respectScale);
+			return getAsTextureSingle(name, target, respectScale, convertPixelsToPoints);
 		}
 		
-		private static function getAsTextureMultiframe(name:String, target:MovieClip, respectScale:Boolean):BitmapTexture {
+		private static function getAsTextureMultiframe(name:String, target:MovieClip, respectScale:Boolean, convertPixelsToPoints:Boolean):BitmapTexture {
 			var frames:Vector.<BitmapTexture> = new Vector.<BitmapTexture>;
 			for (var frameIndex:int = 1; frameIndex <= target.totalFrames; frameIndex++) {
 				target.gotoAndStop(frameIndex);
-				frames.push(getAsTextureSingle(name, target, respectScale));
+				frames.push(getAsTextureSingle(name, target, respectScale, convertPixelsToPoints));
 			}
 			
 			return MultiframeUtil.merge(frames);
 		}
 		
-		public static function getAsTextureSingle(name:String, target:DisplayObject, respectScale:Boolean):BitmapTexture {
+		public static function getAsTextureSingle(name:String, target:DisplayObject, respectScale:Boolean, convertPixelsToPoints:Boolean):BitmapTexture {
 			var bounds:Rectangle = target.getBounds(target);
 			var compoundScale:Number = Settings.scaleFactor;
-			
+			var conversionFactor:Number = 1;
+						
 			if (respectScale) compoundScale *= target.scaleX;
+			if (convertPixelsToPoints) conversionFactor = Settings.conversionFactor;
 			
 			bounds.x 		*= compoundScale;
 			bounds.y 		*= compoundScale;
@@ -165,6 +167,12 @@ package com.grapefrukt.exporter.extractors {
 			bounds.y += crop_rect.y;
 			bounds.width = crop_rect.width;
 			bounds.height = crop_rect.height;
+
+			// when converting pixels to points
+			bounds.x *= conversionFactor; 
+			bounds.y *= conversionFactor; 
+			bounds.width *= conversionFactor;
+			bounds.height *= conversionFactor;
 			
 			var zindex:uint = 0;
 			if (target.parent) zindex = target.parent.getChildIndex(target);

@@ -53,11 +53,8 @@
         if (_frameInfo.scaleY!=0)   [self setScaleY:_frameInfo.scaleY];
     }
     
-    if (!ignoreAlpha) {
+    if (!ignoreAlpha)
         [self setOpacity:_frameInfo.alpha * 255];
-    }
-    
-    
 }
 
 

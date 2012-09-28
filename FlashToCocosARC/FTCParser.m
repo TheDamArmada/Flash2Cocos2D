@@ -56,9 +56,9 @@
     
     TBXMLElement *_texturesheet = [TBXML childElementNamed:@"TextureSheet" parentElement:_root];
     
-    
     // check if there's a spritesheet for it
     NSString *_textureSheetName = [NSString stringWithFormat:@"%@.plist", [TBXML valueOfAttributeNamed:@"name" forElement:_texturesheet]];
+
     NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:_textureSheetName ofType:nil];
     BOOL      textureSheetExists = [[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName];
     
@@ -70,7 +70,7 @@
     
     do {
         NSString *nName     = [TBXML valueOfAttributeNamed:@"name" forElement:_texture];
-        
+
         
         NSRange NghostNameRange;
         
@@ -84,7 +84,7 @@
         float nAY           = -([[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue]);
         NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:_texture];
         int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:_texture] intValue];
-        
+
         // no support for sprite sheets yet
         FTCSprite *_sprite = nil;
         
@@ -181,6 +181,12 @@
                     
                     fi.rotation = [[TBXML valueOfAttributeNamed:@"rotation" forElement:_frameInfo] floatValue];
                     
+                    NSError *noAlpha;
+                    
+                    fi.alpha = [[TBXML valueOfAttributeNamed:@"alpha" forElement:_frameInfo error:&noAlpha] floatValue];
+                    
+                    if (noAlpha) fi.alpha = 1.0;
+             
                     [__partFrames addObject:fi];
                                         
                 } while ((_frameInfo = _frameInfo->nextSibling));

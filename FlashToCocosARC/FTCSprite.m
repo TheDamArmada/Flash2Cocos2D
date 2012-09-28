@@ -15,6 +15,7 @@
 @synthesize ignorePosition = _ignorePosition;
 @synthesize ignoreRotation = _ignoreRotation;
 @synthesize ignoreScale = _ignoreScale;
+@synthesize ignoreAlpha = _ignoreAlpha;
 @synthesize animationsArr = _animationsArr;
 
 
@@ -51,6 +52,12 @@
         if (_frameInfo.scaleX!=0)   [self setScaleX:_frameInfo.scaleX];
         if (_frameInfo.scaleY!=0)   [self setScaleY:_frameInfo.scaleY];
     }
+    
+    if (!ignoreAlpha) {
+        [self setOpacity:_frameInfo.alpha * 255];
+    }
+    
+    
 }
 
 

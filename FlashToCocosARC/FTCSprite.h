@@ -23,6 +23,7 @@
 @property (unsafe_unretained) BOOL       ignoreRotation;
 @property (unsafe_unretained) BOOL       ignorePosition;
 @property (unsafe_unretained) BOOL       ignoreScale;
+@property (unsafe_unretained) BOOL       ignoreAlpha;
 
 @property (nonatomic, strong) NSMutableDictionary   *animationsArr;
 

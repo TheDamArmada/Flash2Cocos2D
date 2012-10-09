@@ -12,7 +12,7 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 - create your character in one MovieClip in Flash.
 - create timeline animations.  must not be nested.  all tweens must be visible at once on the timeline.
 - every animation has to have a keyframe labeled with an unique name. (IE: "*dancing*", "*running*"....) there is a minimum of one label. 
-- to launch custom events during an animation, you can use keyframes labels prefixed with @. IE: "*@launchSound*"
+- to launch custom events during an animation, you can use keyframes labels prefixed with @. (IE: "*@launchSound*")
 - select 'Export for Actionscript' for your character MovieClip
 - add the Grapefukrt exporting code on the first frame:
 
@@ -27,16 +27,17 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	export.export();
 	```
 
-- update publish settings. required libraries:
+- update publish settings with required libraries:
 
 	+ ...path to library.../libs/as3swf/bin/as3swf.swc
 	+ ...path to library.../libs/blooddy-read-only/blooddy_crypto/libs/blooddy_crypto.swc
 	+ ...path to library.../libs/fzip/bin/fzip.swc
 
-	required source paths
+- update publish settings with required source paths:
 
 	+ ...path to library.../libs/Flash2Cocos2D/grapefrukt/src
 	+ ...path to library.../libs/blooddy-read-only/blooddy_crypto/src-as
+
 
 - publish
 - on the top left corner click on "*click to output*"

@@ -56,9 +56,9 @@
     
     TBXMLElement *_texturesheet = [TBXML childElementNamed:@"TextureSheet" parentElement:_root];
     
-    
     // check if there's a spritesheet for it
     NSString *_textureSheetName = [NSString stringWithFormat:@"%@.plist", [TBXML valueOfAttributeNamed:@"name" forElement:_texturesheet]];
+
     NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:_textureSheetName ofType:nil];
     BOOL      textureSheetExists = [[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName];
     
@@ -70,7 +70,7 @@
     
     do {
         NSString *nName     = [TBXML valueOfAttributeNamed:@"name" forElement:_texture];
-        
+
         
         NSRange NghostNameRange;
         
@@ -80,23 +80,22 @@
         
         if (NghostNameRange.location != NSNotFound) continue;
         
-        
-        
         float nAX           = [[TBXML valueOfAttributeNamed:@"registrationPointX" forElement:_texture] floatValue];
-        float nAY           = [[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue] * -1;
+        float nAY           = -([[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue]);
         NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:_texture];
         int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:_texture] intValue];
-        
+
         // no support for sprite sheets yet
         FTCSprite *_sprite = nil;
         
         if (textureSheetExists)
             _sprite = [FTCSprite spriteWithSpriteFrameName:nImage];
-        else 
+        else
             _sprite = [FTCSprite spriteWithFile:nImage];
         
         // SET ANCHOR P
-        CGSize eSize = [_sprite boundingBoxInPixels].size;
+        CGSize eSize = [_sprite boundingBox].size;
+        
         CGPoint aP = CGPointMake(nAX/eSize.width, (eSize.height - (-nAY))/eSize.height);        
         
         [_sprite setAnchorPoint:aP];      
@@ -133,7 +132,7 @@
     
     // set the character animation (it will be filled with events)
     
-
+    
         
     do {        
         
@@ -168,25 +167,28 @@
             if (_frameInfo) {
                 do {
                     
-                    FTCFrameInfo *fi = [FTCFrameInfo alloc];
+                    FTCFrameInfo *fi = [[FTCFrameInfo alloc] init];
                     
 
                     fi.index = [[TBXML valueOfAttributeNamed:@"index" forElement:_frameInfo] intValue];
                     
                     fi.x = [[TBXML valueOfAttributeNamed:@"x" forElement:_frameInfo] floatValue];
-                    fi.y = [[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue] * -1;
+                    fi.y = -([[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue]);
                     
-                    
-                    
+
                     fi.scaleX = [[TBXML valueOfAttributeNamed:@"scaleX" forElement:_frameInfo] floatValue];                
                     fi.scaleY = [[TBXML valueOfAttributeNamed:@"scaleY" forElement:_frameInfo] floatValue];
                     
                     fi.rotation = [[TBXML valueOfAttributeNamed:@"rotation" forElement:_frameInfo] floatValue];
                     
+                    NSError *noAlpha;
+                    
+                    fi.alpha = [[TBXML valueOfAttributeNamed:@"alpha" forElement:_frameInfo error:&noAlpha] floatValue];
+                    
+                    if (noAlpha) fi.alpha = 1.0;
+             
                     [__partFrames addObject:fi];
-                    
-
-                    
+                                        
                 } while ((_frameInfo = _frameInfo->nextSibling));
             }
             

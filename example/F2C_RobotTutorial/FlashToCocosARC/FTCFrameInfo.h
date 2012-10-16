@@ -19,5 +19,6 @@
 @property (unsafe_unretained) float rotation;
 @property (unsafe_unretained) float scaleX;
 @property (unsafe_unretained) float scaleY;
+@property (unsafe_unretained) float alpha;
 
 @end

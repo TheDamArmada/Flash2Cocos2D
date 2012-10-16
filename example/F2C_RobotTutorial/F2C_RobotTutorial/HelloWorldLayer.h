@@ -11,11 +11,9 @@
 #import "cocos2d.h"
 #import "CCRobot.h"
 
-
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer
 {
-
     CCRobot *theRobot;
 }
 

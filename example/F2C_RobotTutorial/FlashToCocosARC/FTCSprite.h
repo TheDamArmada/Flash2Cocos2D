@@ -23,9 +23,9 @@
 @property (unsafe_unretained) BOOL       ignoreRotation;
 @property (unsafe_unretained) BOOL       ignorePosition;
 @property (unsafe_unretained) BOOL       ignoreScale;
+@property (unsafe_unretained) BOOL       ignoreAlpha;
 
-@property (strong) NSMutableDictionary   *animationsArr;
-
+@property (nonatomic, strong) NSMutableDictionary   *animationsArr;
 
 // private
 -(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character;

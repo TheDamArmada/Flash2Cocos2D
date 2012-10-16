@@ -1,0 +1,31 @@
+<apiPackage id="by.blooddy.crypto"><apiName>by.blooddy.crypto</apiName><apiDetail/><apiClassifier id="by.blooddy.crypto:Base64"><apiName>Base64</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto:Base64:decode"><apiName>decode</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.utils:ByteArray"/></apiReturn><apiParam><apiItemName>str</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="by.blooddy.crypto:Base64:encode"><apiName>encode</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="flash.utils:ByteArray"/></apiParam><apiParam><apiItemName>insertNewLines</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="by.blooddy.crypto:MD5"><apiName>MD5</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto:MD5:hashBytes"><apiName>hashBytes</apiName><shortdesc>
+		 Performs the MD5 hash algorithm on a ByteArray.</shortdesc><prolog><asCustoms><keyword>md5.hash, hash
+		 </keyword></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>A string containing the hash value of data
+		 
+		 </apiDesc><apiType value="String"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="flash.utils:ByteArray"/><apiDesc>		The ByteArray data to hash
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the MD5 hash algorithm on a ByteArray.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="by.blooddy.crypto:MD5:hash"><apiName>hash</apiName><shortdesc>
+		 Performs the MD5 hash algorithm on a String.</shortdesc><prolog><asCustoms><keyword>md5.hash, hash
+		 </keyword></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>A string containing the hash value of s
+		 
+		 </apiDesc><apiType value="String"/></apiReturn><apiParam><apiItemName>s</apiItemName><apiType value="String"/><apiDesc>		The string to hash
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs the MD5 hash algorithm on a String.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="by.blooddy.crypto:CRC32"><apiName>CRC32</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto:CRC32:hash"><apiName>hash</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="uint"/></apiReturn><apiParam><apiItemName>bytes</apiItemName><apiType value="flash.utils:ByteArray"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

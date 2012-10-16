@@ -1,0 +1,39 @@
+<apiPackage id="by.blooddy.crypto.image"><apiName>by.blooddy.crypto.image</apiName><apiDetail/><apiClassifier id="by.blooddy.crypto.image:PNG8Encoder"><apiName>PNG8Encoder</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto.image:PNG8Encoder:encode"><apiName>encode</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.utils:ByteArray"/></apiReturn><apiParam><apiItemName>image</apiItemName><apiType value="flash.display:BitmapData"/></apiParam><apiParam><apiItemName>palette</apiItemName><apiOperationClassifier>by.blooddy.crypto.image.palette:IPalette</apiOperationClassifier><apiData>null</apiData></apiParam><apiParam><apiItemName>filter</apiItemName><apiType value="uint"/><apiData>0</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="by.blooddy.crypto.image:PNGEncoder"><apiName>PNGEncoder</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><created>05.07.2010 17:44:26
+	 </created></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto.image:PNGEncoder:encode"><apiName>encode</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiType value="flash.utils:ByteArray"/></apiReturn><apiParam><apiItemName>image</apiItemName><apiType value="flash.display:BitmapData"/></apiParam><apiParam><apiItemName>filter</apiItemName><apiType value="uint"/><apiData>0</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="by.blooddy.crypto.image:PNGFilter"><apiName>PNGFilter</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><created>25.06.2010 16:18:02
+	 </created></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiFinal/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiValue id="by.blooddy.crypto.image:PNGFilter:AVERAGE"><apiName>AVERAGE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="uint"/></apiValueDef></apiValueDetail></apiValue><apiValue id="by.blooddy.crypto.image:PNGFilter:NONE"><apiName>NONE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="uint"/></apiValueDef></apiValueDetail></apiValue><apiValue id="by.blooddy.crypto.image:PNGFilter:PAETH"><apiName>PAETH</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="uint"/></apiValueDef></apiValueDetail></apiValue><apiValue id="by.blooddy.crypto.image:PNGFilter:SUB"><apiName>SUB</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="uint"/></apiValueDef></apiValueDetail></apiValue><apiValue id="by.blooddy.crypto.image:PNGFilter:UP"><apiName>UP</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="uint"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="by.blooddy.crypto.image:PNG24Encoder"><apiName>PNG24Encoder</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto.image:PNG24Encoder:encode"><apiName>encode</apiName><shortdesc>
+		 Created a PNG image from the specified BitmapData
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>a ByteArray representing the PNG encoded image data.
+		 </apiDesc><apiType value="flash.utils:ByteArray"/></apiReturn><apiParam><apiItemName>image</apiItemName><apiType value="flash.display:BitmapData"/><apiDesc>The BitmapData that will be converted into the PNG format.
+		 </apiDesc></apiParam><apiParam><apiItemName>filter</apiItemName><apiType value="uint"/><apiData>0</apiData></apiParam></apiOperationDef><apiDesc>
+		 Created a PNG image from the specified BitmapData
+		 
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="by.blooddy.crypto.image:JPEGEncoder"><apiName>JPEGEncoder</apiName><shortdesc>
+	 </shortdesc><prolog><author>BlooDHounD
+	 </author><asMetadata><apiVersion><apiLanguage version="3.0"/><apiPlatform description="" name="Flash" version="10"/></apiVersion></asMetadata><asCustoms><version>1.0
+	 </version></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="by.blooddy.crypto.image:JPEGEncoder:encode"><apiName>encode</apiName><shortdesc>
+		 Created a JPEG image from the specified BitmapData
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>a ByteArray representing the JPEG encoded image data.
+		 </apiDesc><apiType value="flash.utils:ByteArray"/></apiReturn><apiParam><apiItemName>image</apiItemName><apiType value="flash.display:BitmapData"/><apiDesc>The BitmapData that will be converted into the JPEG format.
+		 </apiDesc></apiParam><apiParam><apiItemName>quality</apiItemName><apiType value="uint"/><apiData>60</apiData><apiDesc>The quality level between 1 and 100 that detrmines the level of compression used in the generated JPEG
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Created a JPEG image from the specified BitmapData
+		 
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

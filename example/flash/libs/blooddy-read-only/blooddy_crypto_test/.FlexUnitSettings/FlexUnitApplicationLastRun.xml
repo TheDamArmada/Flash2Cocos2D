@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="blooddy_crypto_test">
+<testsuite name="by.blooddy.crypto:blooddy_crypto_test" type="testsuiteclass"/>
+</testsuite>
+</testrun>

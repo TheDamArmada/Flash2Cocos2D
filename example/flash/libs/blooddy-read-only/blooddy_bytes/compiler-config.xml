@@ -1,0 +1,11 @@
+<flex-config>
+
+	<compiler>
+		<debug>false</debug>
+	</compiler>
+
+	<includes>
+		<symbol>by.blooddy.core.utils.ByteArrayUtils</symbol>
+	</includes>
+
+</flex-config>

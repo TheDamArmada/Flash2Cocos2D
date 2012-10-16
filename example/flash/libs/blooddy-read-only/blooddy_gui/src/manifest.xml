@@ -1,0 +1,4 @@
+﻿<?xml version="1.0"?>
+<componentPackage>
+    <component id="Button" class="by.blooddy.gui.display.controls.Button" />
+</componentPackage>

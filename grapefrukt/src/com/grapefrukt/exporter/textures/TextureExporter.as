@@ -40,9 +40,9 @@ package com.grapefrukt.exporter.textures {
 	 */
 	public class TextureExporter extends EventDispatcher {
 		
-		private var _queue				:FunctionQueue;
+		protected var _queue				:FunctionQueue;
+		protected var _file_serializer	:IFileSerializer;
 		private var _image_serializer	:IImageSerializer;
-		private var _file_serializer	:IFileSerializer;
 		private var _vector_serializer	:IImageSerializer;
 		
 		public function TextureExporter(queue:FunctionQueue, imageSerializer:IImageSerializer, fileSerializer:IFileSerializer, vectorSerializer:IImageSerializer = null) {

@@ -48,20 +48,20 @@ package com.grapefrukt.exporter.simple {
 	 */
 	public class SimpleExport {
 		
-		private var _queue				:FunctionQueue;
+		protected var _queue				:FunctionQueue;
 		
-		private var _texture_exporter	:TextureExporter;
+		protected var _texture_exporter	:TextureExporter;
 		
-		private var _data_serializer	:IDataSerializer;
-		private var _image_serializer	:IImageSerializer;
-		private var _file_serializer	:IFileSerializer;
+		protected var _data_serializer	:IDataSerializer;
+		protected var _image_serializer	:IImageSerializer;
+		protected var _file_serializer	:IFileSerializer;
 		
 		private var _textures			:TextureSheetCollection;
-		private var _animations			:AnimationCollection;
-		private var _fonts				:FontSheetCollection;
+		protected var _animations			:AnimationCollection;
+		protected var _fonts				:FontSheetCollection;
 		private var _gui				:SimpleExportGui;
 		
-		private var _objectId			: String = "";
+		protected var _objectId			: String = "";
 
 		/**
 		 * Creates the SimpleExport

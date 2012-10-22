@@ -53,7 +53,7 @@ or implied, of grapefrukt games.
 		 * @param	target	The MovieClip to extract from
 		 * @param	ignore	A list of children to ignore (Array of strings)
 		 */
-		public static function extract(list:AnimationCollection, target:MovieClip, ignore:Array = null, convertPixelsToPoints:Boolean=true):void {
+		public static function extract(list:AnimationCollection, target:MovieClip, ignore:Array = null, convertPixelsToPoints:Boolean=true, scaleFactor:Number=1):void {
 			Logger.log("AnimationExtractor", "extracting", target.toString());
 			var fragments:Vector.<AnimationFragment> = getFragments(target);
 			
@@ -61,7 +61,7 @@ or implied, of grapefrukt games.
 			ChildFinder.filter(target, parts, ignore);
 			
 			for each(var fragment:AnimationFragment in fragments) {
-				list.add(getAnimation(target, fragment, parts, convertPixelsToPoints));
+				list.add(getAnimation(target, fragment, parts, convertPixelsToPoints, scaleFactor));
 			}
 		}
 		
@@ -107,13 +107,11 @@ or implied, of grapefrukt games.
 		}
 		
 		
-		private static function getAnimation(mc:MovieClip, fragment:AnimationFragment, parts:Vector.<Child>, convertPixelsToPoints:Boolean):Animation {
+		private static function getAnimation(mc:MovieClip, fragment:AnimationFragment, parts:Vector.<Child>, convertPixelsToPoints:Boolean, scaleFactor:Number):Animation {
 			var loopAt:int = -1;
 			
 			var conversionFactor:Number = 1;			
-			if (convertPixelsToPoints) conversionFactor = Settings.conversionFactor;
-			
-			trace('conversionFactor '+conversionFactor);
+			if (convertPixelsToPoints) conversionFactor = Settings.conversionFactor;			
 			
 			if ( fragment.loops ) loopAt = fragment.totalFrameCount - fragment.loopFrameCount - 1;
 			var animation:Animation = new Animation(fragment.name, fragment.totalFrameCount, loopAt, parts);
@@ -124,7 +122,7 @@ or implied, of grapefrukt games.
 					if (mc[part.name]) {
 						var partX:Number = mc[part.name].x * conversionFactor;
 						var partY:Number = mc[part.name].y * conversionFactor;
-						animation.setFrame(part.name, frame - fragment.startFrame, new AnimationFrame(true, partX, partY, mc[part.name].scaleX, mc[part.name].scaleY, mc[part.name].rotation, mc[part.name].alpha, Settings.scaleFactor));
+						animation.setFrame(part.name, frame - fragment.startFrame, new AnimationFrame(true, partX, partY, mc[part.name].scaleX, mc[part.name].scaleY, mc[part.name].rotation, mc[part.name].alpha, scaleFactor));
 					} else {
 						animation.setFrame(part.name, frame - fragment.startFrame, new AnimationFrame(false));
 					}

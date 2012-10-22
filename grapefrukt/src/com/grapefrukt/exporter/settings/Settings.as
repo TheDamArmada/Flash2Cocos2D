@@ -4,16 +4,11 @@ package com.grapefrukt.exporter.settings {
 	 * @author Martin Jonasson, m@grapefrukt.com
 	 */
 	public class Settings {
-		
+
 		/**
-		 * Set any method with a convertPixelsToPoints parameter to true.  This causes coordinates to be multiplied by this amount.
+		 * Any method with a convertPixelsToPoints set TRUE causes coordinates to be multiplied by this amount.
 		 */
 		public static var conversionFactor:Number = .5;
-		
-		/**
-		 * Experimental property to change the global scale of all exports. Use with caution.
-		 */
-		public static var scaleFactor:Number = 1;
 		
 		/**
 		 * This many pixels will be added to the measured size of the DisplayObject when rendered to a bitmap (these may not be empty due to rounding off errors and antialias)

@@ -29,15 +29,15 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 <p>
 - update publish settings with required libraries:
 
-	+  ...path to library.../libs/as3swf/bin/as3swf.swc
-	+  ...path to library.../libs/blooddy-read-only/blooddy_crypto/libs/blooddy_crypto.swc
-	+  ...path to library.../libs/fzip/bin/fzip.swc
+	+  ...path to library.../as3swf/bin/as3swf.swc
+	+  ...path to library.../blooddy-read-only/blooddy_crypto/libs/blooddy_crypto.swc
+	+  ...path to library.../fzip/bin/fzip.swc
 </p>
 <p>
 - update publish settings with required source paths:
 
-	+  ...path to library.../libs/Flash2Cocos2D/grapefrukt/src
-	+  ...path to library.../libs/blooddy-read-only/blooddy_crypto/src-as
+	+  ...path to library.../Flash2Cocos2D/grapefrukt/src
+	+  ...path to library.../blooddy-read-only/blooddy_crypto/src-as
 </p>
 <p>
 - publish

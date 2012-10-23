@@ -8,11 +8,11 @@ package com.grapefrukt.exporter.textures
 	/**
 	 * @author Chad Stuempges
 	 */
-	public class F2CBitmapTexture extends BitmapTexture
+	public class FTCBitmapTexture extends BitmapTexture
 	{
 		public var fileSuffix : String = "";
 
-		public function F2CBitmapTexture(name : String, bitmap : BitmapData, bounds : Rectangle, zIndex : int, isMask : Boolean = false)
+		public function FTCBitmapTexture(name : String, bitmap : BitmapData, bounds : Rectangle, zIndex : int, isMask : Boolean = false)
 		{
 			super(name, bitmap, bounds, zIndex, isMask);
 		}

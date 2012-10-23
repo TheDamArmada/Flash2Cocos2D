@@ -35,7 +35,7 @@ package com.grapefrukt.exporter.simple
 	/**
 	 * @author Chad Stuempges
 	 */
-	public class F2CSimpleExport extends SimpleExport
+	public class FTCSimpleExport extends SimpleExport
 	{
 		private var _texturesArt : TextureSheetCollection;
 		private var _texturesFile : TextureSheetCollection;
@@ -44,13 +44,13 @@ package com.grapefrukt.exporter.simple
 		 * Creates the SimpleExport
 		 * @param	root	The GUI elements will be added to this DisplayObjectContainer
 		 */
-		public function F2CSimpleExport(root : DisplayObjectContainer, id : String = "") : void
+		public function FTCSimpleExport(root : DisplayObjectContainer, id : String = "") : void
 		{
 			super(root, id);
 
 			_texturesArt = new TextureSheetCollection;
 			_texturesFile = new TextureSheetCollection;
-			_texture_exporter = new F2CTextureExporter(_queue, _image_serializer, _file_serializer);
+			_texture_exporter = new FTCTextureExporter(_queue, _image_serializer, _file_serializer);
 		}
 
 		/**

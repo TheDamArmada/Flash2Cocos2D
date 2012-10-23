@@ -194,8 +194,8 @@ package com.grapefrukt.exporter.extractors
 
 			var artData : BitmapTexture = new artDataClass(name, crop_bitmap, bounds, zindex, isMask);
 
-			if (artData is F2CBitmapTexture && fileSuffix)
-				F2CBitmapTexture(artData).fileSuffix = fileSuffix;
+			if (artData is FTCBitmapTexture && fileSuffix)
+				FTCBitmapTexture(artData).fileSuffix = fileSuffix;
 
 			return artData;
 		}

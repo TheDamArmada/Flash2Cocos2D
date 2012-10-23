@@ -8,9 +8,9 @@ package com.grapefrukt.exporter.textures
 	/**
 	 * @author Chad Stuempges
 	 */
-	public class F2CTextureExporter extends TextureExporter
+	public class FTCTextureExporter extends TextureExporter
 	{
-		public function F2CTextureExporter(queue : FunctionQueue, imageSerializer : IImageSerializer, fileSerializer : IFileSerializer, vectorSerializer : IImageSerializer = null)
+		public function FTCTextureExporter(queue : FunctionQueue, imageSerializer : IImageSerializer, fileSerializer : IFileSerializer, vectorSerializer : IImageSerializer = null)
 		{
 			super(queue, imageSerializer, fileSerializer, vectorSerializer);
 		}
@@ -23,8 +23,8 @@ package com.grapefrukt.exporter.textures
 
 				var fileName : String;
 
-				if (texture is F2CBitmapTexture)
-					fileName = F2CBitmapTexture(texture).getFilenameWithPathAndSuffix();
+				if (texture is FTCBitmapTexture)
+					fileName = FTCBitmapTexture(texture).getFilenameWithPathAndSuffix();
 				else
 					fileName = texture.filenameWithPath;
 

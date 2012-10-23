@@ -1,4 +1,0 @@
-﻿<?xml version="1.0"?>
-<componentPackage>
-    <component id="Component"		class="by.blooddy.gui.display.component.Component" />
-</componentPackage>

@@ -1,8 +1,0 @@
--cp ../blooddy_haxe/src-hx
--cp ../blooddy_bytes/src-hx
--cp src-impl
--cp src-hx
--main MainCrypto
--swf libs/blooddy_crypto.swc
--swf-version 10
--debug

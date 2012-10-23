@@ -1,9 +1,0 @@
-﻿<?xml version="1.0"?>
-<componentPackage>
-    <component id="TextField"		class="by.blooddy.core.display.text.BaseTextField" />
-    <component id="Bitmap"			class="by.blooddy.core.display.BaseBitmap" />
-    <component id="MovieClip"		class="by.blooddy.core.display.BaseMovieClip" />
-    <component id="SimpleButton"	class="by.blooddy.core.display.BaseSimpleButton" />
-    <component id="Sprite"			class="by.blooddy.core.display.BaseSprite" />
-    <component id="Video"			class="by.blooddy.core.display.BaseVideo" />
-</componentPackage>

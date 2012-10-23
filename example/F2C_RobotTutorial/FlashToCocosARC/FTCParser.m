@@ -42,7 +42,7 @@
     NSString *baseFile = [NSString stringWithFormat:@"%@_sheets.xml", _xmlfile];
     
     NSError *error = nil;
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
     
     
     
@@ -119,7 +119,7 @@
 
     
     NSError *error = nil;    
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
     
     
     TBXMLElement *_root = _xmlMaster.rootXMLElement;

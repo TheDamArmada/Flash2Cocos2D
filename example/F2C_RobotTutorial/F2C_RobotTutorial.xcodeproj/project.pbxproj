@@ -34,44 +34,44 @@
 		174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */; };
 		174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EF1511F7DF00D2EBC4 /* FTCParser.m */; };
 		174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378F11511F7DF00D2EBC4 /* FTCSprite.m */; };
-		174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378FD1511F7F000D2EBC4 /* TBXML.m */; };
+		174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378FD1511F7F000D2EBC4 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		174379021511F89000D2EBC4 /* CCRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 174379011511F89000D2EBC4 /* CCRobot.m */; };
-		1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796B1512527E00D2EBC4 /* TBXML+Compression.m */; };
-		1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */; };
+		1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796B1512527E00D2EBC4 /* TBXML+Compression.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63252679162DC35F009A3520 /* Default-568h@2x.png */; };
+		63848D241636C86500D6E96D /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D061636C86500D6E96D /* robot_animations.xml */; };
+		63848D251636C86500D6E96D /* robot_sheets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D071636C86500D6E96D /* robot_sheets.xml */; };
+		63848D261636C86500D6E96D /* robotcharactermc_ArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */; };
+		63848D271636C86500D6E96D /* robotcharactermc_ArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */; };
+		63848D281636C86500D6E96D /* robotcharactermc_ArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */; };
+		63848D291636C86500D6E96D /* robotcharactermc_ArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */; };
+		63848D2A1636C86500D6E96D /* robotcharactermc_Body-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */; };
+		63848D2B1636C86500D6E96D /* robotcharactermc_Body.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */; };
+		63848D2C1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */; };
+		63848D2D1636C86600D6E96D /* robotcharactermc_ForeArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */; };
+		63848D2E1636C86600D6E96D /* robotcharactermc_ForeArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */; };
+		63848D2F1636C86600D6E96D /* robotcharactermc_ForeArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */; };
+		63848D301636C86600D6E96D /* robotcharactermc_HandL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */; };
+		63848D311636C86600D6E96D /* robotcharactermc_HandL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D131636C86500D6E96D /* robotcharactermc_HandL.png */; };
+		63848D321636C86600D6E96D /* robotcharactermc_HandR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */; };
+		63848D331636C86600D6E96D /* robotcharactermc_HandR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D151636C86500D6E96D /* robotcharactermc_HandR.png */; };
+		63848D341636C86600D6E96D /* robotcharactermc_Head-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */; };
+		63848D351636C86600D6E96D /* robotcharactermc_Head.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D171636C86500D6E96D /* robotcharactermc_Head.png */; };
+		63848D361636C86600D6E96D /* robotcharactermc_Leg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */; };
+		63848D371636C86600D6E96D /* robotcharactermc_Leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D191636C86500D6E96D /* robotcharactermc_Leg.png */; };
+		63848D381636C86600D6E96D /* robotcharactermc_NeckBottom-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */; };
+		63848D391636C86600D6E96D /* robotcharactermc_NeckBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */; };
+		63848D3A1636C86600D6E96D /* robotcharactermc_NeckTop-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */; };
+		63848D3B1636C86600D6E96D /* robotcharactermc_NeckTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */; };
+		63848D3C1636C86600D6E96D /* robotcharactermc_ShoulderL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */; };
+		63848D3D1636C86600D6E96D /* robotcharactermc_ShoulderL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */; };
+		63848D3E1636C86600D6E96D /* robotcharactermc_ShoulderR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */; };
+		63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */; };
+		63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */; };
+		63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */; };
 		639D0782162D8D2400A69045 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639D0711162D8CD100A69045 /* libcocos2d.a */; };
 		639D0783162D8D2400A69045 /* libCocosDenshion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639D0715162D8CD100A69045 /* libCocosDenshion.a */; };
 		639D0784162D8D2400A69045 /* libkazmath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639D0717162D8CD100A69045 /* libkazmath.a */; };
-		63FB8EE1162DB45C0036120B /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC3162DB45C0036120B /* robot_animations.xml */; };
-		63FB8EE2162DB45C0036120B /* robot_sheets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC4162DB45C0036120B /* robot_sheets.xml */; };
-		63FB8EE3162DB45C0036120B /* robotcharactermc_ArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC5162DB45C0036120B /* robotcharactermc_ArmL-hd.png */; };
-		63FB8EE4162DB45C0036120B /* robotcharactermc_ArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC6162DB45C0036120B /* robotcharactermc_ArmR-hd.png */; };
-		63FB8EE5162DB45C0036120B /* robotcharactermc_Body-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC7162DB45C0036120B /* robotcharactermc_Body-hd.png */; };
-		63FB8EE6162DB45C0036120B /* robotcharactermc_ForeArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC8162DB45C0036120B /* robotcharactermc_ForeArmL-hd.png */; };
-		63FB8EE7162DB45C0036120B /* robotcharactermc_ForeArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8EC9162DB45C0036120B /* robotcharactermc_ForeArmR-hd.png */; };
-		63FB8EE8162DB45C0036120B /* robotcharactermc_HandL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECA162DB45C0036120B /* robotcharactermc_HandL-hd.png */; };
-		63FB8EE9162DB45C0036120B /* robotcharactermc_HandR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECB162DB45C0036120B /* robotcharactermc_HandR-hd.png */; };
-		63FB8EEA162DB45C0036120B /* robotcharactermc_Head-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECC162DB45C0036120B /* robotcharactermc_Head-hd.png */; };
-		63FB8EEB162DB45C0036120B /* robotcharactermc_Leg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECD162DB45C0036120B /* robotcharactermc_Leg-hd.png */; };
-		63FB8EEC162DB45C0036120B /* robotcharactermc_NeckBottom-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECE162DB45C0036120B /* robotcharactermc_NeckBottom-hd.png */; };
-		63FB8EED162DB45C0036120B /* robotcharactermc_NeckTop-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ECF162DB45C0036120B /* robotcharactermc_NeckTop-hd.png */; };
-		63FB8EEE162DB45C0036120B /* robotcharactermc_ShoulderL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ED0162DB45C0036120B /* robotcharactermc_ShoulderL-hd.png */; };
-		63FB8EEF162DB45C0036120B /* robotcharactermc_ShoulderR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ED1162DB45C0036120B /* robotcharactermc_ShoulderR-hd.png */; };
-		63FB8EF0162DB45C0036120B /* robotcharactermc_Wheel-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8ED2162DB45C0036120B /* robotcharactermc_Wheel-hd.png */; };
-		63FB8F1B162DB5850036120B /* robotcharactermc_ArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F0D162DB5850036120B /* robotcharactermc_ArmL.png */; };
-		63FB8F1C162DB5850036120B /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F0E162DB5850036120B /* robotcharactermc_Wheel.png */; };
-		63FB8F1D162DB5850036120B /* robotcharactermc_Head.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F0F162DB5850036120B /* robotcharactermc_Head.png */; };
-		63FB8F1E162DB5850036120B /* robotcharactermc_Leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F10162DB5850036120B /* robotcharactermc_Leg.png */; };
-		63FB8F1F162DB5850036120B /* robotcharactermc_NeckBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F11162DB5850036120B /* robotcharactermc_NeckBottom.png */; };
-		63FB8F20162DB5850036120B /* robotcharactermc_NeckTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F12162DB5850036120B /* robotcharactermc_NeckTop.png */; };
-		63FB8F21162DB5850036120B /* robotcharactermc_ShoulderL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F13162DB5850036120B /* robotcharactermc_ShoulderL.png */; };
-		63FB8F22162DB5850036120B /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F14162DB5850036120B /* robotcharactermc_ShoulderR.png */; };
-		63FB8F23162DB5850036120B /* robotcharactermc_ArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F15162DB5850036120B /* robotcharactermc_ArmR.png */; };
-		63FB8F24162DB5850036120B /* robotcharactermc_Body.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F16162DB5850036120B /* robotcharactermc_Body.png */; };
-		63FB8F25162DB5850036120B /* robotcharactermc_ForeArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F17162DB5850036120B /* robotcharactermc_ForeArmL.png */; };
-		63FB8F26162DB5850036120B /* robotcharactermc_ForeArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F18162DB5850036120B /* robotcharactermc_ForeArmR.png */; };
-		63FB8F27162DB5850036120B /* robotcharactermc_HandL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F19162DB5850036120B /* robotcharactermc_HandL.png */; };
-		63FB8F28162DB5850036120B /* robotcharactermc_HandR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FB8F1A162DB5850036120B /* robotcharactermc_HandR.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -949,37 +949,37 @@
 		1743796C1512527E00D2EBC4 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
 		1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
 		63252679162DC35F009A3520 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		63848D061636C86500D6E96D /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
+		63848D071636C86500D6E96D /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
+		63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmL-hd.png"; sourceTree = "<group>"; };
+		63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmL.png; sourceTree = "<group>"; };
+		63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmR-hd.png"; sourceTree = "<group>"; };
+		63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmR.png; sourceTree = "<group>"; };
+		63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Body-hd.png"; sourceTree = "<group>"; };
+		63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Body.png; sourceTree = "<group>"; };
+		63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmL-hd.png"; sourceTree = "<group>"; };
+		63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmL.png; sourceTree = "<group>"; };
+		63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmR-hd.png"; sourceTree = "<group>"; };
+		63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmR.png; sourceTree = "<group>"; };
+		63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandL-hd.png"; sourceTree = "<group>"; };
+		63848D131636C86500D6E96D /* robotcharactermc_HandL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandL.png; sourceTree = "<group>"; };
+		63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandR-hd.png"; sourceTree = "<group>"; };
+		63848D151636C86500D6E96D /* robotcharactermc_HandR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandR.png; sourceTree = "<group>"; };
+		63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Head-hd.png"; sourceTree = "<group>"; };
+		63848D171636C86500D6E96D /* robotcharactermc_Head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Head.png; sourceTree = "<group>"; };
+		63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Leg-hd.png"; sourceTree = "<group>"; };
+		63848D191636C86500D6E96D /* robotcharactermc_Leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Leg.png; sourceTree = "<group>"; };
+		63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckBottom-hd.png"; sourceTree = "<group>"; };
+		63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckBottom.png; sourceTree = "<group>"; };
+		63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckTop-hd.png"; sourceTree = "<group>"; };
+		63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckTop.png; sourceTree = "<group>"; };
+		63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderL-hd.png"; sourceTree = "<group>"; };
+		63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderL.png; sourceTree = "<group>"; };
+		63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderR-hd.png"; sourceTree = "<group>"; };
+		63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
+		63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
+		63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
 		639D069A162D8CCE00A69045 /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "libs/cocos2d-iphone-2.0/cocos2d-ios.xcodeproj"; sourceTree = "<group>"; };
-		63FB8EC3162DB45C0036120B /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
-		63FB8EC4162DB45C0036120B /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
-		63FB8EC5162DB45C0036120B /* robotcharactermc_ArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmL-hd.png"; sourceTree = "<group>"; };
-		63FB8EC6162DB45C0036120B /* robotcharactermc_ArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmR-hd.png"; sourceTree = "<group>"; };
-		63FB8EC7162DB45C0036120B /* robotcharactermc_Body-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Body-hd.png"; sourceTree = "<group>"; };
-		63FB8EC8162DB45C0036120B /* robotcharactermc_ForeArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmL-hd.png"; sourceTree = "<group>"; };
-		63FB8EC9162DB45C0036120B /* robotcharactermc_ForeArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmR-hd.png"; sourceTree = "<group>"; };
-		63FB8ECA162DB45C0036120B /* robotcharactermc_HandL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandL-hd.png"; sourceTree = "<group>"; };
-		63FB8ECB162DB45C0036120B /* robotcharactermc_HandR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandR-hd.png"; sourceTree = "<group>"; };
-		63FB8ECC162DB45C0036120B /* robotcharactermc_Head-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Head-hd.png"; sourceTree = "<group>"; };
-		63FB8ECD162DB45C0036120B /* robotcharactermc_Leg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Leg-hd.png"; sourceTree = "<group>"; };
-		63FB8ECE162DB45C0036120B /* robotcharactermc_NeckBottom-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckBottom-hd.png"; sourceTree = "<group>"; };
-		63FB8ECF162DB45C0036120B /* robotcharactermc_NeckTop-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckTop-hd.png"; sourceTree = "<group>"; };
-		63FB8ED0162DB45C0036120B /* robotcharactermc_ShoulderL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderL-hd.png"; sourceTree = "<group>"; };
-		63FB8ED1162DB45C0036120B /* robotcharactermc_ShoulderR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderR-hd.png"; sourceTree = "<group>"; };
-		63FB8ED2162DB45C0036120B /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
-		63FB8F0D162DB5850036120B /* robotcharactermc_ArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmL.png; sourceTree = "<group>"; };
-		63FB8F0E162DB5850036120B /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
-		63FB8F0F162DB5850036120B /* robotcharactermc_Head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Head.png; sourceTree = "<group>"; };
-		63FB8F10162DB5850036120B /* robotcharactermc_Leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Leg.png; sourceTree = "<group>"; };
-		63FB8F11162DB5850036120B /* robotcharactermc_NeckBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckBottom.png; sourceTree = "<group>"; };
-		63FB8F12162DB5850036120B /* robotcharactermc_NeckTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckTop.png; sourceTree = "<group>"; };
-		63FB8F13162DB5850036120B /* robotcharactermc_ShoulderL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderL.png; sourceTree = "<group>"; };
-		63FB8F14162DB5850036120B /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
-		63FB8F15162DB5850036120B /* robotcharactermc_ArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmR.png; sourceTree = "<group>"; };
-		63FB8F16162DB5850036120B /* robotcharactermc_Body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Body.png; sourceTree = "<group>"; };
-		63FB8F17162DB5850036120B /* robotcharactermc_ForeArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmL.png; sourceTree = "<group>"; };
-		63FB8F18162DB5850036120B /* robotcharactermc_ForeArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmR.png; sourceTree = "<group>"; };
-		63FB8F19162DB5850036120B /* robotcharactermc_HandL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandL.png; sourceTree = "<group>"; };
-		63FB8F1A162DB5850036120B /* robotcharactermc_HandR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandR.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1204,36 +1204,36 @@
 		1743794715124CA900D2EBC4 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				63FB8EC3162DB45C0036120B /* robot_animations.xml */,
-				63FB8EC4162DB45C0036120B /* robot_sheets.xml */,
-				63FB8F0D162DB5850036120B /* robotcharactermc_ArmL.png */,
-				63FB8F0E162DB5850036120B /* robotcharactermc_Wheel.png */,
-				63FB8F0F162DB5850036120B /* robotcharactermc_Head.png */,
-				63FB8F10162DB5850036120B /* robotcharactermc_Leg.png */,
-				63FB8F11162DB5850036120B /* robotcharactermc_NeckBottom.png */,
-				63FB8F12162DB5850036120B /* robotcharactermc_NeckTop.png */,
-				63FB8F13162DB5850036120B /* robotcharactermc_ShoulderL.png */,
-				63FB8F14162DB5850036120B /* robotcharactermc_ShoulderR.png */,
-				63FB8F15162DB5850036120B /* robotcharactermc_ArmR.png */,
-				63FB8F16162DB5850036120B /* robotcharactermc_Body.png */,
-				63FB8F17162DB5850036120B /* robotcharactermc_ForeArmL.png */,
-				63FB8F18162DB5850036120B /* robotcharactermc_ForeArmR.png */,
-				63FB8F19162DB5850036120B /* robotcharactermc_HandL.png */,
-				63FB8F1A162DB5850036120B /* robotcharactermc_HandR.png */,
-				63FB8EC5162DB45C0036120B /* robotcharactermc_ArmL-hd.png */,
-				63FB8EC6162DB45C0036120B /* robotcharactermc_ArmR-hd.png */,
-				63FB8EC7162DB45C0036120B /* robotcharactermc_Body-hd.png */,
-				63FB8EC8162DB45C0036120B /* robotcharactermc_ForeArmL-hd.png */,
-				63FB8EC9162DB45C0036120B /* robotcharactermc_ForeArmR-hd.png */,
-				63FB8ECA162DB45C0036120B /* robotcharactermc_HandL-hd.png */,
-				63FB8ECB162DB45C0036120B /* robotcharactermc_HandR-hd.png */,
-				63FB8ECC162DB45C0036120B /* robotcharactermc_Head-hd.png */,
-				63FB8ECD162DB45C0036120B /* robotcharactermc_Leg-hd.png */,
-				63FB8ECE162DB45C0036120B /* robotcharactermc_NeckBottom-hd.png */,
-				63FB8ECF162DB45C0036120B /* robotcharactermc_NeckTop-hd.png */,
-				63FB8ED0162DB45C0036120B /* robotcharactermc_ShoulderL-hd.png */,
-				63FB8ED1162DB45C0036120B /* robotcharactermc_ShoulderR-hd.png */,
-				63FB8ED2162DB45C0036120B /* robotcharactermc_Wheel-hd.png */,
+				63848D061636C86500D6E96D /* robot_animations.xml */,
+				63848D071636C86500D6E96D /* robot_sheets.xml */,
+				63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */,
+				63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */,
+				63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */,
+				63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */,
+				63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */,
+				63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */,
+				63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */,
+				63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */,
+				63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */,
+				63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */,
+				63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */,
+				63848D131636C86500D6E96D /* robotcharactermc_HandL.png */,
+				63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */,
+				63848D151636C86500D6E96D /* robotcharactermc_HandR.png */,
+				63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */,
+				63848D171636C86500D6E96D /* robotcharactermc_Head.png */,
+				63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */,
+				63848D191636C86500D6E96D /* robotcharactermc_Leg.png */,
+				63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */,
+				63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */,
+				63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */,
+				63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */,
+				63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */,
+				63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */,
+				63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */,
+				63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */,
+				63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */,
+				63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -2176,37 +2176,37 @@
 				174376E81511F52C00D2EBC4 /* Icon.png in Resources */,
 				174376EA1511F52C00D2EBC4 /* Icon@2x.png in Resources */,
 				174376ED1511F52C00D2EBC4 /* iTunesArtwork in Resources */,
-				63FB8EE1162DB45C0036120B /* robot_animations.xml in Resources */,
-				63FB8EE2162DB45C0036120B /* robot_sheets.xml in Resources */,
-				63FB8EE3162DB45C0036120B /* robotcharactermc_ArmL-hd.png in Resources */,
-				63FB8EE4162DB45C0036120B /* robotcharactermc_ArmR-hd.png in Resources */,
-				63FB8EE5162DB45C0036120B /* robotcharactermc_Body-hd.png in Resources */,
-				63FB8EE6162DB45C0036120B /* robotcharactermc_ForeArmL-hd.png in Resources */,
-				63FB8EE7162DB45C0036120B /* robotcharactermc_ForeArmR-hd.png in Resources */,
-				63FB8EE8162DB45C0036120B /* robotcharactermc_HandL-hd.png in Resources */,
-				63FB8EE9162DB45C0036120B /* robotcharactermc_HandR-hd.png in Resources */,
-				63FB8EEA162DB45C0036120B /* robotcharactermc_Head-hd.png in Resources */,
-				63FB8EEB162DB45C0036120B /* robotcharactermc_Leg-hd.png in Resources */,
-				63FB8EEC162DB45C0036120B /* robotcharactermc_NeckBottom-hd.png in Resources */,
-				63FB8EED162DB45C0036120B /* robotcharactermc_NeckTop-hd.png in Resources */,
-				63FB8EEE162DB45C0036120B /* robotcharactermc_ShoulderL-hd.png in Resources */,
-				63FB8EEF162DB45C0036120B /* robotcharactermc_ShoulderR-hd.png in Resources */,
-				63FB8EF0162DB45C0036120B /* robotcharactermc_Wheel-hd.png in Resources */,
-				63FB8F1B162DB5850036120B /* robotcharactermc_ArmL.png in Resources */,
-				63FB8F1C162DB5850036120B /* robotcharactermc_Wheel.png in Resources */,
-				63FB8F1D162DB5850036120B /* robotcharactermc_Head.png in Resources */,
-				63FB8F1E162DB5850036120B /* robotcharactermc_Leg.png in Resources */,
-				63FB8F1F162DB5850036120B /* robotcharactermc_NeckBottom.png in Resources */,
-				63FB8F20162DB5850036120B /* robotcharactermc_NeckTop.png in Resources */,
-				63FB8F21162DB5850036120B /* robotcharactermc_ShoulderL.png in Resources */,
-				63FB8F22162DB5850036120B /* robotcharactermc_ShoulderR.png in Resources */,
-				63FB8F23162DB5850036120B /* robotcharactermc_ArmR.png in Resources */,
-				63FB8F24162DB5850036120B /* robotcharactermc_Body.png in Resources */,
-				63FB8F25162DB5850036120B /* robotcharactermc_ForeArmL.png in Resources */,
-				63FB8F26162DB5850036120B /* robotcharactermc_ForeArmR.png in Resources */,
-				63FB8F27162DB5850036120B /* robotcharactermc_HandL.png in Resources */,
-				63FB8F28162DB5850036120B /* robotcharactermc_HandR.png in Resources */,
 				6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */,
+				63848D241636C86500D6E96D /* robot_animations.xml in Resources */,
+				63848D251636C86500D6E96D /* robot_sheets.xml in Resources */,
+				63848D261636C86500D6E96D /* robotcharactermc_ArmL-hd.png in Resources */,
+				63848D271636C86500D6E96D /* robotcharactermc_ArmL.png in Resources */,
+				63848D281636C86500D6E96D /* robotcharactermc_ArmR-hd.png in Resources */,
+				63848D291636C86500D6E96D /* robotcharactermc_ArmR.png in Resources */,
+				63848D2A1636C86500D6E96D /* robotcharactermc_Body-hd.png in Resources */,
+				63848D2B1636C86500D6E96D /* robotcharactermc_Body.png in Resources */,
+				63848D2C1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png in Resources */,
+				63848D2D1636C86600D6E96D /* robotcharactermc_ForeArmL.png in Resources */,
+				63848D2E1636C86600D6E96D /* robotcharactermc_ForeArmR-hd.png in Resources */,
+				63848D2F1636C86600D6E96D /* robotcharactermc_ForeArmR.png in Resources */,
+				63848D301636C86600D6E96D /* robotcharactermc_HandL-hd.png in Resources */,
+				63848D311636C86600D6E96D /* robotcharactermc_HandL.png in Resources */,
+				63848D321636C86600D6E96D /* robotcharactermc_HandR-hd.png in Resources */,
+				63848D331636C86600D6E96D /* robotcharactermc_HandR.png in Resources */,
+				63848D341636C86600D6E96D /* robotcharactermc_Head-hd.png in Resources */,
+				63848D351636C86600D6E96D /* robotcharactermc_Head.png in Resources */,
+				63848D361636C86600D6E96D /* robotcharactermc_Leg-hd.png in Resources */,
+				63848D371636C86600D6E96D /* robotcharactermc_Leg.png in Resources */,
+				63848D381636C86600D6E96D /* robotcharactermc_NeckBottom-hd.png in Resources */,
+				63848D391636C86600D6E96D /* robotcharactermc_NeckBottom.png in Resources */,
+				63848D3A1636C86600D6E96D /* robotcharactermc_NeckTop-hd.png in Resources */,
+				63848D3B1636C86600D6E96D /* robotcharactermc_NeckTop.png in Resources */,
+				63848D3C1636C86600D6E96D /* robotcharactermc_ShoulderL-hd.png in Resources */,
+				63848D3D1636C86600D6E96D /* robotcharactermc_ShoulderL.png in Resources */,
+				63848D3E1636C86600D6E96D /* robotcharactermc_ShoulderR-hd.png in Resources */,
+				63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */,
+				63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */,
+				63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2296,6 +2296,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2317,6 +2318,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = F2C_RobotTutorial/Prefix.pch;

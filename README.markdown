@@ -3,7 +3,7 @@ FlashToCocos2D
 
 
 This tool provides a fast way of reusing animations made in Flash CS in Cocos2D projects.
-A minimaly tweaked version of the amazing exporter by [Grapefrukt](https://github.com/grapefrukt/grapefrukt-export) provides a way to export all the animation information (position, rotation, scale, alpha) of a Flash made character to xml.
+A minimally tweaked version of the amazing exporter by [Grapefrukt](https://github.com/grapefrukt/grapefrukt-export) provides a way to export all the animation information (position, rotation, scale, alpha) of a Flash made character to xml.
 The FlashToCocos iOS library reads those xml files and recreates the characters in Cocos2D.
 
 <h2>Basic workflow:</h2>
@@ -14,8 +14,9 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 - every animation has to have a keyframe labeled with an unique name. (IE: "*dancing*", "*running*"....) there is a minimum of one label. 
 - to launch custom events during an animation, you can use keyframes labels prefixed with @. (IE: "*@launchSound*")
 - select 'Export for Actionscript' for your character MovieClip
-- add the Grapefukrt exporting code on the first frame:
+- add Grapefrukt exporting code on the first frame.  two sample uses:
 
+	<h4>1) exports for retina</h4>
 	```actionscript
 	import com.grapefrukt.exporter.simple.SimpleExport;
 	import com.grapefrukt.exporter.extractors.*;
@@ -25,19 +26,40 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	export.textures.add(TextureExtractor.extract(new RobotCharacterMc)); 
 	AnimationExtractor.extract(export.animations, new RobotCharacterMc);
 	export.export();
+	```	
+	<h4>2) exports for retina and non-retina</h4>
+	```actionscript
+	import com.grapefrukt.exporter.simple.*;
+	import com.grapefrukt.exporter.extractors.*;
+	import com.grapefrukt.exporter.textures.*;
+
+	const SCALE_RETINA = 1;
+	const SCALE_NON_RETINA = .5;
+	const COCOS_RETINA_EXT:String = "-hd";
+
+	// change robot for whatever name you want to use
+	var export:FTCSimpleExport = new FTCSimpleExport(this, "robot"); 
+
+	// change RobotCharacterMc for whatever name your MovieClip is in the library
+	AnimationExtractor.extract(export.animations, new RobotCharacterMc, null, true, 1);
+	var textureSheetRetina:TextureSheet = TextureExtractor.extract(new RobotCharacterMc, null, false, null, true, SCALE_RETINA, FTCBitmapTexture, COCOS_RETINA_EXT);
+	var textureSheetNonRetina:TextureSheet = TextureExtractor.extract(new RobotCharacterMc, null, false, null, true, SCALE_NON_RETINA);
+
+	export.texturesFile.add(textureSheetRetina); 
+	export.texturesArt.add(textureSheetRetina); 
+	export.texturesArt.add(textureSheetNonRetina); 
+
+	export.export();	
 	```
 <p>
-- update publish settings with required libraries:
+- update publish settings with required Library path:
 
-	+  ...path to library.../as3swf/bin/as3swf.swc
-	+  ...path to library.../blooddy-read-only/blooddy_crypto/libs/blooddy_crypto.swc
-	+  ...path to library.../fzip/bin/fzip.swc
+	+  path to library... grapefrukt/lib-swc
 </p>
 <p>
-- update publish settings with required source paths:
+- update publish settings with required Source Path:
 
-	+  ...path to library.../Flash2Cocos2D/grapefrukt/src
-	+  ...path to library.../blooddy-read-only/blooddy_crypto/src-as
+	+  path to library...  grapefrukt/src
 </p>
 <p>
 - publish

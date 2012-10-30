@@ -54,12 +54,12 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 <p>
 - update publish settings with required Library path:
 
-	+  path to library... grapefrukt/lib-swc
+	+  path to Flash2Cocos project... Flash2Cocos2D/example/flash/libs/
 </p>
 <p>
 - update publish settings with required Source Path:
 
-	+  path to library...  grapefrukt/src
+	+  path to Flash2Cocos project...  Flash2Cocos2D/example/flash/libs/
 </p>
 <p>
 - publish

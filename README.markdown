@@ -57,11 +57,6 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	+  path to Flash2Cocos project... Flash2Cocos2D/example/flash/libs/
 </p>
 <p>
-- update publish settings with required Source Path:
-
-	+  path to Flash2Cocos project...  Flash2Cocos2D/example/flash/libs/
-</p>
-<p>
 - publish
 - on the top left corner click on "*click to output*"
 - save the zip file

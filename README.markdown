@@ -6,8 +6,6 @@ This tool provides a fast way of reusing animations made in Flash CS in Cocos2D 
 A minimally tweaked version of the amazing exporter by [Grapefrukt](https://github.com/grapefrukt/grapefrukt-export) provides a way to export all the animation information (position, rotation, scale, alpha) of a Flash made character to xml.
 The FlashToCocos iOS library reads those xml files and recreates the characters in Cocos2D.
 
-to run the example project you need to have CocoaPods installed (http://cocoapods.org/).  imagine them as a cleaner way to submodule.  open that project using the xcworkspace file.
-
 <h2>Basic workflow:</h2>
 
 <h3>FLASH SIDE:</h3>

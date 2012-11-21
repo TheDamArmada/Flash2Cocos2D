@@ -1,0 +1,1 @@
+../../cocos2d/cocos2d/CCParticleSystemQuad.h

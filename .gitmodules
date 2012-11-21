@@ -1,9 +1,0 @@
-[submodule "example/F2C_RobotTutorial/F2C_RobotTutorial/libs"]
-	path = example/F2C_RobotTutorial/F2C_RobotTutorial/libs
-	url = https://github.com/cocos2d/cocos2d-iphone.git
-[submodule "example/F2C_RobotTutorial/F2C_RobotTutorial/libs/cocos2d-iphone"]
-	path = example/F2C_RobotTutorial/F2C_RobotTutorial/libs/cocos2d-iphone
-	url = https://github.com/cocos2d/cocos2d-iphone.git
-[submodule "example/F2C_RobotTutorial/F2C_RobotTutorial/libs/cocos2d-iphone-2.0"]
-	path = example/F2C_RobotTutorial/F2C_RobotTutorial/libs/cocos2d-iphone-2.0
-	url = https://github.com/cocos2d/cocos2d-iphone.git

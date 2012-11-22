@@ -68,7 +68,7 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 - start a Cocos2D project
 - enabled ARC following this [instructions](http://www.tinytimgames.com/2011/07/22/cocos2d-and-arc/)
 - add the FlashToCocos Library
-- add the [TBXML Library](http://tbxml.co.uk/)
+- add the [TBXML Library](http://tbxml.co.uk/) if you haven't installed CocoaPods.  (if you have CocoaPods it's already in Flash2Cocos2D/example/F2C_RobotTutorial/Pods/TBXML.)
 - add the results of unzipping the file created from Flash
 
 

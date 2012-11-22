@@ -34,10 +34,7 @@
 		174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */; };
 		174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EF1511F7DF00D2EBC4 /* FTCParser.m */; };
 		174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378F11511F7DF00D2EBC4 /* FTCSprite.m */; };
-		174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378FD1511F7F000D2EBC4 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		174379021511F89000D2EBC4 /* CCRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 174379011511F89000D2EBC4 /* CCRobot.m */; };
-		1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796B1512527E00D2EBC4 /* TBXML+Compression.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		39BEF0C6FE4B47B1BFB851CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF18101D5D34F2D98DFA5BE /* libPods.a */; };
 		6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63252679162DC35F009A3520 /* Default-568h@2x.png */; };
 		63848D241636C86500D6E96D /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D061636C86500D6E96D /* robot_animations.xml */; };
@@ -113,14 +110,8 @@
 		174378EF1511F7DF00D2EBC4 /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCParser.m; sourceTree = "<group>"; };
 		174378F01511F7DF00D2EBC4 /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCSprite.h; sourceTree = "<group>"; };
 		174378F11511F7DF00D2EBC4 /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCSprite.m; sourceTree = "<group>"; };
-		174378FC1511F7F000D2EBC4 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		174378FD1511F7F000D2EBC4 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		174379001511F89000D2EBC4 /* CCRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRobot.h; sourceTree = "<group>"; };
 		174379011511F89000D2EBC4 /* CCRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRobot.m; sourceTree = "<group>"; };
-		1743796A1512527E00D2EBC4 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
-		1743796B1512527E00D2EBC4 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
-		1743796C1512527E00D2EBC4 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
-		1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
 		63252679162DC35F009A3520 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		63848D061636C86500D6E96D /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
 		63848D071636C86500D6E96D /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
@@ -198,7 +189,6 @@
 		174376C81511F52C00D2EBC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				174378F91511F7F000D2EBC4 /* TBXML */,
 				174378E31511F7DF00D2EBC4 /* FlashToCocosARC */,
 				174376C91511F52C00D2EBC4 /* QuartzCore.framework */,
 				174376CB1511F52C00D2EBC4 /* OpenGLES.framework */,
@@ -292,19 +282,6 @@
 				174378F11511F7DF00D2EBC4 /* FTCSprite.m */,
 			);
 			path = FlashToCocosARC;
-			sourceTree = "<group>";
-		};
-		174378F91511F7F000D2EBC4 /* TBXML */ = {
-			isa = PBXGroup;
-			children = (
-				1743796A1512527E00D2EBC4 /* TBXML+Compression.h */,
-				1743796B1512527E00D2EBC4 /* TBXML+Compression.m */,
-				1743796C1512527E00D2EBC4 /* TBXML+HTTP.h */,
-				1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */,
-				174378FC1511F7F000D2EBC4 /* TBXML.h */,
-				174378FD1511F7F000D2EBC4 /* TBXML.m */,
-			);
-			path = TBXML;
 			sourceTree = "<group>";
 		};
 		1743794715124CA900D2EBC4 /* data */ = {
@@ -473,10 +450,7 @@
 				174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */,
 				174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */,
 				174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */,
-				174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */,
 				174379021511F89000D2EBC4 /* CCRobot.m in Sources */,
-				1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */,
-				1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,12 +506,15 @@
 				GCC_PREFIX_HEADER = F2C_RobotTutorial/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/cocos2d/**";
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
+					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
+				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/cocos2d/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/TBXML\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -554,12 +531,15 @@
 				GCC_PREFIX_HEADER = F2C_RobotTutorial/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/cocos2d/**";
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
+					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
+				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/cocos2d/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/TBXML\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

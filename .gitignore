@@ -4,6 +4,7 @@
 *.DS_Store
 
 # Xcode
+example/F2C_RobotTutorial/DerivedData
 example/F2C_RobotTutorial/DerivedData/
 *.pbxuser
 *.mode1v3
@@ -12,6 +13,7 @@ example/F2C_RobotTutorial/DerivedData/
 *.xcuserstate
 project.xcworkspace/
 xcuserdata/
+*.xcbkptlist
 
 # Generated files
 build/

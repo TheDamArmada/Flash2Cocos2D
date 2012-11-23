@@ -41,7 +41,7 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	var export:FTCSimpleExport = new FTCSimpleExport(this, "robot"); 
 
 	// change RobotCharacterMc for whatever name your MovieClip is in the library
-	AnimationExtractor.extract(export.animations, new RobotCharacterMc, null, true, 1);
+	AnimationExtractor.extract(export.animations, new RobotCharacterMc, null, stage.frameRate, true, 1);
 	var textureSheetRetina:TextureSheet = TextureExtractor.extract(new RobotCharacterMc, null, false, null, true, SCALE_RETINA, FTCBitmapTexture, COCOS_RETINA_EXT);
 	var textureSheetNonRetina:TextureSheet = TextureExtractor.extract(new RobotCharacterMc, null, false, null, true, SCALE_NON_RETINA);
 

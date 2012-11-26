@@ -27,13 +27,6 @@
 		1743782D1511F52E00D2EBC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743782C1511F52E00D2EBC4 /* main.m */; };
 		174378301511F52E00D2EBC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743782F1511F52E00D2EBC4 /* AppDelegate.m */; };
 		174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378351511F52E00D2EBC4 /* HelloWorldLayer.m */; };
-		174378F21511F7DF00D2EBC4 /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */; };
-		174378F31511F7DF00D2EBC4 /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */; };
-		174378F41511F7DF00D2EBC4 /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E91511F7DF00D2EBC4 /* FTCCharacter.m */; };
-		174378F51511F7DF00D2EBC4 /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */; };
-		174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */; };
-		174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EF1511F7DF00D2EBC4 /* FTCParser.m */; };
-		174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378F11511F7DF00D2EBC4 /* FTCSprite.m */; };
 		174379021511F89000D2EBC4 /* CCRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 174379011511F89000D2EBC4 /* CCRobot.m */; };
 		39BEF0C6FE4B47B1BFB851CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF18101D5D34F2D98DFA5BE /* libPods.a */; };
 		6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63252679162DC35F009A3520 /* Default-568h@2x.png */; };
@@ -67,6 +60,17 @@
 		63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */; };
 		63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */; };
 		63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */; };
+		63BDD2C51663D763002421B6 /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */; };
+		63BDD2C61663D763002421B6 /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */; };
+		63BDD2C71663D763002421B6 /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BC1663D763002421B6 /* FTCCharacter.m */; };
+		63BDD2C81663D763002421B6 /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BE1663D763002421B6 /* FTCEventInfo.m */; };
+		63BDD2C91663D763002421B6 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C01663D763002421B6 /* FTCFrameInfo.m */; };
+		63BDD2CA1663D763002421B6 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C21663D763002421B6 /* FTCParser.m */; };
+		63BDD2CB1663D763002421B6 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C41663D763002421B6 /* FTCSprite.m */; };
+		63BDD2D61663D795002421B6 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 63BDD2CD1663D795002421B6 /* README.markdown */; };
+		63BDD2D71663D795002421B6 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2CF1663D795002421B6 /* TBXML+Compression.m */; };
+		63BDD2D81663D795002421B6 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2D01663D795002421B6 /* TBXML+HTTP.m */; };
+		63BDD2D91663D795002421B6 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2D11663D795002421B6 /* TBXML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,20 +100,6 @@
 		174378341511F52E00D2EBC4 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		174378351511F52E00D2EBC4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		174378371511F52E00D2EBC4 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		174378E41511F7DF00D2EBC4 /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimationInfo.h; sourceTree = "<group>"; };
-		174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimationInfo.m; sourceTree = "<group>"; };
-		174378E61511F7DF00D2EBC4 /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimEvent.h; sourceTree = "<group>"; };
-		174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimEvent.m; sourceTree = "<group>"; };
-		174378E81511F7DF00D2EBC4 /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCCharacter.h; sourceTree = "<group>"; };
-		174378E91511F7DF00D2EBC4 /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCCharacter.m; sourceTree = "<group>"; };
-		174378EA1511F7DF00D2EBC4 /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCEventInfo.h; sourceTree = "<group>"; };
-		174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCEventInfo.m; sourceTree = "<group>"; };
-		174378EC1511F7DF00D2EBC4 /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCFrameInfo.h; sourceTree = "<group>"; };
-		174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCFrameInfo.m; sourceTree = "<group>"; };
-		174378EE1511F7DF00D2EBC4 /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCParser.h; sourceTree = "<group>"; };
-		174378EF1511F7DF00D2EBC4 /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCParser.m; sourceTree = "<group>"; };
-		174378F01511F7DF00D2EBC4 /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCSprite.h; sourceTree = "<group>"; };
-		174378F11511F7DF00D2EBC4 /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCSprite.m; sourceTree = "<group>"; };
 		174379001511F89000D2EBC4 /* CCRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRobot.h; sourceTree = "<group>"; };
 		174379011511F89000D2EBC4 /* CCRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRobot.m; sourceTree = "<group>"; };
 		63252679162DC35F009A3520 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -143,6 +133,27 @@
 		63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
 		63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
 		63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
+		63BDD2B71663D763002421B6 /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimationInfo.h; sourceTree = "<group>"; };
+		63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimationInfo.m; sourceTree = "<group>"; };
+		63BDD2B91663D763002421B6 /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimEvent.h; sourceTree = "<group>"; };
+		63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimEvent.m; sourceTree = "<group>"; };
+		63BDD2BB1663D763002421B6 /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCCharacter.h; sourceTree = "<group>"; };
+		63BDD2BC1663D763002421B6 /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCCharacter.m; sourceTree = "<group>"; };
+		63BDD2BD1663D763002421B6 /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCEventInfo.h; sourceTree = "<group>"; };
+		63BDD2BE1663D763002421B6 /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCEventInfo.m; sourceTree = "<group>"; };
+		63BDD2BF1663D763002421B6 /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCFrameInfo.h; sourceTree = "<group>"; };
+		63BDD2C01663D763002421B6 /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCFrameInfo.m; sourceTree = "<group>"; };
+		63BDD2C11663D763002421B6 /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCParser.h; sourceTree = "<group>"; };
+		63BDD2C21663D763002421B6 /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCParser.m; sourceTree = "<group>"; };
+		63BDD2C31663D763002421B6 /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCSprite.h; sourceTree = "<group>"; };
+		63BDD2C41663D763002421B6 /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCSprite.m; sourceTree = "<group>"; };
+		63BDD2CD1663D795002421B6 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		63BDD2CF1663D795002421B6 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
+		63BDD2D01663D795002421B6 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
+		63BDD2D11663D795002421B6 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		63BDD2D31663D795002421B6 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
+		63BDD2D41663D795002421B6 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
+		63BDD2D51663D795002421B6 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
 		686ED183BE17470FB2C92EAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		ECF18101D5D34F2D98DFA5BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,7 +200,6 @@
 		174376C81511F52C00D2EBC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				174378E31511F7DF00D2EBC4 /* FlashToCocosARC */,
 				174376C91511F52C00D2EBC4 /* QuartzCore.framework */,
 				174376CB1511F52C00D2EBC4 /* OpenGLES.framework */,
 				174376CD1511F52C00D2EBC4 /* OpenAL.framework */,
@@ -241,6 +251,8 @@
 		174376EE1511F52C00D2EBC4 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				63BDD2CC1663D795002421B6 /* TBXML */,
+				63BDD2B61663D763002421B6 /* FlashToCocosARC */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -261,27 +273,6 @@
 			);
 			name = Robot;
 			path = Resources/Robot;
-			sourceTree = "<group>";
-		};
-		174378E31511F7DF00D2EBC4 /* FlashToCocosARC */ = {
-			isa = PBXGroup;
-			children = (
-				174378E41511F7DF00D2EBC4 /* FTCAnimationInfo.h */,
-				174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */,
-				174378E61511F7DF00D2EBC4 /* FTCAnimEvent.h */,
-				174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */,
-				174378E81511F7DF00D2EBC4 /* FTCCharacter.h */,
-				174378E91511F7DF00D2EBC4 /* FTCCharacter.m */,
-				174378EA1511F7DF00D2EBC4 /* FTCEventInfo.h */,
-				174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */,
-				174378EC1511F7DF00D2EBC4 /* FTCFrameInfo.h */,
-				174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */,
-				174378EE1511F7DF00D2EBC4 /* FTCParser.h */,
-				174378EF1511F7DF00D2EBC4 /* FTCParser.m */,
-				174378F01511F7DF00D2EBC4 /* FTCSprite.h */,
-				174378F11511F7DF00D2EBC4 /* FTCSprite.m */,
-			);
-			path = FlashToCocosARC;
 			sourceTree = "<group>";
 		};
 		1743794715124CA900D2EBC4 /* data */ = {
@@ -319,6 +310,58 @@
 				63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		63BDD2B61663D763002421B6 /* FlashToCocosARC */ = {
+			isa = PBXGroup;
+			children = (
+				63BDD2B71663D763002421B6 /* FTCAnimationInfo.h */,
+				63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */,
+				63BDD2B91663D763002421B6 /* FTCAnimEvent.h */,
+				63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */,
+				63BDD2BB1663D763002421B6 /* FTCCharacter.h */,
+				63BDD2BC1663D763002421B6 /* FTCCharacter.m */,
+				63BDD2BD1663D763002421B6 /* FTCEventInfo.h */,
+				63BDD2BE1663D763002421B6 /* FTCEventInfo.m */,
+				63BDD2BF1663D763002421B6 /* FTCFrameInfo.h */,
+				63BDD2C01663D763002421B6 /* FTCFrameInfo.m */,
+				63BDD2C11663D763002421B6 /* FTCParser.h */,
+				63BDD2C21663D763002421B6 /* FTCParser.m */,
+				63BDD2C31663D763002421B6 /* FTCSprite.h */,
+				63BDD2C41663D763002421B6 /* FTCSprite.m */,
+			);
+			path = FlashToCocosARC;
+			sourceTree = SOURCE_ROOT;
+		};
+		63BDD2CC1663D795002421B6 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				63BDD2CD1663D795002421B6 /* README.markdown */,
+				63BDD2CE1663D795002421B6 /* TBXML-Code */,
+				63BDD2D21663D795002421B6 /* TBXML-Headers */,
+			);
+			name = TBXML;
+			path = ../../../Pods/TBXML;
+			sourceTree = "<group>";
+		};
+		63BDD2CE1663D795002421B6 /* TBXML-Code */ = {
+			isa = PBXGroup;
+			children = (
+				63BDD2CF1663D795002421B6 /* TBXML+Compression.m */,
+				63BDD2D01663D795002421B6 /* TBXML+HTTP.m */,
+				63BDD2D11663D795002421B6 /* TBXML.m */,
+			);
+			path = "TBXML-Code";
+			sourceTree = "<group>";
+		};
+		63BDD2D21663D795002421B6 /* TBXML-Headers */ = {
+			isa = PBXGroup;
+			children = (
+				63BDD2D31663D795002421B6 /* TBXML+Compression.h */,
+				63BDD2D41663D795002421B6 /* TBXML+HTTP.h */,
+				63BDD2D51663D795002421B6 /* TBXML.h */,
+			);
+			path = "TBXML-Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +456,7 @@
 				63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */,
 				63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */,
 				63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */,
+				63BDD2D61663D795002421B6 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,14 +487,17 @@
 				1743782D1511F52E00D2EBC4 /* main.m in Sources */,
 				174378301511F52E00D2EBC4 /* AppDelegate.m in Sources */,
 				174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */,
-				174378F21511F7DF00D2EBC4 /* FTCAnimationInfo.m in Sources */,
-				174378F31511F7DF00D2EBC4 /* FTCAnimEvent.m in Sources */,
-				174378F41511F7DF00D2EBC4 /* FTCCharacter.m in Sources */,
-				174378F51511F7DF00D2EBC4 /* FTCEventInfo.m in Sources */,
-				174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */,
-				174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */,
-				174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */,
 				174379021511F89000D2EBC4 /* CCRobot.m in Sources */,
+				63BDD2C51663D763002421B6 /* FTCAnimationInfo.m in Sources */,
+				63BDD2C61663D763002421B6 /* FTCAnimEvent.m in Sources */,
+				63BDD2C71663D763002421B6 /* FTCCharacter.m in Sources */,
+				63BDD2C81663D763002421B6 /* FTCEventInfo.m in Sources */,
+				63BDD2C91663D763002421B6 /* FTCFrameInfo.m in Sources */,
+				63BDD2CA1663D763002421B6 /* FTCParser.m in Sources */,
+				63BDD2CB1663D763002421B6 /* FTCSprite.m in Sources */,
+				63BDD2D71663D795002421B6 /* TBXML+Compression.m in Sources */,
+				63BDD2D81663D795002421B6 /* TBXML+HTTP.m in Sources */,
+				63BDD2D91663D795002421B6 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,14 +554,15 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/../../Pods/TBXML/TBXML-Headers\"/**",
+					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
 					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
-					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
 				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/TBXML\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\" \"${PROJECT_DIR}/../../Pods/TBXML/TBXML-Headers\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -532,14 +580,15 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/../../Pods/TBXML/TBXML-Headers\"/**",
+					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
 					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
-					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
 				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods/TBXML\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\" \"${PROJECT_DIR}/../../Pods/TBXML/TBXML-Headers\"/** \"${PROJECT_DIR}/Pods/cocos2d\"/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

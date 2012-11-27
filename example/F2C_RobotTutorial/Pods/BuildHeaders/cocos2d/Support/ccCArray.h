@@ -1,1 +1,0 @@
-../../../cocos2d/cocos2d/Support/ccCArray.h

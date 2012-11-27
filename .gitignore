@@ -2,10 +2,10 @@
 
 # Mac OS X
 *.DS_Store
+profile
 
 # Xcode
-example/F2C_RobotTutorial/DerivedData
-example/F2C_RobotTutorial/DerivedData/
+DerivedData/
 *.pbxuser
 *.mode1v3
 *.mode2v3
@@ -16,9 +16,30 @@ xcuserdata/
 *.xcbkptlist
 
 # Generated files
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+# Xcode 4
+xcuserdata/
+project.xcworkspace/
+# Generated files
+VersionX-revision.h
+# build products
 build/
 *.[oa]
-*.pyc
+Pods/
+*.lock
 
-# Backup files
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+# automatic backup files
 *~.nib
+*.swp
+*~
+*(Autosaved).rtfd/

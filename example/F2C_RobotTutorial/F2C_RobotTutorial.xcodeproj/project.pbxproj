@@ -29,6 +29,13 @@
 		174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378351511F52E00D2EBC4 /* HelloWorldLayer.m */; };
 		174379021511F89000D2EBC4 /* CCRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 174379011511F89000D2EBC4 /* CCRobot.m */; };
 		39BEF0C6FE4B47B1BFB851CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF18101D5D34F2D98DFA5BE /* libPods.a */; };
+		631964531664D113007633EA /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644C1664D113007633EA /* FTCAnimationInfo.m */; };
+		631964541664D113007633EA /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644D1664D113007633EA /* FTCAnimEvent.m */; };
+		631964551664D113007633EA /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644E1664D113007633EA /* FTCCharacter.m */; };
+		631964561664D113007633EA /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644F1664D113007633EA /* FTCEventInfo.m */; };
+		631964571664D113007633EA /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964501664D113007633EA /* FTCFrameInfo.m */; };
+		631964581664D113007633EA /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964511664D113007633EA /* FTCParser.m */; };
+		631964591664D113007633EA /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964521664D113007633EA /* FTCSprite.m */; };
 		6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63252679162DC35F009A3520 /* Default-568h@2x.png */; };
 		63848D241636C86500D6E96D /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D061636C86500D6E96D /* robot_animations.xml */; };
 		63848D251636C86500D6E96D /* robot_sheets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D071636C86500D6E96D /* robot_sheets.xml */; };
@@ -60,13 +67,6 @@
 		63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */; };
 		63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */; };
 		63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */; };
-		63BDD2C51663D763002421B6 /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */; };
-		63BDD2C61663D763002421B6 /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */; };
-		63BDD2C71663D763002421B6 /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BC1663D763002421B6 /* FTCCharacter.m */; };
-		63BDD2C81663D763002421B6 /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2BE1663D763002421B6 /* FTCEventInfo.m */; };
-		63BDD2C91663D763002421B6 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C01663D763002421B6 /* FTCFrameInfo.m */; };
-		63BDD2CA1663D763002421B6 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C21663D763002421B6 /* FTCParser.m */; };
-		63BDD2CB1663D763002421B6 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BDD2C41663D763002421B6 /* FTCSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +98,13 @@
 		174378371511F52E00D2EBC4 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		174379001511F89000D2EBC4 /* CCRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRobot.h; sourceTree = "<group>"; };
 		174379011511F89000D2EBC4 /* CCRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRobot.m; sourceTree = "<group>"; };
+		6319644C1664D113007633EA /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCAnimationInfo.m; path = ../../../FlashToCocosARC/FTCAnimationInfo.m; sourceTree = "<group>"; };
+		6319644D1664D113007633EA /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCAnimEvent.m; path = ../../../FlashToCocosARC/FTCAnimEvent.m; sourceTree = "<group>"; };
+		6319644E1664D113007633EA /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCCharacter.m; path = ../../../FlashToCocosARC/FTCCharacter.m; sourceTree = "<group>"; };
+		6319644F1664D113007633EA /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCEventInfo.m; path = ../../../FlashToCocosARC/FTCEventInfo.m; sourceTree = "<group>"; };
+		631964501664D113007633EA /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCFrameInfo.m; path = ../../../FlashToCocosARC/FTCFrameInfo.m; sourceTree = "<group>"; };
+		631964511664D113007633EA /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCParser.m; path = ../../../FlashToCocosARC/FTCParser.m; sourceTree = "<group>"; };
+		631964521664D113007633EA /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCSprite.m; path = ../../../FlashToCocosARC/FTCSprite.m; sourceTree = "<group>"; };
 		63252679162DC35F009A3520 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		63848D061636C86500D6E96D /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
 		63848D071636C86500D6E96D /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
@@ -129,20 +136,6 @@
 		63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
 		63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
 		63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
-		63BDD2B71663D763002421B6 /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimationInfo.h; sourceTree = "<group>"; };
-		63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimationInfo.m; sourceTree = "<group>"; };
-		63BDD2B91663D763002421B6 /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimEvent.h; sourceTree = "<group>"; };
-		63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimEvent.m; sourceTree = "<group>"; };
-		63BDD2BB1663D763002421B6 /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCCharacter.h; sourceTree = "<group>"; };
-		63BDD2BC1663D763002421B6 /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCCharacter.m; sourceTree = "<group>"; };
-		63BDD2BD1663D763002421B6 /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCEventInfo.h; sourceTree = "<group>"; };
-		63BDD2BE1663D763002421B6 /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCEventInfo.m; sourceTree = "<group>"; };
-		63BDD2BF1663D763002421B6 /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCFrameInfo.h; sourceTree = "<group>"; };
-		63BDD2C01663D763002421B6 /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCFrameInfo.m; sourceTree = "<group>"; };
-		63BDD2C11663D763002421B6 /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCParser.h; sourceTree = "<group>"; };
-		63BDD2C21663D763002421B6 /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCParser.m; sourceTree = "<group>"; };
-		63BDD2C31663D763002421B6 /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCSprite.h; sourceTree = "<group>"; };
-		63BDD2C41663D763002421B6 /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCSprite.m; sourceTree = "<group>"; };
 		686ED183BE17470FB2C92EAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		ECF18101D5D34F2D98DFA5BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -240,7 +233,13 @@
 		174376EE1511F52C00D2EBC4 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				63BDD2B61663D763002421B6 /* FlashToCocosARC */,
+				6319644C1664D113007633EA /* FTCAnimationInfo.m */,
+				6319644D1664D113007633EA /* FTCAnimEvent.m */,
+				6319644E1664D113007633EA /* FTCCharacter.m */,
+				6319644F1664D113007633EA /* FTCEventInfo.m */,
+				631964501664D113007633EA /* FTCFrameInfo.m */,
+				631964511664D113007633EA /* FTCParser.m */,
+				631964521664D113007633EA /* FTCSprite.m */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -299,27 +298,6 @@
 			);
 			path = data;
 			sourceTree = "<group>";
-		};
-		63BDD2B61663D763002421B6 /* FlashToCocosARC */ = {
-			isa = PBXGroup;
-			children = (
-				63BDD2B71663D763002421B6 /* FTCAnimationInfo.h */,
-				63BDD2B81663D763002421B6 /* FTCAnimationInfo.m */,
-				63BDD2B91663D763002421B6 /* FTCAnimEvent.h */,
-				63BDD2BA1663D763002421B6 /* FTCAnimEvent.m */,
-				63BDD2BB1663D763002421B6 /* FTCCharacter.h */,
-				63BDD2BC1663D763002421B6 /* FTCCharacter.m */,
-				63BDD2BD1663D763002421B6 /* FTCEventInfo.h */,
-				63BDD2BE1663D763002421B6 /* FTCEventInfo.m */,
-				63BDD2BF1663D763002421B6 /* FTCFrameInfo.h */,
-				63BDD2C01663D763002421B6 /* FTCFrameInfo.m */,
-				63BDD2C11663D763002421B6 /* FTCParser.h */,
-				63BDD2C21663D763002421B6 /* FTCParser.m */,
-				63BDD2C31663D763002421B6 /* FTCSprite.h */,
-				63BDD2C41663D763002421B6 /* FTCSprite.m */,
-			);
-			path = FlashToCocosARC;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -444,13 +422,13 @@
 				174378301511F52E00D2EBC4 /* AppDelegate.m in Sources */,
 				174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */,
 				174379021511F89000D2EBC4 /* CCRobot.m in Sources */,
-				63BDD2C51663D763002421B6 /* FTCAnimationInfo.m in Sources */,
-				63BDD2C61663D763002421B6 /* FTCAnimEvent.m in Sources */,
-				63BDD2C71663D763002421B6 /* FTCCharacter.m in Sources */,
-				63BDD2C81663D763002421B6 /* FTCEventInfo.m in Sources */,
-				63BDD2C91663D763002421B6 /* FTCFrameInfo.m in Sources */,
-				63BDD2CA1663D763002421B6 /* FTCParser.m in Sources */,
-				63BDD2CB1663D763002421B6 /* FTCSprite.m in Sources */,
+				631964531664D113007633EA /* FTCAnimationInfo.m in Sources */,
+				631964541664D113007633EA /* FTCAnimEvent.m in Sources */,
+				631964551664D113007633EA /* FTCCharacter.m in Sources */,
+				631964561664D113007633EA /* FTCEventInfo.m in Sources */,
+				631964571664D113007633EA /* FTCFrameInfo.m in Sources */,
+				631964581664D113007633EA /* FTCParser.m in Sources */,
+				631964591664D113007633EA /* FTCSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

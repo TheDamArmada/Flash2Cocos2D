@@ -1,4 +1,4 @@
-<Animations>
+<Animations frameRate="30">
   <Animation name="move_static" frameCount="10">
     <Part name="ArmL">
       <Frame x="22.88" y="-51.10" rotation="-100.783" index="0"/>
@@ -29,7 +29,7 @@
       <Frame x="1.48" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="18.828" index="1"/>
       <Frame x="1.50" y="-27.65" scaleX="0.999" scaleY="0.999" rotation="18.272" index="2"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="17.036" index="3"/>
-      <Frame x="1.52" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="15.307" index="4"/>
+      <Frame x="1.52" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="15.306" index="4"/>
       <Frame x="1.52" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="13.268" index="5"/>
       <Frame x="1.50" y="-27.65" scaleX="0.999" scaleY="0.999" rotation="10.550" index="6"/>
       <Frame x="1.50" y="-27.65" rotation="7.526" index="7"/>
@@ -63,7 +63,7 @@
     <Part name="HandL">
       <Frame x="48.38" y="-25.23" rotation="-100.782" index="0"/>
       <Frame x="47.90" y="-25.20" scaleX="0.999" scaleY="0.999" rotation="-100.264" index="1"/>
-      <Frame x="46.50" y="-25.23" scaleX="0.999" scaleY="0.999" rotation="-98.759" index="2"/>
+      <Frame x="46.50" y="-25.23" scaleX="0.999" scaleY="0.999" rotation="-98.758" index="2"/>
       <Frame x="44.10" y="-25.13" rotation="-96.253" index="3"/>
       <Frame x="40.80" y="-25.10" rotation="-92.556" index="4"/>
       <Frame x="36.58" y="-25.02" rotation="-88.237" index="5"/>
@@ -90,7 +90,7 @@
       <Frame x="38.83" y="-96.30" rotation="4.270" index="2"/>
       <Frame x="37.52" y="-96.78" rotation="4.048" index="3"/>
       <Frame x="35.73" y="-97.42" rotation="3.812" index="4"/>
-      <Frame x="33.40" y="-98.22" rotation="3.562" index="5"/>
+      <Frame x="33.38" y="-98.22" rotation="3.562" index="5"/>
       <Frame x="30.52" y="-99.28" rotation="3.298" index="6"/>
       <Frame x="27.18" y="-100.47" rotation="3.021" index="7"/>
       <Frame x="23.30" y="-101.88" rotation="2.542" index="8"/>
@@ -129,7 +129,7 @@
       <Frame x="24.05" y="-81.97" scaleX="0.998" scaleY="0.998" rotation="33.619" index="5"/>
       <Frame x="21.30" y="-82.95" scaleX="0.998" scaleY="0.998" rotation="33.355" index="6"/>
       <Frame x="18.05" y="-84.08" scaleX="0.998" scaleY="0.998" rotation="33.076" index="7"/>
-      <Frame x="14.32" y="-85.45" scaleX="0.998" scaleY="0.998" rotation="32.596" index="8"/>
+      <Frame x="14.32" y="-85.45" scaleX="0.999" scaleY="0.999" rotation="32.596" index="8"/>
       <Frame x="10.05" y="-86.92" rotation="32.194" index="9"/>
     </Part>
     <Part name="ShoulderL">
@@ -694,7 +694,7 @@
       <Frame x="-2.92" y="-65.30" rotation="1.260" index="8"/>
       <Frame x="-2.38" y="-65.75" rotation="4.307" index="9"/>
       <Frame x="-1.88" y="-66.15" rotation="7.023" index="10"/>
-      <Frame x="-1.52" y="-66.42" scaleX="0.999" scaleY="0.999" rotation="9.033" index="11"/>
+      <Frame x="-1.52" y="-66.42" scaleX="0.999" scaleY="0.999" rotation="9.031" index="11"/>
       <Frame x="-1.27" y="-66.67" scaleX="0.999" scaleY="0.999" rotation="10.521" index="12"/>
       <Frame x="-1.10" y="-66.78" scaleX="0.999" scaleY="0.999" rotation="11.301" index="13"/>
     </Part>
@@ -704,15 +704,15 @@
       <Frame x="1.50" y="-27.63" rotation="5.026" index="2"/>
       <Frame x="1.50" y="-27.63" rotation="7.279" index="3"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="9.295" index="4"/>
-      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="11.264" index="5"/>
+      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="11.263" index="5"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="12.807" index="6"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="14.303" index="7"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="15.560" index="8"/>
-      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="16.770" index="9"/>
+      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="16.769" index="9"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="17.554" index="10"/>
-      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="18.291" index="11"/>
+      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="18.289" index="11"/>
       <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="18.788" index="12"/>
-      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="19.050" index="13"/>
+      <Frame x="1.50" y="-27.63" scaleX="0.999" scaleY="0.999" rotation="19.049" index="13"/>
     </Part>
     <Part name="ForeArmL">
       <Frame x="-6.75" y="-34.85" rotation="-60.000" index="0"/>
@@ -772,7 +772,7 @@
       <Frame x="-21.30" y="-42.70" scaleX="0.999" scaleY="0.999" rotation="-27.042" index="6"/>
       <Frame x="-22.13" y="-44.65" scaleX="0.999" scaleY="0.999" rotation="-24.838" index="7"/>
       <Frame x="-22.85" y="-46.25" scaleX="0.999" scaleY="0.999" rotation="-23.077" index="8"/>
-      <Frame x="-23.43" y="-47.70" scaleX="0.999" scaleY="0.999" rotation="-21.575" index="9"/>
+      <Frame x="-23.43" y="-47.70" scaleX="0.999" scaleY="0.999" rotation="-21.574" index="9"/>
       <Frame x="-23.93" y="-48.85" scaleX="0.999" scaleY="0.999" rotation="-20.327" index="10"/>
       <Frame x="-24.32" y="-49.75" scaleX="0.999" scaleY="0.999" rotation="-19.526" index="11"/>
       <Frame x="-24.57" y="-50.35" scaleX="0.999" scaleY="0.999" rotation="-18.790" index="12"/>
@@ -784,7 +784,7 @@
       <Frame x="24.48" y="-101.50" rotation="2.760" index="2"/>
       <Frame x="26.93" y="-100.55" rotation="3.013" index="3"/>
       <Frame x="29.15" y="-99.78" rotation="3.261" index="4"/>
-      <Frame x="31.23" y="-99.08" rotation="3.503" index="5"/>
+      <Frame x="31.20" y="-99.08" rotation="3.502" index="5"/>
       <Frame x="33.00" y="-98.40" rotation="3.552" index="6"/>
       <Frame x="34.60" y="-97.78" rotation="3.783" index="7"/>
       <Frame x="35.98" y="-97.30" rotation="4.006" index="8"/>
@@ -812,12 +812,12 @@
     </Part>
     <Part name="NeckBottom">
       <Frame x="5.00" y="-72.60" rotation="20.197" index="0"/>
-      <Frame x="7.00" y="-72.08" scaleX="0.999" scaleY="0.999" rotation="23.582" index="1"/>
+      <Frame x="7.00" y="-72.08" scaleX="0.999" scaleY="0.999" rotation="23.581" index="1"/>
       <Frame x="8.85" y="-71.65" scaleX="0.999" scaleY="0.999" rotation="26.839" index="2"/>
       <Frame x="10.57" y="-71.22" scaleX="0.999" scaleY="0.999" rotation="29.846" index="3"/>
       <Frame x="12.18" y="-70.83" scaleX="0.999" scaleY="0.999" rotation="32.599" index="4"/>
       <Frame x="13.60" y="-70.47" scaleX="0.998" scaleY="0.998" rotation="35.098" index="5"/>
-      <Frame x="14.85" y="-70.13" scaleX="0.998" scaleY="0.998" rotation="37.346" index="6"/>
+      <Frame x="14.85" y="-70.13" scaleX="0.998" scaleY="0.998" rotation="37.345" index="6"/>
       <Frame x="15.97" y="-69.88" scaleX="0.998" scaleY="0.998" rotation="39.339" index="7"/>
       <Frame x="16.95" y="-69.60" scaleX="0.998" scaleY="0.998" rotation="40.890" index="8"/>
       <Frame x="17.77" y="-69.45" scaleX="0.998" scaleY="0.998" rotation="42.378" index="9"/>
@@ -870,7 +870,7 @@
       <Frame x="5.83" y="-64.95" rotation="1.260" index="8"/>
       <Frame x="6.53" y="-64.95" rotation="4.307" index="9"/>
       <Frame x="7.13" y="-64.92" rotation="7.023" index="10"/>
-      <Frame x="7.55" y="-64.90" scaleX="0.999" scaleY="0.999" rotation="9.033" index="11"/>
+      <Frame x="7.55" y="-64.90" scaleX="0.999" scaleY="0.999" rotation="9.031" index="11"/>
       <Frame x="7.88" y="-64.90" scaleX="0.999" scaleY="0.999" rotation="10.521" index="12"/>
       <Frame x="8.05" y="-64.92" scaleX="0.999" scaleY="0.999" rotation="11.301" index="13"/>
     </Part>

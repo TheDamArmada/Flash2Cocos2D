@@ -123,9 +123,9 @@
     
     
     TBXMLElement *_root = _xmlMaster.rootXMLElement;
-
-    
     if (!_root) return NO;
+
+    _character.frameRate = [[TBXML valueOfAttributeNamed:@"frameRate" forElement:_root] floatValue];
     
     
     TBXMLElement *_animation = [TBXML childElementNamed:@"Animation" parentElement:_root];

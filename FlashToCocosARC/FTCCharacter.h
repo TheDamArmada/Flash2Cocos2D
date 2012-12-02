@@ -33,6 +33,7 @@
 @property (unsafe_unretained) id<FTCCharacterDelegate> delegate;
 @property (strong) NSMutableDictionary *childrenTable;
 @property (strong) NSMutableDictionary *animationEventsTable;
+@property float frameRate;
 
 
 

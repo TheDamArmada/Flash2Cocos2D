@@ -136,6 +136,13 @@
 		63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
 		63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
 		63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
+		638D708B166C012B00E6BE7E /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCAnimationInfo.h; path = ../../../FlashToCocosARC/FTCAnimationInfo.h; sourceTree = "<group>"; };
+		638D708C166C012B00E6BE7E /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCAnimEvent.h; path = ../../../FlashToCocosARC/FTCAnimEvent.h; sourceTree = "<group>"; };
+		638D708D166C012B00E6BE7E /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCCharacter.h; path = ../../../FlashToCocosARC/FTCCharacter.h; sourceTree = "<group>"; };
+		638D708E166C012B00E6BE7E /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCEventInfo.h; path = ../../../FlashToCocosARC/FTCEventInfo.h; sourceTree = "<group>"; };
+		638D708F166C012B00E6BE7E /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCFrameInfo.h; path = ../../../FlashToCocosARC/FTCFrameInfo.h; sourceTree = "<group>"; };
+		638D7090166C012B00E6BE7E /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCParser.h; path = ../../../FlashToCocosARC/FTCParser.h; sourceTree = "<group>"; };
+		638D7091166C012B00E6BE7E /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCSprite.h; path = ../../../FlashToCocosARC/FTCSprite.h; sourceTree = "<group>"; };
 		686ED183BE17470FB2C92EAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		ECF18101D5D34F2D98DFA5BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -233,6 +240,13 @@
 		174376EE1511F52C00D2EBC4 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				638D708B166C012B00E6BE7E /* FTCAnimationInfo.h */,
+				638D708C166C012B00E6BE7E /* FTCAnimEvent.h */,
+				638D708D166C012B00E6BE7E /* FTCCharacter.h */,
+				638D708E166C012B00E6BE7E /* FTCEventInfo.h */,
+				638D708F166C012B00E6BE7E /* FTCFrameInfo.h */,
+				638D7090166C012B00E6BE7E /* FTCParser.h */,
+				638D7091166C012B00E6BE7E /* FTCSprite.h */,
 				6319644C1664D113007633EA /* FTCAnimationInfo.m */,
 				6319644D1664D113007633EA /* FTCAnimEvent.m */,
 				6319644E1664D113007633EA /* FTCCharacter.m */,

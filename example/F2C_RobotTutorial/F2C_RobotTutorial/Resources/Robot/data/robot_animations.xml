@@ -1,4 +1,4 @@
-<Animations frameRate="30">
+<Animations>
   <Animation name="move_static" frameCount="10">
     <Part name="ArmL">
       <Frame x="22.88" y="-51.10" rotation="-100.783" index="0"/>

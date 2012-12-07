@@ -17,21 +17,16 @@
 
 
 -(BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
-{
-    
+{    
     // sheets file
-   
     BOOL sheetParse = [self parseSheetXML:_xmlfile toCharacter:_character];
     
-//    [_character reorderChildren];
+//  [_character reorderChildren];
     
     // animations file
-    
     BOOL animParse  = [self parseAnimationXML:_xmlfile toCharacter:_character];
     
     [_character setFirstPose];
-    
-    
     
     return (sheetParse && animParse);
 }
@@ -44,15 +39,10 @@
     NSError *error = nil;
     TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
     
-    
-    
-    // root
-    
+    // root    
     TBXMLElement *_root = _xmlMaster.rootXMLElement;
-    
 
     if (!_root) return NO;
-    
     
     TBXMLElement *_texturesheet = [TBXML childElementNamed:@"TextureSheet" parentElement:_root];
     
@@ -70,13 +60,10 @@
     
     do {
         NSString *nName     = [TBXML valueOfAttributeNamed:@"name" forElement:_texture];
-
         
         NSRange NghostNameRange;
         
-        
         NghostNameRange = [nName rangeOfString:@"ftcghost"];
-        
         
         if (NghostNameRange.location != NSNotFound) continue;
         
@@ -105,58 +92,37 @@
     } while ((_texture = _texture->nextSibling));
     
     return YES;
-
 }
-
-
-
 
 -(BOOL) parseAnimationXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
 {
-
     NSString *baseFile = [NSString stringWithFormat:@"%@_animations.xml", _xmlfile];
-    
-
     
     NSError *error = nil;    
     TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
-    
     
     TBXMLElement *_root = _xmlMaster.rootXMLElement;
     if (!_root) return NO;
 
     _character.frameRate = [[TBXML valueOfAttributeNamed:@"frameRate" forElement:_root] floatValue];
     
-    
     TBXMLElement *_animation = [TBXML childElementNamed:@"Animation" parentElement:_root];
     
     // set the character animation (it will be filled with events)
-    
-    
-        
-    do {        
-        
+    do {                
         NSString *animName = [TBXML valueOfAttributeNamed:@"name" forElement:_animation];
         if ([animName isEqualToString:@""]) animName = @"_init";
         
-              
-        
-        
         TBXMLElement *_part = [TBXML childElementNamed:@"Part" parentElement:_animation];
-        
-               
         do {
         
             NSString *partName = [TBXML valueOfAttributeNamed:@"name" forElement:_part];
             
             NSRange ghostNameRange;
             
-            
             ghostNameRange = [partName rangeOfString:@"ftcghost"];
-            
-            
+             
             if (ghostNameRange.location != NSNotFound) continue;
-            
                  
             NSMutableArray *__partFrames = [[NSMutableArray alloc] init];
             
@@ -166,7 +132,6 @@
 
             if (_frameInfo) {
                 do {
-                    
                     FTCFrameInfo *fi = [[FTCFrameInfo alloc] init];
                     
 
@@ -194,24 +159,18 @@
             
             [__sprite.animationsArr setValue:__partFrames forKey:animName];         
             
-        } while ((_part = _part->nextSibling));
-        
+        } while ((_part = _part->nextSibling));        
         
         // Process Events if needed
         int _animationLength = [[TBXML valueOfAttributeNamed:@"frameCount" forElement:_animation] intValue];
         
-        
-        
         NSMutableArray  *__eventsArr = [[NSMutableArray alloc] initWithCapacity:_animationLength];
         for (int ea=0; ea<_animationLength; ea++) { [__eventsArr addObject:[NSNull null]];};
-        
             
         TBXMLElement *_eventXML = [TBXML childElementNamed:@"Marker" parentElement:_animation];
         
-        
         if (_eventXML) {
             do {
-                
                 NSString *eventType = [TBXML valueOfAttributeNamed:@"name" forElement:_eventXML];
                 int     frameIndex   = [[TBXML valueOfAttributeNamed:@"frame" forElement:_eventXML] intValue];
 
@@ -229,19 +188,14 @@
         [__eventInfo setEventsInfo:__eventsArr];
         
         [_character.animationEventsTable setValue:__eventInfo forKey:animName];
-        
 
         __eventsArr = nil;
         __eventInfo = nil;
 
 
     } while ((_animation = _animation->nextSibling));
-
-    
-    
    
     return YES;
 }
-
 
 @end

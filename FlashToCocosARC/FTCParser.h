@@ -13,10 +13,6 @@
 @class FTCCharacter;
 
 @interface FTCParser : NSObject
-{
- 
-}
-
 
 -(BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
 -(BOOL) parseSheetXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;

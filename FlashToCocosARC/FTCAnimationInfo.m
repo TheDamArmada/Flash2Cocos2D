@@ -12,6 +12,4 @@
 
 @synthesize name, frameInfoArray, partName;
 
-
-
 @end

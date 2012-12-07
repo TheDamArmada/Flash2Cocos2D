@@ -18,7 +18,6 @@
 @synthesize ignoreAlpha = _ignoreAlpha;
 @synthesize animationsArr = _animationsArr;
 
-
 -(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character
 {
     currentCharacter = _character;
@@ -63,7 +62,6 @@
     if (!currentAnimationInfo) return;
     if (_frameindex < currentAnimationInfo.count) 
         [self applyFrameInfo:[currentAnimationInfo objectAtIndex:_frameindex]];
-    
 }
 
 @end

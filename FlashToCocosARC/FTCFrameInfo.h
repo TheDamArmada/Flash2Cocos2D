@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FTCFrameInfo : NSObject
-{
-
-}
 
 @property (unsafe_unretained) int   index;
 @property (unsafe_unretained) float x;

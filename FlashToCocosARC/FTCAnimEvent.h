@@ -12,4 +12,5 @@
 
 @property (unsafe_unretained) int  frameCount;
 @property (strong) NSMutableArray *eventsInfo;
+
 @end

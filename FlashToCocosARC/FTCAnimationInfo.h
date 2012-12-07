@@ -10,7 +10,6 @@
 
 @interface FTCAnimationInfo : NSObject
 
-
 @property (strong) NSString  *name;
 @property (strong) NSString  *partName;
 @property (strong) NSArray   *frameInfoArray;

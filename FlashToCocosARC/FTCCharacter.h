@@ -14,8 +14,6 @@
 
 @interface FTCCharacter : CCSprite
 {
-    
-
     NSArray                     *currentAnimEvent;
     
     int                         intFrame;
@@ -27,14 +25,12 @@
     BOOL                        _doesLoop;
     BOOL                        nextAnimationDoesLoop;
     BOOL                        _isPaused;
-    
 }
 
 @property (unsafe_unretained) id<FTCCharacterDelegate> delegate;
 @property (strong) NSMutableDictionary *childrenTable;
 @property (strong) NSMutableDictionary *animationEventsTable;
 @property float frameRate;
-
 
 
 +(FTCCharacter *) characterFromXMLFile:(NSString *)_xmlfile;
@@ -57,12 +53,12 @@
 // private
 -(void) setFirstPose;
 -(void) createCharacterFromXML:(NSString *)_xmlfile;
+-(void) scheduleAnimation;
 
 @end
 
 
 @protocol FTCCharacterDelegate <NSObject>
-
 
 @optional
 -(void) onCharacterCreated:(FTCCharacter *)_character;

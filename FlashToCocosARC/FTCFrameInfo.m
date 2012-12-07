@@ -10,8 +10,6 @@
 
 @implementation FTCFrameInfo
 
-
 @synthesize index, x, y, scaleX, scaleY, rotation, alpha;
-
 
 @end

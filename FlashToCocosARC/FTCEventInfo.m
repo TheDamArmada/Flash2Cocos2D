@@ -12,5 +12,4 @@
 
 @synthesize eventType, frameIndex;
 
-
 @end

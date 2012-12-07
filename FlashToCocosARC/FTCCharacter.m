@@ -83,7 +83,6 @@
     intFrame ++;
     
     // end of animation
-    
     if (intFrame == currentAnimationLength) {
         
         if (![nextAnimationId isEqualToString:@""]) {
@@ -103,28 +102,23 @@
         
     }
     
-    [self playFrame];
-    
+    [self playFrame];    
 }
 
 -(void) playFrame
 {
     // check if theres any event for that frame
-    
     if ([[currentAnimEvent objectAtIndex:intFrame] class]!=[NSNull class]) {
         if ([delegate respondsToSelector:@selector(onCharacter:event:atFrame:)])
             [delegate onCharacter:self event:[(FTCEventInfo *)[currentAnimEvent objectAtIndex:intFrame] eventType] atFrame:intFrame];
     };
-    
-    
     
     if ([delegate respondsToSelector:@selector(onCharacter:updateToFrame:)])
         [delegate onCharacter:self updateToFrame:intFrame];
     
     for (FTCSprite *sprite in self.childrenTable.allValues) {
         [sprite playFrame:intFrame];
-    }
-    
+    }    
 }
 
 -(void) pauseAnimation
@@ -144,7 +138,7 @@
 
 -(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId
 {
-    NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
+    //NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
     currentAnimationId = _animationId;
     currentAnimEvent = [[self.animationEventsTable objectForKey:_animationId] eventsInfo];
     currentAnimationLength = [[self.animationEventsTable objectForKey:_animationId] frameCount];
@@ -178,7 +172,6 @@
     
     nextAnimationId = @"";
     nextAnimationDoesLoop = NO;
-    
     
     intFrame = 0;
     _doesLoop = _isLoopable;
@@ -235,8 +228,6 @@
 
 -(void) createCharacterFromXML:(NSString *)_xmlfile
 {
-    //    NSLog(@"Creating FTCharacter");
-    
     if ([[[FTCParser alloc] init] parseXML:_xmlfile toCharacter:self])
     {
         [self scheduleAnimation];

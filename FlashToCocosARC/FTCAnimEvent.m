@@ -11,9 +11,6 @@
 @implementation FTCAnimEvent
 @synthesize eventsInfo, frameCount;
 
-
-
-
 - (id)init
 {
     self = [super init];

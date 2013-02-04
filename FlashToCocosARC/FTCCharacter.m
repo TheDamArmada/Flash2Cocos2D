@@ -13,6 +13,7 @@
 @implementation FTCCharacter
 {
     void (^onComplete) ();
+    ccColor3B _childrenTableColor;
 }
 
 @synthesize childrenTable;
@@ -162,6 +163,9 @@
 
 -(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait
 {
+    if ([currentAnimationId isEqualToString:_animId])
+        return;
+    
     if (_wait && currentAnimationLength>0) {
         nextAnimationId = _animId;
         nextAnimationDoesLoop = _isLoopable;
@@ -256,6 +260,23 @@
     
     if (onComplete)
         onComplete();
+}
+
+- (ccColor3B) color {
+    return _childrenTableColor;
+}
+
+- (void) setColor:(ccColor3B)color3 {
+    
+    _childrenTableColor = color3;
+    
+    for (NSString *key in self.childrenTable) {
+        
+        CCNode *child = [self.childrenTable objectForKey:key];
+        
+        if ([child isKindOfClass:[CCSprite class]])
+            ((CCSprite*)child).color = color3;
+    }
 }
 
 @end

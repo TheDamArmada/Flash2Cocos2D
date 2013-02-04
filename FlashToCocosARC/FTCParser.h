@@ -14,8 +14,12 @@
 
 @interface FTCParser : NSObject
 
--(BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
--(BOOL) parseSheetXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
--(BOOL) parseAnimationXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
+- (BOOL) characterExists:(NSString*)characterName atPath:(NSString*)path;
+- (BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
+- (BOOL) parseXML:(NSString *)_xmlfile withPath:(NSString*)_path toCharacter:(FTCCharacter *)_character;
+- (BOOL) parseSheetXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
+- (BOOL) parseSheetXML:(NSString *)_xmlfile withPath:(NSString*)_path toCharacter:(FTCCharacter *)_character;
+- (BOOL) parseAnimationXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character;
+- (BOOL) parseAnimationXML:(NSString *)_xmlfile withPath:(NSString*)_path toCharacter:(FTCCharacter *)_character;
 
 @end

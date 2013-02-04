@@ -37,7 +37,7 @@
 		
         theRobot = [[CCRobot alloc] init];
         [theRobot setPosition:ccp(160, 310)];
-        [theRobot setScale:.5f];
+        [theRobot setScale:1];
         [self addChild:theRobot];
         
         

@@ -39,7 +39,7 @@ static NSString* pathEmpty = @"";
 
 -(BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
 {
-    return [self parseSheetXML:_xmlfile withPath:pathEmpty toCharacter:_character];
+    return [self parseXML:_xmlfile withPath:pathEmpty toCharacter:_character];
 }
 
 - (BOOL) parseXML:(NSString *)_xmlfile withPath:(NSString*)_path toCharacter:(FTCCharacter *)_character

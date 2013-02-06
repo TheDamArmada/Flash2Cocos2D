@@ -66,7 +66,7 @@ static NSString* pathEmpty = @"";
     NSString *baseFile = [_xmlfile stringByAppendingString:extensionSheets];
     
     NSError *error = nil;
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:[_path stringByAppendingPathComponent: baseFile] error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:[_path stringByAppendingPathComponent: baseFile] error:&error];
     
     // root
     TBXMLElement *_root = _xmlMaster.rootXMLElement;
@@ -136,7 +136,7 @@ static NSString* pathEmpty = @"";
     NSString *baseFile = [_xmlfile stringByAppendingString:extensionAnimations];
     
     NSError *error = nil;    
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
+    TBXML *_xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
     
     
     TBXMLElement *_root = _xmlMaster.rootXMLElement;

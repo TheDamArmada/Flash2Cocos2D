@@ -603,15 +603,14 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
-					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
-					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
 				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\" \"${PROJECT_DIR}/Pods/cocos2d\"/** \"${PROJECT_DIR}/Pods/TBXML\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,15 +628,14 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
-					"\"${PROJECT_DIR}/Pods/TBXML\"/**",
-					"\"${PROJECT_DIR}/Pods/cocos2d\"/**",
 				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\" \"${PROJECT_DIR}/Pods/cocos2d\"/** \"${PROJECT_DIR}/Pods/TBXML\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -727,6 +725,7 @@
 				632BD094166D18AE00677696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,8 @@
 
 @implementation FTCAnimationInfo
 
-@synthesize name, frameInfoArray, partName;
+@synthesize name = _name;
+@synthesize partName = _partName;
+@synthesize frameInfoArray = _frameInfoArray;
 
 @end

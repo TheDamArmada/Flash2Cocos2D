@@ -10,7 +10,7 @@
 
 @interface FTCAnimEvent : NSObject
 
-@property (unsafe_unretained) int  frameCount;
-@property (strong) NSMutableArray *eventsInfo;
+@property (nonatomic, assign) int  frameCount;
+@property (nonatomic, strong) NSMutableArray *eventsInfo;
 
 @end

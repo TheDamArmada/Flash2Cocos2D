@@ -10,12 +10,12 @@
 
 @interface FTCFrameInfo : NSObject
 
-@property (unsafe_unretained) int   index;
-@property (unsafe_unretained) float x;
-@property (unsafe_unretained) float y;
-@property (unsafe_unretained) float rotation;
-@property (unsafe_unretained) float scaleX;
-@property (unsafe_unretained) float scaleY;
-@property (unsafe_unretained) float alpha;
+@property (nonatomic, assign) int index;
+@property (nonatomic, assign) float x;
+@property (nonatomic, assign) float y;
+@property (nonatomic, assign) float rotation;
+@property (nonatomic, assign) float scaleX;
+@property (nonatomic, assign) float scaleY;
+@property (nonatomic, assign) float alpha;
 
 @end

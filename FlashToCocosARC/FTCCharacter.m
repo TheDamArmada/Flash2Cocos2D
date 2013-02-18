@@ -12,47 +12,54 @@
 
 @implementation FTCCharacter
 {
-    void (^onComplete) ();
+    void (^_onComplete) ();
     ccColor3B _childrenTableColor;
+    NSArray *_currentAnimEvent;
+    
+    int _intFrame;
+    int _currentAnimationLength;
+    
+    NSString *_currentAnimationId;
+    NSString *_nextAnimationId;
+    
+    BOOL _doesLoop;
+    BOOL _nextAnimationDoesLoop;
+    BOOL _isPaused;
 }
 
-@synthesize childrenTable;
-@synthesize animationEventsTable;
-@synthesize delegate;
-@synthesize frameRate;
+@synthesize delegate = _delegate;
+@synthesize childrenTable = _childrenTable;
+@synthesize animationEventsTable = _animationEventsTable;
+@synthesize frameRate = _frameRate;
 
-
-+(FTCCharacter *) characterFromXMLFile:(NSString *)_xmlfile
++(FTCCharacter *) characterFromXMLFile:(NSString *)xmlfile
 {
-    FTCCharacter *_c = [[FTCCharacter alloc] init];
-    [_c createCharacterFromXML:_xmlfile];
-    return _c;
+    FTCCharacter *character = [[FTCCharacter alloc] init];
+    [character createCharacterFromXML:xmlfile];
+    return character;
 }
 
-+(FTCCharacter *) characterFromXMLFile:(NSString *)_xmlfile onCharacterComplete:(void(^)())completeHandler
++(FTCCharacter *) characterFromXMLFile:(NSString *)xmlfile onCharacterComplete:(void(^)())completeHandler
 {
-    FTCCharacter *_c = [_c initFromXMLFile:_xmlfile onCharacterComplete:completeHandler];
-    return _c;
+    return [[FTCCharacter alloc] initFromXMLFile:xmlfile onCharacterComplete:completeHandler];
 }
 
--(id) initFromXMLFile:(NSString *)_xmlfile {
+-(id) initFromXMLFile:(NSString *)xmlfile {
     
     self = [self init];
     if (self)
     {
-        [self createCharacterFromXML:_xmlfile];
+        [self createCharacterFromXML:xmlfile];
     }
     
     return self;
 }
 
--(id) initFromXMLFile:(NSString *)_xmlfile onCharacterComplete:(void (^)())completeHandler {
+-(id) initFromXMLFile:(NSString *)xmlfile onCharacterComplete:(void (^)())completeHandler {
     
     self = [self init];
     if (self)
-    {
-        [self createCharacterFromXML:_xmlfile onCharacterComplete:completeHandler];
-    }
+        [self createCharacterFromXML:xmlfile onCharacterComplete:completeHandler];
     
     return self;
 }
@@ -60,9 +67,8 @@
 - (id)init
 {
     self = [super init];
-    if (self) {
+    if (self)
         [self initProperties];
-    }
     
     return self;
 }
@@ -73,23 +79,22 @@
     
     self.animationEventsTable = [[NSMutableDictionary alloc] init];
     
-    currentAnimationId = @"";
+    _currentAnimationId = @"";
 }
 
--(void) handleScheduleUpdate:(ccTime)_dt
+-(void) handleScheduleUpdate:(ccTime)dt
 {
-    if (currentAnimationLength == 0 || _isPaused )
+    if (_currentAnimationLength == 0 || _isPaused )
         return;
     
-    intFrame ++;
+    _intFrame ++;
     
     // end of animation
-    if (intFrame == currentAnimationLength) {
-        
-        if (![nextAnimationId isEqualToString:@""]) {
-            [self playAnimation:nextAnimationId loop:nextAnimationDoesLoop wait:NO];
+    if (_intFrame == _currentAnimationLength)
+    {
+        if (![_nextAnimationId isEqualToString:@""]) {
+            [self playAnimation:_nextAnimationId loop:_nextAnimationDoesLoop wait:NO];
             return;
-            
         }
         
         if (!_doesLoop) {
@@ -97,10 +102,9 @@
             return;
         }
         
-        intFrame = 0;
-        if ([delegate respondsToSelector:@selector(onCharacter:loopedAnimation:)])
-            [delegate onCharacter:self loopedAnimation:currentAnimationId];
-        
+        _intFrame = 0;
+        if ([_delegate respondsToSelector:@selector(onCharacter:loopedAnimation:)])
+            [_delegate onCharacter:self loopedAnimation:_currentAnimationId];
     }
     
     [self playFrame];    
@@ -109,17 +113,16 @@
 -(void) playFrame
 {
     // check if theres any event for that frame
-    if ([[currentAnimEvent objectAtIndex:intFrame] class]!=[NSNull class]) {
-        if ([delegate respondsToSelector:@selector(onCharacter:event:atFrame:)])
-            [delegate onCharacter:self event:[(FTCEventInfo *)[currentAnimEvent objectAtIndex:intFrame] eventType] atFrame:intFrame];
-    };
+    if ([[_currentAnimEvent objectAtIndex:_intFrame] class]!=[NSNull class] && [_delegate respondsToSelector:@selector(onCharacter:event:atFrame:)]) 
+        [_delegate onCharacter:self event:[(FTCEventInfo *)[_currentAnimEvent objectAtIndex:_intFrame] eventType] atFrame:_intFrame];
     
-    if ([delegate respondsToSelector:@selector(onCharacter:updateToFrame:)])
-        [delegate onCharacter:self updateToFrame:intFrame];
     
-    for (FTCSprite *sprite in self.childrenTable.allValues) {
-        [sprite playFrame:intFrame];
-    }    
+    if ([_delegate respondsToSelector:@selector(onCharacter:updateToFrame:)]) 
+        [_delegate onCharacter:self updateToFrame:_intFrame];
+    
+    
+    for (FTCSprite *sprite in self.childrenTable.allValues) 
+        [sprite playFrame:_intFrame];
 }
 
 -(void) pauseAnimation
@@ -134,98 +137,97 @@
 
 -(int) getCurrentFrame
 {
-    return intFrame;
+    return _intFrame;
 }
 
--(void) playFrame:(int)_frameIndex fromAnimation:(NSString *)_animationId
+-(void) playFrame:(int)frameIndex fromAnimation:(NSString *)animationId
 {
-    //NSLog(@"PLAYING FRAME %i FROM %@", _frameIndex, _animationId);
-    currentAnimationId = _animationId;
-    currentAnimEvent = [[self.animationEventsTable objectForKey:_animationId] eventsInfo];
-    currentAnimationLength = [[self.animationEventsTable objectForKey:_animationId] frameCount];
-    intFrame = _frameIndex;
+    NSLog(@"PLAYING FRAME %i FROM %@", frameIndex, animationId);
+    
+    _currentAnimationId = animationId;
+    _currentAnimEvent = [[self.animationEventsTable objectForKey:animationId] eventsInfo];
+    _currentAnimationLength = [[self.animationEventsTable objectForKey:animationId] frameCount];
+    _intFrame = frameIndex;
     _isPaused = YES;
-    for (FTCSprite *sprite in self.childrenTable.allValues) {
-        [sprite setCurrentAnimation:currentAnimationId forCharacter:self];
-    }
+    
+    for (FTCSprite *sprite in self.childrenTable.allValues)
+        [sprite setCurrentAnimation:_currentAnimationId forCharacter:self];
+    
     [self playFrame];
 }
 
 -(void) stopAnimation
 {
-    currentAnimationLength = 0;
-    NSString *oldAnimId = currentAnimationId;
-    currentAnimationId = @"";
+    _currentAnimationLength = 0;
+    NSString *oldAnimId = _currentAnimationId = @"";
     
-    if ([delegate respondsToSelector:@selector(onCharacter:endsAnimation:)])
-        [delegate onCharacter:self endsAnimation:oldAnimId];
+    if ([_delegate respondsToSelector:@selector(onCharacter:endsAnimation:)])
+        [_delegate onCharacter:self endsAnimation:oldAnimId];
 }
 
--(void) playAnimation:(NSString *)_animId loop:(BOOL)_isLoopable wait:(BOOL)_wait
+-(void) playAnimation:(NSString *)animId loop:(BOOL)isLoopable wait:(BOOL)wait
 {
-    if ([currentAnimationId isEqualToString:_animId])
+    if ([_currentAnimationId isEqualToString:animId])
         return;
     
-    if (_wait && currentAnimationLength>0) {
-        nextAnimationId = _animId;
-        nextAnimationDoesLoop = _isLoopable;
+    if (wait && _currentAnimationLength>0)
+    {
+        _nextAnimationId = animId;
+        _nextAnimationDoesLoop = isLoopable;
         return;
     }
     
     _isPaused = NO;
+    _nextAnimationId = @"";
+    _nextAnimationDoesLoop = NO;
+    _intFrame = 0;
+    _doesLoop = isLoopable;
+    _currentAnimationId = animId;
     
-    nextAnimationId = @"";
-    nextAnimationDoesLoop = NO;
+    for (FTCSprite *sprite in self.childrenTable.allValues)
+        [sprite setCurrentAnimation:_currentAnimationId forCharacter:self];
     
-    intFrame = 0;
-    _doesLoop = _isLoopable;
-    currentAnimationId = _animId;
+    _currentAnimEvent = [[self.animationEventsTable objectForKey:animId] eventsInfo];
+    _currentAnimationLength = [[self.animationEventsTable objectForKey:animId] frameCount];
     
+    NSLog(@"PLAY ANIMATION - %@ CurrentAnimLength %i", animId, _currentAnimationLength);
     
-    for (FTCSprite *sprite in self.childrenTable.allValues) {
-        [sprite setCurrentAnimation:currentAnimationId forCharacter:self];
-    }
-    
-    currentAnimEvent = [[self.animationEventsTable objectForKey:_animId] eventsInfo];
-    currentAnimationLength = [[self.animationEventsTable objectForKey:_animId] frameCount];
-    
-    //    NSLog(@"PLAY ANIMATION - %@ CurrentAnimLength %i", _animId, currentAnimationLength);
-    
-    if ([delegate respondsToSelector:@selector(onCharacter:startsAnimation:)])
-        [delegate onCharacter:self startsAnimation:_animId];
+    if ([_delegate respondsToSelector:@selector(onCharacter:startsAnimation:)])
+        [_delegate onCharacter:self startsAnimation:animId];
     
 }
 
--(FTCSprite *) getChildByName:(NSString *)_childname
+-(FTCSprite *) getChildByName:(NSString *)childname
 {
     // build a predicate to look in the table what object has the propery _childname in .name
-    return [self.childrenTable objectForKey:_childname];
+    return [self.childrenTable objectForKey:childname];
 }
 
 -(NSString *) getCurrentAnimation
 {
-    return currentAnimationId;
+    return _currentAnimationId;
 }
 
--(int) getDurationForAnimation:(NSString *)_animationId
+-(int) getDurationForAnimation:(NSString *)animationId
 {
-    return [[self.animationEventsTable objectForKey:_animationId] frameCount];
+    return [[self.animationEventsTable objectForKey:animationId] frameCount];
 }
 
--(void) addElement:(FTCSprite *)_element withName:(NSString *)_name atIndex:(int)_index
+-(void) addElement:(FTCSprite *)element withName:(NSString *)name atIndex:(int)index
 {
-    [self addChild:_element z:_index];
+    [self addChild:element z:index];
     
+    [element setName:name];
     
-    [_element setName:_name];
-    
-    [self.childrenTable setValue:_element forKey:_name];
+    [self.childrenTable setValue:element forKey:name];
 }
 
 -(void) reorderChildren
 {
     int totalChildren = self.childrenTable.count;
-    [self.childrenTable.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    
+    [self.childrenTable.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
         [self reorderChild:obj z:totalChildren-idx];
     }];
 }
@@ -237,20 +239,20 @@
         [self scheduleAnimation];
         return;
     }
-    
-    NSLog(@"FTCCharacter: There was an error parsing xmlFile: %@", _xmlfile);
+
+    NSLog(@"%s: There was an error parsing xmlFile for character: %@", __PRETTY_FUNCTION__, _xmlfile);
 }
 
 -(void) scheduleAnimation
 {
     [scheduler_ unscheduleAllSelectorsForTarget:self];
-    [scheduler_ scheduleSelector:@selector(handleScheduleUpdate:) forTarget:self interval:frameRate/1000 paused:NO];
+    [scheduler_ scheduleSelector:@selector(handleScheduleUpdate:) forTarget:self interval:_frameRate/1000 paused:NO];
 }
 
--(void) createCharacterFromXML:(NSString *)_xmlfile onCharacterComplete:(void(^)())completeHandler
+-(void) createCharacterFromXML:(NSString *)xmlfile onCharacterComplete:(void(^)())completeHandler
 {
-    onComplete = completeHandler;
-    return [self createCharacterFromXML:_xmlfile];
+    _onComplete = [completeHandler copy];
+    return [self createCharacterFromXML:xmlfile];
 }
 
 -(void) setFirstPose
@@ -258,20 +260,20 @@
     if ([self.delegate respondsToSelector:@selector(onCharacterCreated:)])
         [self.delegate onCharacterCreated:self];
     
-    if (onComplete)
-        onComplete();
+    if (_onComplete)
+        _onComplete();
 }
 
 - (ccColor3B) color {
     return _childrenTableColor;
 }
 
-- (void) setColor:(ccColor3B)color3 {
-    
+- (void) setColor:(ccColor3B)color3
+{
     _childrenTableColor = color3;
     
-    for (NSString *key in self.childrenTable) {
-        
+    for (NSString *key in self.childrenTable)
+    {    
         CCNode *child = [self.childrenTable objectForKey:key];
         
         if ([child isKindOfClass:[CCSprite class]])

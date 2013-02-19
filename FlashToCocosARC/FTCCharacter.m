@@ -167,7 +167,7 @@
 
 -(void) playAnimation:(NSString *)animId loop:(BOOL)isLoopable wait:(BOOL)wait
 {
-    if ([_currentAnimationId isEqualToString:animId])
+    if ([_currentAnimationId isEqualToString:animId] && _isPaused == NO)
         return;
     
     if (wait && _currentAnimationLength>0)

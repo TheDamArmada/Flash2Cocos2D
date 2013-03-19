@@ -12,6 +12,10 @@
 
 @class FTCCharacter;
 
+static NSString* extensionSheets = @"_sheets.xml";
+static NSString* extensionAnimations = @"_animations.xml";
+static NSString* pathEmpty = @"";
+
 @interface FTCParser : NSObject
 
 - (BOOL) characterExists:(NSString*)characterName atPath:(NSString*)path;
@@ -21,5 +25,9 @@
 - (BOOL) parseSheetXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character;
 - (BOOL) parseAnimationXML:(NSString *)xmlfile toCharacter:(FTCCharacter *)character;
 - (BOOL) parseAnimationXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character;
+
+// protected
+- (BOOL) parseAnimation:(TBXMLElement*) animation toCharacter:(FTCCharacter *)character;
+- (BOOL) spriteSheetExists:(TBXMLElement*)textureSheet;
 
 @end

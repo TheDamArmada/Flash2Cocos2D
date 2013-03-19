@@ -15,10 +15,6 @@
 
 @implementation FTCParser
 
-static NSString* extensionSheets = @"_sheets.xml";
-static NSString* extensionAnimations = @"_animations.xml";
-static NSString* pathEmpty = @"";
-
 # pragma mark - public
 
 -(BOOL) characterExists:(NSString*)characterName atPath:(NSString*)path
@@ -60,15 +56,20 @@ static NSString* pathEmpty = @"";
 
 -(BOOL) parseSheetXML:(NSString *)xmlfile toCharacter:(FTCCharacter *)character
 {
-    return [self parseSheetXML:pathEmpty toCharacter:character];
+    return [self parseSheetXML:pathEmpty withPath:pathEmpty toCharacter:character];
 }
 
 - (BOOL) parseSheetXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character
 {
     NSString *baseFile = [xmlfile stringByAppendingString:extensionSheets];
-    
+    NSString *fullPath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:[path stringByAppendingPathComponent: baseFile]];
     NSError *error = nil;
-    TBXML *xmlMaster = [TBXML newTBXMLWithXMLFile:[path stringByAppendingPathComponent: baseFile] error:&error];
+    
+    NSAssert(baseFile!=fullPath || fullPath!=nil, @"FTCParser did not locate a valid file path for %@.", xmlfile);
+    
+    NSString *data = [NSString stringWithContentsOfFile:fullPath encoding:1 error:&error];
+    
+    TBXML *xmlMaster = [TBXML newTBXMLWithXMLString:data error:&error];
     
     TBXMLElement *root = xmlMaster.rootXMLElement;
     if (!root)
@@ -106,7 +107,7 @@ static NSString* pathEmpty = @"";
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:spriteSheetName];//TODO: add any path what was passed in
         return YES;
     }
-
+    
     return NO;
 }
 
@@ -127,15 +128,18 @@ static NSString* pathEmpty = @"";
     NSString *relativePath = [path stringByAppendingPathComponent:nImage];
     NSString *fullImagePath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:relativePath];
     
-    if (spriteSheetExists) 
+    NSAssert(relativePath!=fullImagePath || fullImagePath!=nil, @"FTCParser did not locate a valid file path for %@.", nImage);
+    
+    // Load JPG
+    if (spriteSheetExists)
         sprite = [FTCSprite spriteWithSpriteFrameName:fullImagePath];
-    else 
+    else
         sprite = [FTCSprite spriteWithFile:fullImagePath];
     
     if (!sprite)
     {
         NSLog(@"FTCParser unable to load sprite at location: %@", fullImagePath);
-        return NO;
+        return NO; // stop trying to load other JPG's.
     }
     
     // SET ANCHOR P
@@ -160,7 +164,13 @@ static NSString* pathEmpty = @"";
     NSString *baseFile = [xmlfile stringByAppendingString:extensionAnimations];
     
     NSError *error = nil;
-    TBXML *xmlMaster = [TBXML newTBXMLWithXMLFile:baseFile error:&error];
+    NSString *fullImagePath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:baseFile];
+    
+    NSAssert(baseFile!=fullImagePath || fullImagePath!=nil, @"FTCParser did not locate a valid file path for %@.", xmlfile);
+    
+    NSString *data = [NSString stringWithContentsOfFile:fullImagePath encoding:1 error:&error];
+    
+    TBXML *xmlMaster = [TBXML newTBXMLWithXMLString:data error:&error];
     
     TBXMLElement *root = xmlMaster.rootXMLElement;
     if (!root)

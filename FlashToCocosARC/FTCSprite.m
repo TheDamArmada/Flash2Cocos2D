@@ -9,11 +9,14 @@
 #import "FTCSprite.h"
 #import "FTCCharacter.h"
 
+@interface FTCSprite ()
+
+@property (weak, nonatomic) NSArray       *currentAnimationInfo;
+@property (weak, nonatomic) FTCCharacter  *currentCharacter;
+
+@end
+
 @implementation FTCSprite
-{
-    NSArray *_currentAnimationInfo;
-    FTCCharacter *_currentCharacter;
-}
 
 @synthesize name = _name;
 @synthesize ignoreAlpha = _ignoreAlpha;
@@ -24,8 +27,8 @@
 
 -(void) setCurrentAnimation:(NSString *)framesId forCharacter:(FTCCharacter *)character
 {
-    _currentCharacter = character;
-    _currentAnimationInfo = [self.animationsArr objectForKey:framesId];
+    self.currentCharacter = character;
+    self.currentAnimationInfo = [self.animationsArr objectForKey:framesId];
 }
 
 -(NSMutableDictionary*) animationsArr
@@ -38,8 +41,8 @@
 
 -(void) setCurrentAnimationFramesInfo:(NSArray *)framesInfoArr forCharacter:(FTCCharacter *)character
 {
-    _currentCharacter = character;
-    _currentAnimationInfo = framesInfoArr;
+    self.currentCharacter = character;
+    self.currentAnimationInfo = framesInfoArr;
 }
 
 -(void) applyFrameInfo:(FTCFrameInfo *)frameInfo
@@ -66,11 +69,11 @@
 
 -(void) playFrame:(int)frameindex
 {
-    if (!_currentAnimationInfo)
+    if (!self.currentAnimationInfo)
         return;
     
-    if (frameindex < _currentAnimationInfo.count)
-        [self applyFrameInfo:[_currentAnimationInfo objectAtIndex:frameindex]];
+    if (frameindex < self.currentAnimationInfo.count)
+        [self applyFrameInfo:[self.currentAnimationInfo objectAtIndex:frameindex]];
 }
 
 @end

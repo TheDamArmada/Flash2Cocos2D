@@ -16,7 +16,8 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 - select 'Export for Actionscript' for your character MovieClip
 - add Grapefrukt exporting code on the first frame.  two sample uses:
 
-	<h4>1) exports for retina</h4>
+<h4>1) exports for retina</h4>
+    
 	```actionscript
 	import com.grapefrukt.exporter.simple.SimpleExport;
 	import com.grapefrukt.exporter.extractors.*;
@@ -27,7 +28,8 @@ The FlashToCocos iOS library reads those xml files and recreates the characters 
 	AnimationExtractor.extract(export.animations, new RobotCharacterMc);
 	export.export();
 	```	
-	<h4>2) exports for retina and non-retina</h4>
+<h4>2) exports for retina and non-retina</h4>
+	
 	```actionscript
 	import com.grapefrukt.exporter.simple.*;
 	import com.grapefrukt.exporter.extractors.*;

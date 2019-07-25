@@ -15,231 +15,299 @@
 
 @implementation FTCParser
 
+# pragma mark - public
 
--(BOOL) parseXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
+-(BOOL) characterExists:(NSString*)characterName atPath:(NSString*)path
 {
+    NSString *fileNameSheets = [characterName stringByAppendingString:extensionSheets];
+    NSString *fileNameAnimations = [characterName stringByAppendingString:extensionAnimations];
     
+    if ([self isValid:characterName fileName:fileNameSheets atPath:path] && [self isValid:characterName fileName:fileNameAnimations atPath:path])
+        return YES;
+    
+    return NO;
+}
+
+-(BOOL) isValid:(NSString*)characterName fileName:(NSString*)file atPath:(NSString*)path
+{
+    NSString *fullPath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:[path stringByAppendingPathComponent:file]];
+    return ![fullPath isEqualToString:file];
+}
+
+-(BOOL) parseXML:(NSString *)xmlfile toCharacter:(FTCCharacter *)character
+{
+    return [self parseXML:xmlfile withPath:pathEmpty toCharacter:character];
+}
+
+- (BOOL) parseXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character
+{
     // sheets file
-   
-    BOOL sheetParse = [self parseSheetXML:_xmlfile toCharacter:_character];
-    
-//    [_character reorderChildren];
+    BOOL sheetParse = [self parseSheetXML:xmlfile withPath:path toCharacter:character];
     
     // animations file
+    BOOL animParse  = [self parseAnimationXML:xmlfile withPath:path toCharacter:character];
     
-    BOOL animParse  = [self parseAnimationXML:_xmlfile toCharacter:_character];
-    
-    [_character setFirstPose];
-    
-    
+    [character setFirstPose];
     
     return (sheetParse && animParse);
 }
 
+# pragma mark - *_sheets.xml.  public.
 
--(BOOL) parseSheetXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
+-(BOOL) parseSheetXML:(NSString *)xmlfile toCharacter:(FTCCharacter *)character
 {
-    NSString *baseFile = [NSString stringWithFormat:@"%@_sheets.xml", _xmlfile];
-    
-    NSError *error = nil;
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
-    
-    
-    
-    // root
-    
-    TBXMLElement *_root = _xmlMaster.rootXMLElement;
-    
+    return [self parseSheetXML:pathEmpty withPath:pathEmpty toCharacter:character];
+}
 
-    if (!_root) return NO;
+- (BOOL) parseSheetXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character
+{
+    NSString *baseFile = [xmlfile stringByAppendingString:extensionSheets];
+    NSString *fullPath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:[path stringByAppendingPathComponent: baseFile]];
+    NSError *error = nil;
     
+    NSAssert(baseFile!=fullPath || fullPath!=nil, @"FTCParser did not locate a valid file path for %@.", xmlfile);
     
-    TBXMLElement *_texturesheet = [TBXML childElementNamed:@"TextureSheet" parentElement:_root];
+    NSString *data = [NSString stringWithContentsOfFile:fullPath encoding:1 error:&error];
     
+    TBXML *xmlMaster = [TBXML newTBXMLWithXMLString:data error:&error];
     
+    TBXMLElement *root = xmlMaster.rootXMLElement;
+    if (!root)
+        return NO;
+    
+    TBXMLElement *textureSheet = [TBXML childElementNamed:@"TextureSheet" parentElement:root];
+    
+    // TODO: test & fix for Sprite Sheet loading & parsing
     // check if there's a spritesheet for it
-    NSString *_textureSheetName = [NSString stringWithFormat:@"%@.plist", [TBXML valueOfAttributeNamed:@"name" forElement:_texturesheet]];
-    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:_textureSheetName ofType:nil];
-    BOOL      textureSheetExists = [[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName];
+    BOOL hasSpriteSheet = [self spriteSheetExists:textureSheet];
     
-    if (textureSheetExists) {
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:_textureSheetName];
+    TBXMLElement *texture = [TBXML childElementNamed:@"Texture" parentElement:textureSheet];
+    while (texture)
+    {
+        BOOL parseOk = [self parseTexture:texture hasSpriteSheet:hasSpriteSheet withPath:path toCharacter:character];
+        if (!parseOk)
+            return NO;
+        
+        texture = [TBXML nextSiblingNamed:@"Texture" searchFromElement:texture];
     }
     
-    TBXMLElement *_texture = [TBXML childElementNamed:@"Texture" parentElement:_texturesheet];
-    
-    do {
-        NSString *nName     = [TBXML valueOfAttributeNamed:@"name" forElement:_texture];
-        
-        
-        NSRange NghostNameRange;
-        
-        
-        NghostNameRange = [nName rangeOfString:@"ftcghost"];
-        
-        
-        if (NghostNameRange.location != NSNotFound) continue;
-        
-        
-        
-        float nAX           = [[TBXML valueOfAttributeNamed:@"registrationPointX" forElement:_texture] floatValue];
-        float nAY           = [[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:_texture] floatValue] * -1;
-        NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:_texture];
-        int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:_texture] intValue];
-        
-        // no support for sprite sheets yet
-        FTCSprite *_sprite = nil;
-        
-        if (textureSheetExists)
-            _sprite = [FTCSprite spriteWithSpriteFrameName:nImage];
-        else 
-            _sprite = [FTCSprite spriteWithFile:nImage];
-        
-        // SET ANCHOR P
-        CGSize eSize = [_sprite boundingBoxInPixels].size;
-        CGPoint aP = CGPointMake(nAX/eSize.width, (eSize.height - (-nAY))/eSize.height);        
-        
-        [_sprite setAnchorPoint:aP];      
-        
-        [_character addElement:_sprite withName:nName atIndex:zIndex];   
-        
-    } while ((_texture = _texture->nextSibling));
-    
     return YES;
-
 }
 
+# pragma mark - *_sheets.xml.  private.
 
-
-
--(BOOL) parseAnimationXML:(NSString *)_xmlfile toCharacter:(FTCCharacter *)_character
+- (BOOL) spriteSheetExists:(TBXMLElement*)textureSheet
 {
+    NSString *spriteSheetName = [NSString stringWithFormat:@"%@.plist", [TBXML valueOfAttributeNamed:@"name" forElement:textureSheet]];
+    
+    NSString *pathAndSpriteSheetName = [[NSBundle mainBundle] pathForResource:spriteSheetName ofType:nil];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndSpriteSheetName])
+    {
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:spriteSheetName];//TODO: add any path what was passed in
+        return YES;
+    }
+    
+    return NO;
+}
 
-    NSString *baseFile = [NSString stringWithFormat:@"%@_animations.xml", _xmlfile];
+- (BOOL) parseTexture:(TBXMLElement *)texture hasSpriteSheet:(BOOL)spriteSheetExists withPath:(NSString*)path toCharacter:(FTCCharacter *)character
+{
+    NSString *nName = [TBXML valueOfAttributeNamed:@"name" forElement:texture];
     
+    NSRange ghostNameRange = [nName rangeOfString:@"ftcghost"];
+    if (ghostNameRange.location != NSNotFound)
+        return YES;
+    
+    float nAX           = [[TBXML valueOfAttributeNamed:@"registrationPointX" forElement:texture] floatValue];
+    float nAY           = -([[TBXML valueOfAttributeNamed:@"registrationPointY" forElement:texture] floatValue]); // flash & cocos2d have inverted Y axis
+    NSString *nImage    = [TBXML valueOfAttributeNamed:@"path" forElement:texture];
+    int     zIndex      = [[TBXML valueOfAttributeNamed:@"zIndex" forElement:texture] intValue];
+    
+    FTCSprite *sprite = nil;
+    NSString *relativePath = [path stringByAppendingPathComponent:nImage];
+    NSString *fullImagePath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:relativePath];
+    
+    NSAssert(relativePath!=fullImagePath || fullImagePath!=nil, @"FTCParser did not locate a valid file path for %@.", nImage);
+    
+    // Load JPG
+    if (spriteSheetExists)
+        sprite = [FTCSprite spriteWithSpriteFrameName:fullImagePath];
+    else
+        sprite = [FTCSprite spriteWithFile:fullImagePath];
+    
+    if (!sprite)
+    {
+        NSLog(@"FTCParser unable to load sprite at location: %@", fullImagePath);
+        return NO; // stop trying to load other JPG's.
+    }
+    
+    // SET ANCHOR P
+    CGSize eSize = [sprite boundingBox].size;
+    CGPoint aP = CGPointMake(nAX/eSize.width, (eSize.height - (-nAY))/eSize.height);
+    [sprite setAnchorPoint:aP];
+    
+    [character addElement:sprite withName:nName atIndex:zIndex];
+    
+    return YES;
+}
 
-    
-    NSError *error = nil;    
-    TBXML *_xmlMaster = [TBXML tbxmlWithXMLFile:baseFile error:&error];
-    
-    
-    TBXMLElement *_root = _xmlMaster.rootXMLElement;
+# pragma mark - *_animations.xml.  public.
 
+- (BOOL)parseAnimationXML:(NSString *)xmlfile withPath:(NSString*)path toCharacter:(FTCCharacter *)character {
     
-    if (!_root) return NO;
+    return [self parseAnimationXML:[path stringByAppendingPathComponent: xmlfile] toCharacter:character];
+}
+
+-(BOOL) parseAnimationXML:(NSString *)xmlfile toCharacter:(FTCCharacter *)character
+{
+    NSString *baseFile = [xmlfile stringByAppendingString:extensionAnimations];
     
+    NSError *error = nil;
+    NSString *fullImagePath = [[CCFileUtils sharedFileUtils] fullPathFromRelativePath:baseFile];
     
-    TBXMLElement *_animation = [TBXML childElementNamed:@"Animation" parentElement:_root];
+    NSAssert(baseFile!=fullImagePath || fullImagePath!=nil, @"FTCParser did not locate a valid file path for %@.", xmlfile);
+    
+    NSString *data = [NSString stringWithContentsOfFile:fullImagePath encoding:1 error:&error];
+    
+    TBXML *xmlMaster = [TBXML newTBXMLWithXMLString:data error:&error];
+    
+    TBXMLElement *root = xmlMaster.rootXMLElement;
+    if (!root)
+        return NO;
+    
+    character.frameRate = [[TBXML valueOfAttributeNamed:@"frameRate" forElement:root] floatValue];
     
     // set the character animation (it will be filled with events)
+    TBXMLElement *animation = [TBXML childElementNamed:@"Animation" parentElement:root];
+    while (animation)
+    {
+        BOOL parseOk = [self parseAnimation:animation toCharacter:character];
+        if (!parseOk)
+            return NO;
+        
+        animation = [TBXML nextSiblingNamed:@"Animation" searchFromElement:animation];
+    }
     
-
-        
-    do {        
-        
-        NSString *animName = [TBXML valueOfAttributeNamed:@"name" forElement:_animation];
-        if ([animName isEqualToString:@""]) animName = @"_init";
-        
-              
-        
-        
-        TBXMLElement *_part = [TBXML childElementNamed:@"Part" parentElement:_animation];
-        
-               
-        do {
-        
-            NSString *partName = [TBXML valueOfAttributeNamed:@"name" forElement:_part];
-            
-            NSRange ghostNameRange;
-            
-            
-            ghostNameRange = [partName rangeOfString:@"ftcghost"];
-            
-            
-            if (ghostNameRange.location != NSNotFound) continue;
-            
-                 
-            NSMutableArray *__partFrames = [[NSMutableArray alloc] init];
-            
-            TBXMLElement *_frameInfo = [TBXML childElementNamed:@"Frame" parentElement:_part];
-
-            FTCSprite *__sprite = [_character getChildByName:partName];
-
-            if (_frameInfo) {
-                do {
-                    
-                    FTCFrameInfo *fi = [FTCFrameInfo alloc];
-                    
-
-                    fi.index = [[TBXML valueOfAttributeNamed:@"index" forElement:_frameInfo] intValue];
-                    
-                    fi.x = [[TBXML valueOfAttributeNamed:@"x" forElement:_frameInfo] floatValue];
-                    fi.y = [[TBXML valueOfAttributeNamed:@"y" forElement:_frameInfo] floatValue] * -1;
-                    
-                    
-                    
-                    fi.scaleX = [[TBXML valueOfAttributeNamed:@"scaleX" forElement:_frameInfo] floatValue];                
-                    fi.scaleY = [[TBXML valueOfAttributeNamed:@"scaleY" forElement:_frameInfo] floatValue];
-                    
-                    fi.rotation = [[TBXML valueOfAttributeNamed:@"rotation" forElement:_frameInfo] floatValue];
-                    
-                    [__partFrames addObject:fi];
-                    
-
-                    
-                } while ((_frameInfo = _frameInfo->nextSibling));
-            }
-            
-            [__sprite.animationsArr setValue:__partFrames forKey:animName];         
-            
-        } while ((_part = _part->nextSibling));
-        
-        
-        // Process Events if needed
-        int _animationLength = [[TBXML valueOfAttributeNamed:@"frameCount" forElement:_animation] intValue];
-        
-        
-        
-        NSMutableArray  *__eventsArr = [[NSMutableArray alloc] initWithCapacity:_animationLength];
-        for (int ea=0; ea<_animationLength; ea++) { [__eventsArr addObject:[NSNull null]];};
-        
-            
-        TBXMLElement *_eventXML = [TBXML childElementNamed:@"Marker" parentElement:_animation];
-        
-        
-        if (_eventXML) {
-            do {
-                
-                NSString *eventType = [TBXML valueOfAttributeNamed:@"name" forElement:_eventXML];
-                int     frameIndex   = [[TBXML valueOfAttributeNamed:@"frame" forElement:_eventXML] intValue];
-
-                FTCEventInfo *_eventInfo = [[FTCEventInfo alloc] init];
-                [_eventInfo setFrameIndex:frameIndex];
-                [_eventInfo setEventType:eventType];
-                
-                [__eventsArr insertObject:_eventInfo atIndex:frameIndex];
-                
-            } while ((_eventXML = [TBXML nextSiblingNamed:@"Marker" searchFromElement:_eventXML]));                                  
-        }
-        
-        FTCAnimEvent *__eventInfo = [[FTCAnimEvent alloc] init];
-        [__eventInfo setFrameCount:_animationLength];            
-        [__eventInfo setEventsInfo:__eventsArr];
-        
-        [_character.animationEventsTable setValue:__eventInfo forKey:animName];
-        
-
-        __eventsArr = nil;
-        __eventInfo = nil;
-
-
-    } while ((_animation = _animation->nextSibling));
-
-    
-    
-   
     return YES;
 }
 
+# pragma mark - *_animations.xml.  private.
+
+-(BOOL) parseAnimation:(TBXMLElement*) animation toCharacter:(FTCCharacter *)character
+{
+    NSString *animName = [TBXML valueOfAttributeNamed:@"name" forElement:animation];
+    if ([animName isEqualToString:@""])
+        animName = @"_init";
+    
+    TBXMLElement *part = [TBXML childElementNamed:@"Part" parentElement:animation];
+    while(part)
+    {
+        BOOL parseOk = [self parsePart:part withAnimationName:animName toCharacter:character];
+        if (!parseOk)
+            return NO;
+        
+        part = [TBXML nextSiblingNamed:@"Part" searchFromElement:part];
+    }
+    
+    // Process Events if needed
+    int animationLength = [[TBXML valueOfAttributeNamed:@"frameCount" forElement:animation] intValue];
+    
+    NSMutableArray  *eventsArr = [[NSMutableArray alloc] initWithCapacity:animationLength];
+    for (int ea=0; ea<animationLength; ea++)
+        [eventsArr addObject:[NSNull null]];
+    
+    TBXMLElement *eventXML = [TBXML childElementNamed:@"Marker" parentElement:animation];
+    
+    while (eventXML)
+    {
+        NSString *eventType = [TBXML valueOfAttributeNamed:@"name" forElement:eventXML];
+        int     frameIndex   = [[TBXML valueOfAttributeNamed:@"frame" forElement:eventXML] intValue];
+        
+        FTCEventInfo *eventInfo = [[FTCEventInfo alloc] init];
+        [eventInfo setFrameIndex:frameIndex];
+        [eventInfo setEventType:eventType];
+        
+        [eventsArr insertObject:eventInfo atIndex:frameIndex];
+        
+        eventXML = [TBXML nextSiblingNamed:@"Marker" searchFromElement:eventXML];
+    }
+    
+    FTCAnimEvent *eventInfo = [[FTCAnimEvent alloc] init];
+    [eventInfo setFrameCount:animationLength];
+    [eventInfo setEventsInfo:eventsArr];
+    
+    [character.animationEventsTable setValue:eventInfo forKey:animName];
+    
+    eventsArr = nil;
+    eventInfo = nil;
+    
+    return YES;
+}
+
+-(BOOL) parsePart:(TBXMLElement*) part withAnimationName:(NSString*)animName toCharacter:(FTCCharacter *)character
+{
+    NSString *partName = [TBXML valueOfAttributeNamed:@"name" forElement:part];
+    
+    NSRange ghostNameRange = [partName rangeOfString:@"ftcghost"];
+    if (ghostNameRange.location != NSNotFound)
+        return YES;
+    
+    NSMutableArray *partFrames = [[NSMutableArray alloc] init];
+    
+    TBXMLElement *frameInfo = [TBXML childElementNamed:@"Frame" parentElement:part];
+    
+    while (frameInfo)
+    {
+        FTCFrameInfo *fi = [[FTCFrameInfo alloc] init];
+        
+        BOOL parseOk = [self parseFrame:frameInfo toDTO:fi];
+        if (!parseOk)
+            return NO;
+        
+        [partFrames addObject:fi];
+        
+        frameInfo = [TBXML nextSiblingNamed:@"Frame" searchFromElement:frameInfo];
+    }
+    
+    FTCSprite *sprite = [character getChildByName:partName];
+    [sprite.animationsArr setValue:partFrames forKey:animName];
+    
+    return YES;
+}
+
+-(BOOL) parseFrame:(TBXMLElement*)frameInfo toDTO:(FTCFrameInfo*)fi
+{
+    NSError *requiredParamMissing = nil;
+    fi.index = [[TBXML valueOfAttributeNamed:@"index" forElement:frameInfo error:&requiredParamMissing] intValue];
+    if (requiredParamMissing != nil)
+        return NO;
+    
+    NSString *xPosition = [TBXML valueOfAttributeNamed:@"x" forElement:frameInfo];
+    if (xPosition.length)
+        fi.x = xPosition.floatValue;
+    
+    NSString *yPosition = [TBXML valueOfAttributeNamed:@"y" forElement:frameInfo];
+    if (yPosition.length)
+        fi.y = -yPosition.floatValue;
+    
+    NSString *scaleX = [TBXML valueOfAttributeNamed:@"scaleX" forElement:frameInfo];
+    if (scaleX.length)
+        fi.scaleX = scaleX.floatValue;
+    
+    NSString *scaleY = [TBXML valueOfAttributeNamed:@"scaleY" forElement:frameInfo];
+    if (scaleY.length)
+        fi.scaleY = scaleY.floatValue;
+    
+    NSString *rotation = [TBXML valueOfAttributeNamed:@"rotation" forElement:frameInfo];
+    if (rotation.length)
+        fi.rotation = rotation.floatValue;
+    
+    NSError *noAlpha = nil;
+    NSString *alpha = [TBXML valueOfAttributeNamed:@"alpha" forElement:frameInfo error:&noAlpha];
+    fi.alpha = (noAlpha == nil) ? alpha.floatValue : 1.0f;
+    
+    return YES;
+}
 
 @end

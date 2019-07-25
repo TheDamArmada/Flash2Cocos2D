@@ -13,23 +13,17 @@
 @class  FTCCharacter;
 
 @interface FTCSprite : CCSprite 
-{
-    CCNode          *debugDrawingNode;
-    NSArray         *currentAnimationInfo;
-    FTCCharacter    *currentCharacter;
-}
 
-@property (strong) NSString              *name;
-@property (unsafe_unretained) BOOL       ignoreRotation;
-@property (unsafe_unretained) BOOL       ignorePosition;
-@property (unsafe_unretained) BOOL       ignoreScale;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) BOOL ignoreRotation;
+@property (nonatomic, assign) BOOL ignorePosition;
+@property (nonatomic, assign) BOOL ignoreScale;
+@property (nonatomic, assign) BOOL ignoreAlpha;
+@property (nonatomic, strong) NSMutableDictionary *animationsArr;
 
-@property (strong) NSMutableDictionary   *animationsArr;
-
-
-// private
--(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character;
--(void) setCurrentAnimationFramesInfo:(NSArray *)_framesInfoArr forCharacter:(FTCCharacter *)_character;
--(void) applyFrameInfo:(FTCFrameInfo *)_frameInfo;
--(void) playFrame:(int)_frameindex;
+//private
+-(void) setCurrentAnimation:(NSString *)framesId forCharacter:(FTCCharacter *)character;
+-(void) setCurrentAnimationFramesInfo:(NSArray *)framesInfoArr forCharacter:(FTCCharacter *)character;
+-(void) applyFrameInfo:(FTCFrameInfo *)frameInfo;
+-(void) playFrame:(int)frameindex;
 @end

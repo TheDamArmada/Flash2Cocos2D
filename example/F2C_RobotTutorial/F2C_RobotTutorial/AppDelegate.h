@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCProtocols.h"
 
 @class RootViewController;
+@protocol CCDirectorDelegate;
 
-@interface AppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate, CCDirectorDelegate> {
 	UIWindow			*window;
 	RootViewController	*viewController;
 }

@@ -10,6 +10,7 @@
 
 @interface FTCEventInfo : NSObject
 
-@property (unsafe_unretained) int      frameIndex;
-@property (strong) NSString *eventType;
+@property (nonatomic, assign) int frameIndex;
+@property (nonatomic, copy) NSString *eventType;
+
 @end

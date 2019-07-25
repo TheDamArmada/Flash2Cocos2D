@@ -26,521 +26,64 @@
 		174376ED1511F52C00D2EBC4 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 174376EC1511F52C00D2EBC4 /* iTunesArtwork */; };
 		1743782D1511F52E00D2EBC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743782C1511F52E00D2EBC4 /* main.m */; };
 		174378301511F52E00D2EBC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743782F1511F52E00D2EBC4 /* AppDelegate.m */; };
-		174378331511F52E00D2EBC4 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378321511F52E00D2EBC4 /* RootViewController.m */; };
 		174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378351511F52E00D2EBC4 /* HelloWorldLayer.m */; };
-		174378F21511F7DF00D2EBC4 /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */; };
-		174378F31511F7DF00D2EBC4 /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */; };
-		174378F41511F7DF00D2EBC4 /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378E91511F7DF00D2EBC4 /* FTCCharacter.m */; };
-		174378F51511F7DF00D2EBC4 /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */; };
-		174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */; };
-		174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378EF1511F7DF00D2EBC4 /* FTCParser.m */; };
-		174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378F11511F7DF00D2EBC4 /* FTCSprite.m */; };
-		174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 174378FD1511F7F000D2EBC4 /* TBXML.m */; };
 		174379021511F89000D2EBC4 /* CCRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 174379011511F89000D2EBC4 /* CCRobot.m */; };
-		1743795815124CA900D2EBC4 /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1743794815124CA900D2EBC4 /* robot_animations.xml */; };
-		1743795915124CA900D2EBC4 /* robot_sheets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1743794915124CA900D2EBC4 /* robot_sheets.xml */; };
-		1743795A15124CA900D2EBC4 /* robotcharactermc_ArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794A15124CA900D2EBC4 /* robotcharactermc_ArmL.png */; };
-		1743795B15124CA900D2EBC4 /* robotcharactermc_ArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794B15124CA900D2EBC4 /* robotcharactermc_ArmR.png */; };
-		1743795C15124CA900D2EBC4 /* robotcharactermc_Body.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794C15124CA900D2EBC4 /* robotcharactermc_Body.png */; };
-		1743795D15124CA900D2EBC4 /* robotcharactermc_ForeArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794D15124CA900D2EBC4 /* robotcharactermc_ForeArmL.png */; };
-		1743795E15124CA900D2EBC4 /* robotcharactermc_ForeArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794E15124CA900D2EBC4 /* robotcharactermc_ForeArmR.png */; };
-		1743795F15124CA900D2EBC4 /* robotcharactermc_HandL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743794F15124CA900D2EBC4 /* robotcharactermc_HandL.png */; };
-		1743796015124CA900D2EBC4 /* robotcharactermc_HandR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795015124CA900D2EBC4 /* robotcharactermc_HandR.png */; };
-		1743796115124CA900D2EBC4 /* robotcharactermc_Head.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795115124CA900D2EBC4 /* robotcharactermc_Head.png */; };
-		1743796215124CA900D2EBC4 /* robotcharactermc_Leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795215124CA900D2EBC4 /* robotcharactermc_Leg.png */; };
-		1743796315124CA900D2EBC4 /* robotcharactermc_NeckBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795315124CA900D2EBC4 /* robotcharactermc_NeckBottom.png */; };
-		1743796415124CA900D2EBC4 /* robotcharactermc_NeckTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795415124CA900D2EBC4 /* robotcharactermc_NeckTop.png */; };
-		1743796515124CA900D2EBC4 /* robotcharactermc_ShoulderL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795515124CA900D2EBC4 /* robotcharactermc_ShoulderL.png */; };
-		1743796615124CA900D2EBC4 /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795615124CA900D2EBC4 /* robotcharactermc_ShoulderR.png */; };
-		1743796715124CA900D2EBC4 /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1743795715124CA900D2EBC4 /* robotcharactermc_Wheel.png */; };
-		1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796B1512527E00D2EBC4 /* TBXML+Compression.m */; };
-		1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */; };
-		17EB88861513567A003B6F12 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EB8803151355A5003B6F12 /* libcocos2d.a */; };
-		17EB88871513567A003B6F12 /* libCocosDenshion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EB8807151355A5003B6F12 /* libCocosDenshion.a */; };
+		39BEF0C6FE4B47B1BFB851CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF18101D5D34F2D98DFA5BE /* libPods.a */; };
+		631964531664D113007633EA /* FTCAnimationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644C1664D113007633EA /* FTCAnimationInfo.m */; };
+		631964541664D113007633EA /* FTCAnimEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644D1664D113007633EA /* FTCAnimEvent.m */; };
+		631964551664D113007633EA /* FTCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644E1664D113007633EA /* FTCCharacter.m */; };
+		631964561664D113007633EA /* FTCEventInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6319644F1664D113007633EA /* FTCEventInfo.m */; };
+		631964571664D113007633EA /* FTCFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964501664D113007633EA /* FTCFrameInfo.m */; };
+		631964581664D113007633EA /* FTCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964511664D113007633EA /* FTCParser.m */; };
+		631964591664D113007633EA /* FTCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 631964521664D113007633EA /* FTCSprite.m */; };
+		6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63252679162DC35F009A3520 /* Default-568h@2x.png */; };
+		632BD086166D18AE00677696 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632BD085166D18AE00677696 /* SenTestingKit.framework */; };
+		632BD087166D18AE00677696 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174376D31511F52C00D2EBC4 /* UIKit.framework */; };
+		632BD088166D18AE00677696 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174376D51511F52C00D2EBC4 /* Foundation.framework */; };
+		632BD08E166D18AE00677696 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 632BD08C166D18AE00677696 /* InfoPlist.strings */; };
+		632BD091166D18AE00677696 /* AppLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 632BD090166D18AE00677696 /* AppLogicTests.m */; };
+		63848D241636C86500D6E96D /* robot_animations.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D061636C86500D6E96D /* robot_animations.xml */; };
+		63848D251636C86500D6E96D /* robot_sheets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 63848D071636C86500D6E96D /* robot_sheets.xml */; };
+		63848D261636C86500D6E96D /* robotcharactermc_ArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */; };
+		63848D271636C86500D6E96D /* robotcharactermc_ArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */; };
+		63848D281636C86500D6E96D /* robotcharactermc_ArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */; };
+		63848D291636C86500D6E96D /* robotcharactermc_ArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */; };
+		63848D2A1636C86500D6E96D /* robotcharactermc_Body-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */; };
+		63848D2B1636C86500D6E96D /* robotcharactermc_Body.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */; };
+		63848D2C1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */; };
+		63848D2D1636C86600D6E96D /* robotcharactermc_ForeArmL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */; };
+		63848D2E1636C86600D6E96D /* robotcharactermc_ForeArmR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */; };
+		63848D2F1636C86600D6E96D /* robotcharactermc_ForeArmR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */; };
+		63848D301636C86600D6E96D /* robotcharactermc_HandL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */; };
+		63848D311636C86600D6E96D /* robotcharactermc_HandL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D131636C86500D6E96D /* robotcharactermc_HandL.png */; };
+		63848D321636C86600D6E96D /* robotcharactermc_HandR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */; };
+		63848D331636C86600D6E96D /* robotcharactermc_HandR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D151636C86500D6E96D /* robotcharactermc_HandR.png */; };
+		63848D341636C86600D6E96D /* robotcharactermc_Head-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */; };
+		63848D351636C86600D6E96D /* robotcharactermc_Head.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D171636C86500D6E96D /* robotcharactermc_Head.png */; };
+		63848D361636C86600D6E96D /* robotcharactermc_Leg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */; };
+		63848D371636C86600D6E96D /* robotcharactermc_Leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D191636C86500D6E96D /* robotcharactermc_Leg.png */; };
+		63848D381636C86600D6E96D /* robotcharactermc_NeckBottom-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */; };
+		63848D391636C86600D6E96D /* robotcharactermc_NeckBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */; };
+		63848D3A1636C86600D6E96D /* robotcharactermc_NeckTop-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */; };
+		63848D3B1636C86600D6E96D /* robotcharactermc_NeckTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */; };
+		63848D3C1636C86600D6E96D /* robotcharactermc_ShoulderL-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */; };
+		63848D3D1636C86600D6E96D /* robotcharactermc_ShoulderL.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */; };
+		63848D3E1636C86600D6E96D /* robotcharactermc_ShoulderR-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */; };
+		63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */; };
+		63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */; };
+		63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		17EB87FC151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 509807081175041800EA7266;
-			remoteInfo = "build all tests";
-		};
-		17EB87FE151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 504225700FC0B39C00B992F7;
-			remoteInfo = box2d;
-		};
-		17EB8800151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50B2C4D10E100AEA00AE9530;
-			remoteInfo = Chipmunk;
-		};
-		17EB8802151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5018F24D0DFDEAC400C013A5;
-			remoteInfo = cocos2d;
-		};
-		17EB8804151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 502C65EE0DFEF3DD00E4107D;
-			remoteInfo = "cocos2d-documentation";
-		};
-		17EB8806151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50CB2FCA1004C8B100B7A750;
-			remoteInfo = CocosDenshion;
-		};
-		17EB8808151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 509B3A0D0F31024E00F2FB95;
-			remoteInfo = cocosLive;
-		};
-		17EB880A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 505461DF10616AE100AB7C52;
-			remoteInfo = FontLabel;
-		};
-		17EB880C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 503164CD10277665003ACFE7;
-			remoteInfo = libpng;
-		};
-		17EB880E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 509B39DF0F31020900F2FB95;
-			remoteInfo = TouchJSON;
-		};
-		17EB8810151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8E6CBEEF0F7A758000D47B3A;
-			remoteInfo = vorbis;
-		};
-		17EB8812151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 504CC32F1035BDE90096894C;
-			remoteInfo = ActionManagerTest;
-		};
-		17EB8814151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50C93AAD0E0BF6E000517B01;
-			remoteInfo = ActionsTest;
-		};
-		17EB8816151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05CA7B0410ED674700F12774;
-			remoteInfo = ActionsWithBlocksSample;
-		};
-		17EB8818151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 504828800F45AED700A30CEF;
-			remoteInfo = AttachTest;
-		};
-		17EB881A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5042262E0FC0B5D500B992F7;
-			remoteInfo = Box2dAccelTouchTest;
-		};
-		17EB881C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50010ED2103B3DB80059EC2E;
-			remoteInfo = Box2dTestBed;
-		};
-		17EB881E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50B2C5E80E100EF000AE9530;
-			remoteInfo = ChipmunkAccelTouchTest;
-		};
-		17EB8820151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50B2CE460E129FD900AE9530;
-			remoteInfo = ChipmunkTestBed;
-		};
-		17EB8822151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 506C77E20E01520900B48100;
-			remoteInfo = ClickAndMoveTest;
-		};
-		17EB8824151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 505224F911B3D4700061670F;
-			remoteInfo = "CocosDenshion - Tom The Turret";
-		};
-		17EB8826151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 505228BA11B3DBB90061670F;
-			remoteInfo = "CocosDenshion - Drum Pad";
-		};
-		17EB8828151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5052293C11B3DCD80061670F;
-			remoteInfo = "CocosDenshion - Fade To Grey";
-		};
-		17EB882A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5052296E11B3DCE90061670F;
-			remoteInfo = "CocosDenshion - FancyRat Metering";
-		};
-		17EB882C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 509B3A280F3102FD00F2FB95;
-			remoteInfo = cocosLiveTest;
-		};
-		17EB882E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 506144080E589A2E003CCDB7;
-			remoteInfo = cocosnodeTest;
-		};
-		17EB8830151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E0A8C2C7133C335500297B76;
-			remoteInfo = DirectorTest;
-		};
-		17EB8832151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 501945740F964C620059CE7C;
-			remoteInfo = drawPrimitivesTest;
-		};
-		17EB8834151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 504E17DC11C4C7E100E19835;
-			remoteInfo = EAGLViewTest;
-		};
-		17EB8836151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 505B63A30F2F4210001B4104;
-			remoteInfo = EaseActionsTest;
-		};
-		17EB8838151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50A24E440F377FA1007CAEB0;
-			remoteInfo = EffectsTest;
-		};
-		17EB883A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50D56FD20F3FABEC007CD6B9;
-			remoteInfo = EffectsAdvancedTest;
-		};
-		17EB883C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DAABAA9A1059A42E00794EB3;
-			remoteInfo = FontTest;
-		};
-		17EB883E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50C7D4950E5C2ED80035ACA2;
-			remoteInfo = IntervalTest;
-		};
-		17EB8840151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50E77D1211D4C926009CA2C2;
-			remoteInfo = HiResTest;
-		};
-		17EB8842151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 506882110E95761200F943E5;
-			remoteInfo = LabelTest;
-		};
-		17EB8844151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 504799B1100F6A4200D1C71A;
-			remoteInfo = LayerTest;
-		};
-		17EB8846151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 506C7A090E01C73A00B48100;
-			remoteInfo = MenuTest;
-		};
-		17EB8848151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05AAF3E410EE85B300CACA2B;
-			remoteInfo = MenuTestWithBlocks;
-		};
-		17EB884A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50A783C40F3AFCE500104C45;
-			remoteInfo = MotionStreakTest;
-		};
-		17EB884C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50C195600EE4B57E00829067;
-			remoteInfo = ParallaxTest;
-		};
-		17EB884E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50DB1BCA0E1C1E5900A89DFF;
-			remoteInfo = ParticleTest;
-		};
-		17EB8850151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8EDF3ED80F6BDA0000F54643;
-			remoteInfo = "PASoundEngineTest (experimental)";
-		};
-		17EB8852151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 501504ED11330E1700A9CA65;
-			remoteInfo = ProgressActionsTest;
-		};
-		17EB8854151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 495E73F7104B74E20012BB52;
-			remoteInfo = RenderTextureTest;
-		};
-		17EB8856151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 502C66180DFEFCCA00E4107D;
-			remoteInfo = RotateWorldTest;
-		};
-		17EB8858151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 506C800E0E041C9300B48100;
-			remoteInfo = SceneTest;
-		};
-		17EB885A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 508CA7DA1193270F003AC397;
-			remoteInfo = SchedulerTest;
-		};
-		17EB885C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 501C7C910F91EFFF0024A296;
-			remoteInfo = SpriteTest;
-		};
-		17EB885E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A0240F18139E3AE50075D13F;
-			remoteInfo = TestCocos2dExtension;
-		};
-		17EB8860151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 505B62D60F2E6A0F001B4104;
-			remoteInfo = Texture2dTest;
-		};
-		17EB8862151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 503F5CBE101FE930002A37E5;
-			remoteInfo = TileMapTest;
-		};
-		17EB8864151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5012DD3B0FE2994300D6DDD1;
-			remoteInfo = TouchesTest;
-		};
-		17EB8866151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50C938E00E0A9DBB00517B01;
-			remoteInfo = TransitionsTest;
-		};
-		17EB8868151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E0C5588611FE48E600B9E4CB;
-			remoteInfo = ZwoptexTest;
-		};
-		17EB886A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50DFC29F0FF627B6007E7827;
-			remoteInfo = HelloWorldSample;
-		};
-		17EB886C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50D0E05F0FF9232E00098927;
-			remoteInfo = HelloActionsSample;
-		};
-		17EB886E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50D0E0DE0FF930BA00098927;
-			remoteInfo = HelloEventsSample;
-		};
-		17EB8870151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 507FF8F2116D16F600B6FAB2;
-			remoteInfo = Bug350;
-		};
-		17EB8872151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50CB34DD100765EF00B7A750;
-			remoteInfo = Bug422;
-		};
-		17EB8874151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E037DA4C1281C7F0003D39D7;
-			remoteInfo = Bug458;
-		};
-		17EB8876151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E02BC2CD1270E489006E46A2;
-			remoteInfo = Bug624;
-		};
-		17EB8878151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 50CBA48711CBD6FB007B009D;
-			remoteInfo = Bug886;
-		};
-		17EB887A151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 507C0F0B11D609290075E747;
-			remoteInfo = Bug899;
-		};
-		17EB887C151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 502BF56911E39CC30030C477;
-			remoteInfo = Bug914;
-		};
-		17EB887E151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E0BD9270134B744600E71F1D;
-			remoteInfo = Bug1159;
-		};
-		17EB8880151355A5003B6F12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A031C5B7139543A70072E9F9;
-			remoteInfo = Bug1174;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		174376C51511F52C00D2EBC4 /* F2C_RobotTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F2C_RobotTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		174376C91511F52C00D2EBC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		174376CB1511F52C00D2EBC4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		174376CD1511F52C00D2EBC4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		174376CF1511F52C00D2EBC4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		174376D11511F52C00D2EBC4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		174376D31511F52C00D2EBC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		174376D51511F52C00D2EBC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		174376D71511F52C00D2EBC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		174376C91511F52C00D2EBC4 /* QuartzCore.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		174376CB1511F52C00D2EBC4 /* OpenGLES.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		174376CD1511F52C00D2EBC4 /* OpenAL.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		174376CF1511F52C00D2EBC4 /* AudioToolbox.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		174376D11511F52C00D2EBC4 /* AVFoundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		174376D31511F52C00D2EBC4 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		174376D51511F52C00D2EBC4 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		174376D71511F52C00D2EBC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		174376DB1511F52C00D2EBC4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		174376DD1511F52C00D2EBC4 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		174376DF1511F52C00D2EBC4 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
@@ -555,52 +98,65 @@
 		1743782C1511F52E00D2EBC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1743782E1511F52E00D2EBC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1743782F1511F52E00D2EBC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		174378311511F52E00D2EBC4 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		174378321511F52E00D2EBC4 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		174378341511F52E00D2EBC4 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		174378351511F52E00D2EBC4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		174378371511F52E00D2EBC4 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		174378E41511F7DF00D2EBC4 /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimationInfo.h; sourceTree = "<group>"; };
-		174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimationInfo.m; sourceTree = "<group>"; };
-		174378E61511F7DF00D2EBC4 /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCAnimEvent.h; sourceTree = "<group>"; };
-		174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCAnimEvent.m; sourceTree = "<group>"; };
-		174378E81511F7DF00D2EBC4 /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCCharacter.h; sourceTree = "<group>"; };
-		174378E91511F7DF00D2EBC4 /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCCharacter.m; sourceTree = "<group>"; };
-		174378EA1511F7DF00D2EBC4 /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCEventInfo.h; sourceTree = "<group>"; };
-		174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCEventInfo.m; sourceTree = "<group>"; };
-		174378EC1511F7DF00D2EBC4 /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCFrameInfo.h; sourceTree = "<group>"; };
-		174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCFrameInfo.m; sourceTree = "<group>"; };
-		174378EE1511F7DF00D2EBC4 /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCParser.h; sourceTree = "<group>"; };
-		174378EF1511F7DF00D2EBC4 /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCParser.m; sourceTree = "<group>"; };
-		174378F01511F7DF00D2EBC4 /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCSprite.h; sourceTree = "<group>"; };
-		174378F11511F7DF00D2EBC4 /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCSprite.m; sourceTree = "<group>"; };
-		174378FC1511F7F000D2EBC4 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		174378FD1511F7F000D2EBC4 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		174379001511F89000D2EBC4 /* CCRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRobot.h; sourceTree = "<group>"; };
 		174379011511F89000D2EBC4 /* CCRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRobot.m; sourceTree = "<group>"; };
-		1743794815124CA900D2EBC4 /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
-		1743794915124CA900D2EBC4 /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
-		1743794A15124CA900D2EBC4 /* robotcharactermc_ArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmL.png; sourceTree = "<group>"; };
-		1743794B15124CA900D2EBC4 /* robotcharactermc_ArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmR.png; sourceTree = "<group>"; };
-		1743794C15124CA900D2EBC4 /* robotcharactermc_Body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Body.png; sourceTree = "<group>"; };
-		1743794D15124CA900D2EBC4 /* robotcharactermc_ForeArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmL.png; sourceTree = "<group>"; };
-		1743794E15124CA900D2EBC4 /* robotcharactermc_ForeArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmR.png; sourceTree = "<group>"; };
-		1743794F15124CA900D2EBC4 /* robotcharactermc_HandL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandL.png; sourceTree = "<group>"; };
-		1743795015124CA900D2EBC4 /* robotcharactermc_HandR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandR.png; sourceTree = "<group>"; };
-		1743795115124CA900D2EBC4 /* robotcharactermc_Head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Head.png; sourceTree = "<group>"; };
-		1743795215124CA900D2EBC4 /* robotcharactermc_Leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Leg.png; sourceTree = "<group>"; };
-		1743795315124CA900D2EBC4 /* robotcharactermc_NeckBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckBottom.png; sourceTree = "<group>"; };
-		1743795415124CA900D2EBC4 /* robotcharactermc_NeckTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckTop.png; sourceTree = "<group>"; };
-		1743795515124CA900D2EBC4 /* robotcharactermc_ShoulderL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderL.png; sourceTree = "<group>"; };
-		1743795615124CA900D2EBC4 /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
-		1743795715124CA900D2EBC4 /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
-		174379681512527E00D2EBC4 /* TBXML-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML-iOS-Prefix.pch"; sourceTree = "<group>"; };
-		174379691512527E00D2EBC4 /* TBXML-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML-Prefix.pch"; sourceTree = "<group>"; };
-		1743796A1512527E00D2EBC4 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
-		1743796B1512527E00D2EBC4 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
-		1743796C1512527E00D2EBC4 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
-		1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
-		17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "../../../../../../Resources/ios/cocos2D ARC/cocos2d-iphone-1.0.1/cocos2d-ios.xcodeproj"; sourceTree = "<group>"; };
+		6319644C1664D113007633EA /* FTCAnimationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCAnimationInfo.m; path = ../../../FlashToCocosARC/FTCAnimationInfo.m; sourceTree = "<group>"; };
+		6319644D1664D113007633EA /* FTCAnimEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCAnimEvent.m; path = ../../../FlashToCocosARC/FTCAnimEvent.m; sourceTree = "<group>"; };
+		6319644E1664D113007633EA /* FTCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCCharacter.m; path = ../../../FlashToCocosARC/FTCCharacter.m; sourceTree = "<group>"; };
+		6319644F1664D113007633EA /* FTCEventInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCEventInfo.m; path = ../../../FlashToCocosARC/FTCEventInfo.m; sourceTree = "<group>"; };
+		631964501664D113007633EA /* FTCFrameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCFrameInfo.m; path = ../../../FlashToCocosARC/FTCFrameInfo.m; sourceTree = "<group>"; };
+		631964511664D113007633EA /* FTCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCParser.m; path = ../../../FlashToCocosARC/FTCParser.m; sourceTree = "<group>"; };
+		631964521664D113007633EA /* FTCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCSprite.m; path = ../../../FlashToCocosARC/FTCSprite.m; sourceTree = "<group>"; };
+		63252679162DC35F009A3520 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		632BD084166D18AE00677696 /* AppLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		632BD085166D18AE00677696 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		632BD08B166D18AE00677696 /* AppLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppLogicTests-Info.plist"; sourceTree = "<group>"; };
+		632BD08D166D18AE00677696 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		632BD08F166D18AE00677696 /* AppLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLogicTests.h; sourceTree = "<group>"; };
+		632BD090166D18AE00677696 /* AppLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLogicTests.m; sourceTree = "<group>"; };
+		632BD092166D18AE00677696 /* AppLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		63848D061636C86500D6E96D /* robot_animations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_animations.xml; sourceTree = "<group>"; };
+		63848D071636C86500D6E96D /* robot_sheets.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = robot_sheets.xml; sourceTree = "<group>"; };
+		63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmL-hd.png"; sourceTree = "<group>"; };
+		63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmL.png; sourceTree = "<group>"; };
+		63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ArmR-hd.png"; sourceTree = "<group>"; };
+		63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ArmR.png; sourceTree = "<group>"; };
+		63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Body-hd.png"; sourceTree = "<group>"; };
+		63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Body.png; sourceTree = "<group>"; };
+		63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmL-hd.png"; sourceTree = "<group>"; };
+		63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmL.png; sourceTree = "<group>"; };
+		63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ForeArmR-hd.png"; sourceTree = "<group>"; };
+		63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ForeArmR.png; sourceTree = "<group>"; };
+		63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandL-hd.png"; sourceTree = "<group>"; };
+		63848D131636C86500D6E96D /* robotcharactermc_HandL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandL.png; sourceTree = "<group>"; };
+		63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_HandR-hd.png"; sourceTree = "<group>"; };
+		63848D151636C86500D6E96D /* robotcharactermc_HandR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_HandR.png; sourceTree = "<group>"; };
+		63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Head-hd.png"; sourceTree = "<group>"; };
+		63848D171636C86500D6E96D /* robotcharactermc_Head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Head.png; sourceTree = "<group>"; };
+		63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Leg-hd.png"; sourceTree = "<group>"; };
+		63848D191636C86500D6E96D /* robotcharactermc_Leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Leg.png; sourceTree = "<group>"; };
+		63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckBottom-hd.png"; sourceTree = "<group>"; };
+		63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckBottom.png; sourceTree = "<group>"; };
+		63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_NeckTop-hd.png"; sourceTree = "<group>"; };
+		63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_NeckTop.png; sourceTree = "<group>"; };
+		63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderL-hd.png"; sourceTree = "<group>"; };
+		63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderL.png; sourceTree = "<group>"; };
+		63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_ShoulderR-hd.png"; sourceTree = "<group>"; };
+		63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_ShoulderR.png; sourceTree = "<group>"; };
+		63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotcharactermc_Wheel-hd.png"; sourceTree = "<group>"; };
+		63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcharactermc_Wheel.png; sourceTree = "<group>"; };
+		638D708B166C012B00E6BE7E /* FTCAnimationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCAnimationInfo.h; path = ../../../FlashToCocosARC/FTCAnimationInfo.h; sourceTree = "<group>"; };
+		638D708C166C012B00E6BE7E /* FTCAnimEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCAnimEvent.h; path = ../../../FlashToCocosARC/FTCAnimEvent.h; sourceTree = "<group>"; };
+		638D708D166C012B00E6BE7E /* FTCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCCharacter.h; path = ../../../FlashToCocosARC/FTCCharacter.h; sourceTree = "<group>"; };
+		638D708E166C012B00E6BE7E /* FTCEventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCEventInfo.h; path = ../../../FlashToCocosARC/FTCEventInfo.h; sourceTree = "<group>"; };
+		638D708F166C012B00E6BE7E /* FTCFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCFrameInfo.h; path = ../../../FlashToCocosARC/FTCFrameInfo.h; sourceTree = "<group>"; };
+		638D7090166C012B00E6BE7E /* FTCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCParser.h; path = ../../../FlashToCocosARC/FTCParser.h; sourceTree = "<group>"; };
+		638D7091166C012B00E6BE7E /* FTCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCSprite.h; path = ../../../FlashToCocosARC/FTCSprite.h; sourceTree = "<group>"; };
+		686ED183BE17470FB2C92EAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		ECF18101D5D34F2D98DFA5BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -608,8 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17EB88861513567A003B6F12 /* libcocos2d.a in Frameworks */,
-				17EB88871513567A003B6F12 /* libCocosDenshion.a in Frameworks */,
 				174376CA1511F52C00D2EBC4 /* QuartzCore.framework in Frameworks */,
 				174376CC1511F52C00D2EBC4 /* OpenGLES.framework in Frameworks */,
 				174376CE1511F52C00D2EBC4 /* OpenAL.framework in Frameworks */,
@@ -618,6 +172,17 @@
 				174376D41511F52C00D2EBC4 /* UIKit.framework in Frameworks */,
 				174376D61511F52C00D2EBC4 /* Foundation.framework in Frameworks */,
 				174376D81511F52C00D2EBC4 /* CoreGraphics.framework in Frameworks */,
+				39BEF0C6FE4B47B1BFB851CB /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632BD080166D18AE00677696 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632BD086166D18AE00677696 /* SenTestingKit.framework in Frameworks */,
+				632BD087166D18AE00677696 /* UIKit.framework in Frameworks */,
+				632BD088166D18AE00677696 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,9 +192,12 @@
 		174376BA1511F52C00D2EBC4 = {
 			isa = PBXGroup;
 			children = (
+				63252679162DC35F009A3520 /* Default-568h@2x.png */,
 				174376D91511F52C00D2EBC4 /* F2C_RobotTutorial */,
+				632BD089166D18AE00677696 /* AppLogicTests */,
 				174376C81511F52C00D2EBC4 /* Frameworks */,
 				174376C61511F52C00D2EBC4 /* Products */,
+				686ED183BE17470FB2C92EAC /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -637,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				174376C51511F52C00D2EBC4 /* F2C_RobotTutorial.app */,
+				632BD084166D18AE00677696 /* AppLogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -644,8 +213,6 @@
 		174376C81511F52C00D2EBC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				174378F91511F7F000D2EBC4 /* TBXML */,
-				174378E31511F7DF00D2EBC4 /* FlashToCocosARC */,
 				174376C91511F52C00D2EBC4 /* QuartzCore.framework */,
 				174376CB1511F52C00D2EBC4 /* OpenGLES.framework */,
 				174376CD1511F52C00D2EBC4 /* OpenAL.framework */,
@@ -654,6 +221,8 @@
 				174376D31511F52C00D2EBC4 /* UIKit.framework */,
 				174376D51511F52C00D2EBC4 /* Foundation.framework */,
 				174376D71511F52C00D2EBC4 /* CoreGraphics.framework */,
+				ECF18101D5D34F2D98DFA5BE /* libPods.a */,
+				632BD085166D18AE00677696 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -663,8 +232,6 @@
 			children = (
 				1743782E1511F52E00D2EBC4 /* AppDelegate.h */,
 				1743782F1511F52E00D2EBC4 /* AppDelegate.m */,
-				174378311511F52E00D2EBC4 /* RootViewController.h */,
-				174378321511F52E00D2EBC4 /* RootViewController.m */,
 				174378341511F52E00D2EBC4 /* HelloWorldLayer.h */,
 				174378351511F52E00D2EBC4 /* HelloWorldLayer.m */,
 				174378371511F52E00D2EBC4 /* GameConfig.h */,
@@ -698,7 +265,20 @@
 		174376EE1511F52C00D2EBC4 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */,
+				638D708B166C012B00E6BE7E /* FTCAnimationInfo.h */,
+				638D708C166C012B00E6BE7E /* FTCAnimEvent.h */,
+				638D708D166C012B00E6BE7E /* FTCCharacter.h */,
+				638D708E166C012B00E6BE7E /* FTCEventInfo.h */,
+				638D708F166C012B00E6BE7E /* FTCFrameInfo.h */,
+				638D7090166C012B00E6BE7E /* FTCParser.h */,
+				638D7091166C012B00E6BE7E /* FTCSprite.h */,
+				6319644C1664D113007633EA /* FTCAnimationInfo.m */,
+				6319644D1664D113007633EA /* FTCAnimEvent.m */,
+				6319644E1664D113007633EA /* FTCCharacter.m */,
+				6319644F1664D113007633EA /* FTCEventInfo.m */,
+				631964501664D113007633EA /* FTCFrameInfo.m */,
+				631964511664D113007633EA /* FTCParser.m */,
+				631964521664D113007633EA /* FTCSprite.m */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -721,137 +301,61 @@
 			path = Resources/Robot;
 			sourceTree = "<group>";
 		};
-		174378E31511F7DF00D2EBC4 /* FlashToCocosARC */ = {
-			isa = PBXGroup;
-			children = (
-				174378E41511F7DF00D2EBC4 /* FTCAnimationInfo.h */,
-				174378E51511F7DF00D2EBC4 /* FTCAnimationInfo.m */,
-				174378E61511F7DF00D2EBC4 /* FTCAnimEvent.h */,
-				174378E71511F7DF00D2EBC4 /* FTCAnimEvent.m */,
-				174378E81511F7DF00D2EBC4 /* FTCCharacter.h */,
-				174378E91511F7DF00D2EBC4 /* FTCCharacter.m */,
-				174378EA1511F7DF00D2EBC4 /* FTCEventInfo.h */,
-				174378EB1511F7DF00D2EBC4 /* FTCEventInfo.m */,
-				174378EC1511F7DF00D2EBC4 /* FTCFrameInfo.h */,
-				174378ED1511F7DF00D2EBC4 /* FTCFrameInfo.m */,
-				174378EE1511F7DF00D2EBC4 /* FTCParser.h */,
-				174378EF1511F7DF00D2EBC4 /* FTCParser.m */,
-				174378F01511F7DF00D2EBC4 /* FTCSprite.h */,
-				174378F11511F7DF00D2EBC4 /* FTCSprite.m */,
-			);
-			path = FlashToCocosARC;
-			sourceTree = "<group>";
-		};
-		174378F91511F7F000D2EBC4 /* TBXML */ = {
-			isa = PBXGroup;
-			children = (
-				174379681512527E00D2EBC4 /* TBXML-iOS-Prefix.pch */,
-				174379691512527E00D2EBC4 /* TBXML-Prefix.pch */,
-				1743796A1512527E00D2EBC4 /* TBXML+Compression.h */,
-				1743796B1512527E00D2EBC4 /* TBXML+Compression.m */,
-				1743796C1512527E00D2EBC4 /* TBXML+HTTP.h */,
-				1743796D1512527E00D2EBC4 /* TBXML+HTTP.m */,
-				174378FC1511F7F000D2EBC4 /* TBXML.h */,
-				174378FD1511F7F000D2EBC4 /* TBXML.m */,
-			);
-			path = TBXML;
-			sourceTree = "<group>";
-		};
 		1743794715124CA900D2EBC4 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				1743794815124CA900D2EBC4 /* robot_animations.xml */,
-				1743794915124CA900D2EBC4 /* robot_sheets.xml */,
-				1743794A15124CA900D2EBC4 /* robotcharactermc_ArmL.png */,
-				1743794B15124CA900D2EBC4 /* robotcharactermc_ArmR.png */,
-				1743794C15124CA900D2EBC4 /* robotcharactermc_Body.png */,
-				1743794D15124CA900D2EBC4 /* robotcharactermc_ForeArmL.png */,
-				1743794E15124CA900D2EBC4 /* robotcharactermc_ForeArmR.png */,
-				1743794F15124CA900D2EBC4 /* robotcharactermc_HandL.png */,
-				1743795015124CA900D2EBC4 /* robotcharactermc_HandR.png */,
-				1743795115124CA900D2EBC4 /* robotcharactermc_Head.png */,
-				1743795215124CA900D2EBC4 /* robotcharactermc_Leg.png */,
-				1743795315124CA900D2EBC4 /* robotcharactermc_NeckBottom.png */,
-				1743795415124CA900D2EBC4 /* robotcharactermc_NeckTop.png */,
-				1743795515124CA900D2EBC4 /* robotcharactermc_ShoulderL.png */,
-				1743795615124CA900D2EBC4 /* robotcharactermc_ShoulderR.png */,
-				1743795715124CA900D2EBC4 /* robotcharactermc_Wheel.png */,
+				63848D061636C86500D6E96D /* robot_animations.xml */,
+				63848D071636C86500D6E96D /* robot_sheets.xml */,
+				63848D081636C86500D6E96D /* robotcharactermc_ArmL-hd.png */,
+				63848D091636C86500D6E96D /* robotcharactermc_ArmL.png */,
+				63848D0A1636C86500D6E96D /* robotcharactermc_ArmR-hd.png */,
+				63848D0B1636C86500D6E96D /* robotcharactermc_ArmR.png */,
+				63848D0C1636C86500D6E96D /* robotcharactermc_Body-hd.png */,
+				63848D0D1636C86500D6E96D /* robotcharactermc_Body.png */,
+				63848D0E1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png */,
+				63848D0F1636C86500D6E96D /* robotcharactermc_ForeArmL.png */,
+				63848D101636C86500D6E96D /* robotcharactermc_ForeArmR-hd.png */,
+				63848D111636C86500D6E96D /* robotcharactermc_ForeArmR.png */,
+				63848D121636C86500D6E96D /* robotcharactermc_HandL-hd.png */,
+				63848D131636C86500D6E96D /* robotcharactermc_HandL.png */,
+				63848D141636C86500D6E96D /* robotcharactermc_HandR-hd.png */,
+				63848D151636C86500D6E96D /* robotcharactermc_HandR.png */,
+				63848D161636C86500D6E96D /* robotcharactermc_Head-hd.png */,
+				63848D171636C86500D6E96D /* robotcharactermc_Head.png */,
+				63848D181636C86500D6E96D /* robotcharactermc_Leg-hd.png */,
+				63848D191636C86500D6E96D /* robotcharactermc_Leg.png */,
+				63848D1A1636C86500D6E96D /* robotcharactermc_NeckBottom-hd.png */,
+				63848D1B1636C86500D6E96D /* robotcharactermc_NeckBottom.png */,
+				63848D1C1636C86500D6E96D /* robotcharactermc_NeckTop-hd.png */,
+				63848D1D1636C86500D6E96D /* robotcharactermc_NeckTop.png */,
+				63848D1E1636C86500D6E96D /* robotcharactermc_ShoulderL-hd.png */,
+				63848D1F1636C86500D6E96D /* robotcharactermc_ShoulderL.png */,
+				63848D201636C86500D6E96D /* robotcharactermc_ShoulderR-hd.png */,
+				63848D211636C86500D6E96D /* robotcharactermc_ShoulderR.png */,
+				63848D221636C86500D6E96D /* robotcharactermc_Wheel-hd.png */,
+				63848D231636C86500D6E96D /* robotcharactermc_Wheel.png */,
 			);
 			path = data;
 			sourceTree = "<group>";
 		};
-		17EB877C151355A2003B6F12 /* Products */ = {
+		632BD089166D18AE00677696 /* AppLogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				17EB87FD151355A5003B6F12 /* libbuild all tests.a */,
-				17EB87FF151355A5003B6F12 /* libbox2d.a */,
-				17EB8801151355A5003B6F12 /* libChipmunk.a */,
-				17EB8803151355A5003B6F12 /* libcocos2d.a */,
-				17EB8805151355A5003B6F12 /* libcocos2d-documentation.a */,
-				17EB8807151355A5003B6F12 /* libCocosDenshion.a */,
-				17EB8809151355A5003B6F12 /* libcocos Live.a */,
-				17EB880B151355A5003B6F12 /* libFontLabel.a */,
-				17EB880D151355A5003B6F12 /* liblibpng.a */,
-				17EB880F151355A5003B6F12 /* libTouchJSON.a */,
-				17EB8811151355A5003B6F12 /* libvorbis.a */,
-				17EB8813151355A5003B6F12 /* ActionManagerTest.app */,
-				17EB8815151355A5003B6F12 /* ActionsTest.app */,
-				17EB8817151355A5003B6F12 /* ActionsWithBlocksSample.app */,
-				17EB8819151355A5003B6F12 /* AttachTest.app */,
-				17EB881B151355A5003B6F12 /* Box2dAccelTouchTest.app */,
-				17EB881D151355A5003B6F12 /* Box2dTestBed.app */,
-				17EB881F151355A5003B6F12 /* ChipmunkAccelTouchTest.app */,
-				17EB8821151355A5003B6F12 /* ChipmunkTest.app */,
-				17EB8823151355A5003B6F12 /* ClickAndMoveTest.app */,
-				17EB8825151355A5003B6F12 /* CocosDenshion - Tom The Turret.app */,
-				17EB8827151355A5003B6F12 /* CocosDenshion - Drum Pad.app */,
-				17EB8829151355A5003B6F12 /* CocosDenshion - Fade To Grey.app */,
-				17EB882B151355A5003B6F12 /* CocosDenshion - FancyRat Metering Demo.app */,
-				17EB882D151355A5003B6F12 /* cocosLiveTest.app */,
-				17EB882F151355A5003B6F12 /* cocosnodeTest.app */,
-				17EB8831151355A5003B6F12 /* DirectorTest.app */,
-				17EB8833151355A5003B6F12 /* drawPrimitivesTest.app */,
-				17EB8835151355A5003B6F12 /* EAGLViewTest.app */,
-				17EB8837151355A5003B6F12 /* EaseActionsTest.app */,
-				17EB8839151355A5003B6F12 /* EffectsTest.app */,
-				17EB883B151355A5003B6F12 /* EffectsAdvancedTest.app */,
-				17EB883D151355A5003B6F12 /* FontTest.app */,
-				17EB883F151355A5003B6F12 /* IntervalTest.app */,
-				17EB8841151355A5003B6F12 /* HiResTest.app */,
-				17EB8843151355A5003B6F12 /* LabelTest.app */,
-				17EB8845151355A5003B6F12 /* LayerTest.app */,
-				17EB8847151355A5003B6F12 /* MenuTest.app */,
-				17EB8849151355A5003B6F12 /* MenuTestWithBlocks.app */,
-				17EB884B151355A5003B6F12 /* MotionStreakTest.app */,
-				17EB884D151355A5003B6F12 /* ParallaxTest.app */,
-				17EB884F151355A5003B6F12 /* ParticleTest.app */,
-				17EB8851151355A5003B6F12 /* SoundEngineTest.app */,
-				17EB8853151355A5003B6F12 /* ProgressActionsTest.app */,
-				17EB8855151355A5003B6F12 /* RenderTextureTest.app */,
-				17EB8857151355A5003B6F12 /* RotateWorldTest.app */,
-				17EB8859151355A5003B6F12 /* SceneTest.app */,
-				17EB885B151355A5003B6F12 /* SchedulerTest.app */,
-				17EB885D151355A5003B6F12 /* SpriteTest.app */,
-				17EB885F151355A5003B6F12 /* TestCocos2dExtension.app */,
-				17EB8861151355A5003B6F12 /* Texture2dTest.app */,
-				17EB8863151355A5003B6F12 /* TileMapTest.app */,
-				17EB8865151355A5003B6F12 /* TouchesTest.app */,
-				17EB8867151355A5003B6F12 /* TransitionsTest.app */,
-				17EB8869151355A5003B6F12 /* ZwoptexTest.app */,
-				17EB886B151355A5003B6F12 /* HelloWorldSample.app */,
-				17EB886D151355A5003B6F12 /* HelloActionsSample.app */,
-				17EB886F151355A5003B6F12 /* HelloEventsSample.app */,
-				17EB8871151355A5003B6F12 /* Bug350.app */,
-				17EB8873151355A5003B6F12 /* Bug422.app */,
-				17EB8875151355A5003B6F12 /* Bug458.app */,
-				17EB8877151355A5003B6F12 /* Bug624.app */,
-				17EB8879151355A5003B6F12 /* Bug886.app */,
-				17EB887B151355A5003B6F12 /* Bug899.app */,
-				17EB887D151355A5003B6F12 /* Bug914.app */,
-				17EB887F151355A5003B6F12 /* Bug1159.app */,
-				17EB8881151355A5003B6F12 /* Bug1174.app */,
+				632BD08F166D18AE00677696 /* AppLogicTests.h */,
+				632BD090166D18AE00677696 /* AppLogicTests.m */,
+				632BD08A166D18AE00677696 /* Supporting Files */,
 			);
-			name = Products;
+			path = AppLogicTests;
+			sourceTree = "<group>";
+		};
+		632BD08A166D18AE00677696 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				632BD08B166D18AE00677696 /* AppLogicTests-Info.plist */,
+				632BD08C166D18AE00677696 /* InfoPlist.strings */,
+				632BD092166D18AE00677696 /* AppLogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -864,6 +368,7 @@
 				174376C11511F52C00D2EBC4 /* Sources */,
 				174376C21511F52C00D2EBC4 /* Frameworks */,
 				174376C31511F52C00D2EBC4 /* Resources */,
+				6FFE1B0703C8492BA830F066 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -873,6 +378,24 @@
 			productName = F2C_RobotTutorial;
 			productReference = 174376C51511F52C00D2EBC4 /* F2C_RobotTutorial.app */;
 			productType = "com.apple.product-type.application";
+		};
+		632BD083166D18AE00677696 /* AppLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 632BD095166D18AF00677696 /* Build configuration list for PBXNativeTarget "AppLogicTests" */;
+			buildPhases = (
+				632BD07F166D18AE00677696 /* Sources */,
+				632BD080166D18AE00677696 /* Frameworks */,
+				632BD081166D18AE00677696 /* Resources */,
+				632BD082166D18AE00677696 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppLogicTests;
+			productName = AppLogicTests;
+			productReference = 632BD084166D18AE00677696 /* AppLogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -888,494 +411,18 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 174376BA1511F52C00D2EBC4;
 			productRefGroup = 174376C61511F52C00D2EBC4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 17EB877C151355A2003B6F12 /* Products */;
-					ProjectRef = 17EB877B151355A2003B6F12 /* cocos2d-ios.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				174376C41511F52C00D2EBC4 /* F2C_RobotTutorial */,
+				632BD083166D18AE00677696 /* AppLogicTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		17EB87FD151355A5003B6F12 /* libbuild all tests.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libbuild all tests.a";
-			remoteRef = 17EB87FC151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB87FF151355A5003B6F12 /* libbox2d.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libbox2d.a;
-			remoteRef = 17EB87FE151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8801151355A5003B6F12 /* libChipmunk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libChipmunk.a;
-			remoteRef = 17EB8800151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8803151355A5003B6F12 /* libcocos2d.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcocos2d.a;
-			remoteRef = 17EB8802151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8805151355A5003B6F12 /* libcocos2d-documentation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libcocos2d-documentation.a";
-			remoteRef = 17EB8804151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8807151355A5003B6F12 /* libCocosDenshion.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCocosDenshion.a;
-			remoteRef = 17EB8806151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8809151355A5003B6F12 /* libcocos Live.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libcocos Live.a";
-			remoteRef = 17EB8808151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB880B151355A5003B6F12 /* libFontLabel.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libFontLabel.a;
-			remoteRef = 17EB880A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB880D151355A5003B6F12 /* liblibpng.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = liblibpng.a;
-			remoteRef = 17EB880C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB880F151355A5003B6F12 /* libTouchJSON.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTouchJSON.a;
-			remoteRef = 17EB880E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8811151355A5003B6F12 /* libvorbis.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libvorbis.a;
-			remoteRef = 17EB8810151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8813151355A5003B6F12 /* ActionManagerTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ActionManagerTest.app;
-			remoteRef = 17EB8812151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8815151355A5003B6F12 /* ActionsTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ActionsTest.app;
-			remoteRef = 17EB8814151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8817151355A5003B6F12 /* ActionsWithBlocksSample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ActionsWithBlocksSample.app;
-			remoteRef = 17EB8816151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8819151355A5003B6F12 /* AttachTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = AttachTest.app;
-			remoteRef = 17EB8818151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB881B151355A5003B6F12 /* Box2dAccelTouchTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Box2dAccelTouchTest.app;
-			remoteRef = 17EB881A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB881D151355A5003B6F12 /* Box2dTestBed.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Box2dTestBed.app;
-			remoteRef = 17EB881C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB881F151355A5003B6F12 /* ChipmunkAccelTouchTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ChipmunkAccelTouchTest.app;
-			remoteRef = 17EB881E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8821151355A5003B6F12 /* ChipmunkTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ChipmunkTest.app;
-			remoteRef = 17EB8820151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8823151355A5003B6F12 /* ClickAndMoveTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ClickAndMoveTest.app;
-			remoteRef = 17EB8822151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8825151355A5003B6F12 /* CocosDenshion - Tom The Turret.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "CocosDenshion - Tom The Turret.app";
-			remoteRef = 17EB8824151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8827151355A5003B6F12 /* CocosDenshion - Drum Pad.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "CocosDenshion - Drum Pad.app";
-			remoteRef = 17EB8826151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8829151355A5003B6F12 /* CocosDenshion - Fade To Grey.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "CocosDenshion - Fade To Grey.app";
-			remoteRef = 17EB8828151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB882B151355A5003B6F12 /* CocosDenshion - FancyRat Metering Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "CocosDenshion - FancyRat Metering Demo.app";
-			remoteRef = 17EB882A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB882D151355A5003B6F12 /* cocosLiveTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = cocosLiveTest.app;
-			remoteRef = 17EB882C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB882F151355A5003B6F12 /* cocosnodeTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = cocosnodeTest.app;
-			remoteRef = 17EB882E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8831151355A5003B6F12 /* DirectorTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = DirectorTest.app;
-			remoteRef = 17EB8830151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8833151355A5003B6F12 /* drawPrimitivesTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = drawPrimitivesTest.app;
-			remoteRef = 17EB8832151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8835151355A5003B6F12 /* EAGLViewTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EAGLViewTest.app;
-			remoteRef = 17EB8834151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8837151355A5003B6F12 /* EaseActionsTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EaseActionsTest.app;
-			remoteRef = 17EB8836151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8839151355A5003B6F12 /* EffectsTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EffectsTest.app;
-			remoteRef = 17EB8838151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB883B151355A5003B6F12 /* EffectsAdvancedTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = EffectsAdvancedTest.app;
-			remoteRef = 17EB883A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB883D151355A5003B6F12 /* FontTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = FontTest.app;
-			remoteRef = 17EB883C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB883F151355A5003B6F12 /* IntervalTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = IntervalTest.app;
-			remoteRef = 17EB883E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8841151355A5003B6F12 /* HiResTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HiResTest.app;
-			remoteRef = 17EB8840151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8843151355A5003B6F12 /* LabelTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LabelTest.app;
-			remoteRef = 17EB8842151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8845151355A5003B6F12 /* LayerTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LayerTest.app;
-			remoteRef = 17EB8844151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8847151355A5003B6F12 /* MenuTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = MenuTest.app;
-			remoteRef = 17EB8846151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8849151355A5003B6F12 /* MenuTestWithBlocks.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = MenuTestWithBlocks.app;
-			remoteRef = 17EB8848151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB884B151355A5003B6F12 /* MotionStreakTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = MotionStreakTest.app;
-			remoteRef = 17EB884A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB884D151355A5003B6F12 /* ParallaxTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ParallaxTest.app;
-			remoteRef = 17EB884C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB884F151355A5003B6F12 /* ParticleTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ParticleTest.app;
-			remoteRef = 17EB884E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8851151355A5003B6F12 /* SoundEngineTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SoundEngineTest.app;
-			remoteRef = 17EB8850151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8853151355A5003B6F12 /* ProgressActionsTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ProgressActionsTest.app;
-			remoteRef = 17EB8852151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8855151355A5003B6F12 /* RenderTextureTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = RenderTextureTest.app;
-			remoteRef = 17EB8854151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8857151355A5003B6F12 /* RotateWorldTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = RotateWorldTest.app;
-			remoteRef = 17EB8856151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8859151355A5003B6F12 /* SceneTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SceneTest.app;
-			remoteRef = 17EB8858151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB885B151355A5003B6F12 /* SchedulerTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SchedulerTest.app;
-			remoteRef = 17EB885A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB885D151355A5003B6F12 /* SpriteTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SpriteTest.app;
-			remoteRef = 17EB885C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB885F151355A5003B6F12 /* TestCocos2dExtension.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TestCocos2dExtension.app;
-			remoteRef = 17EB885E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8861151355A5003B6F12 /* Texture2dTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Texture2dTest.app;
-			remoteRef = 17EB8860151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8863151355A5003B6F12 /* TileMapTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TileMapTest.app;
-			remoteRef = 17EB8862151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8865151355A5003B6F12 /* TouchesTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TouchesTest.app;
-			remoteRef = 17EB8864151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8867151355A5003B6F12 /* TransitionsTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TransitionsTest.app;
-			remoteRef = 17EB8866151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8869151355A5003B6F12 /* ZwoptexTest.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ZwoptexTest.app;
-			remoteRef = 17EB8868151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB886B151355A5003B6F12 /* HelloWorldSample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HelloWorldSample.app;
-			remoteRef = 17EB886A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB886D151355A5003B6F12 /* HelloActionsSample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HelloActionsSample.app;
-			remoteRef = 17EB886C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB886F151355A5003B6F12 /* HelloEventsSample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HelloEventsSample.app;
-			remoteRef = 17EB886E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8871151355A5003B6F12 /* Bug350.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug350.app;
-			remoteRef = 17EB8870151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8873151355A5003B6F12 /* Bug422.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug422.app;
-			remoteRef = 17EB8872151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8875151355A5003B6F12 /* Bug458.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug458.app;
-			remoteRef = 17EB8874151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8877151355A5003B6F12 /* Bug624.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug624.app;
-			remoteRef = 17EB8876151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8879151355A5003B6F12 /* Bug886.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug886.app;
-			remoteRef = 17EB8878151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB887B151355A5003B6F12 /* Bug899.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug899.app;
-			remoteRef = 17EB887A151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB887D151355A5003B6F12 /* Bug914.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug914.app;
-			remoteRef = 17EB887C151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB887F151355A5003B6F12 /* Bug1159.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug1159.app;
-			remoteRef = 17EB887E151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17EB8881151355A5003B6F12 /* Bug1174.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Bug1174.app;
-			remoteRef = 17EB8880151355A5003B6F12 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		174376C31511F52C00D2EBC4 /* Resources */ = {
@@ -1391,26 +438,79 @@
 				174376E81511F52C00D2EBC4 /* Icon.png in Resources */,
 				174376EA1511F52C00D2EBC4 /* Icon@2x.png in Resources */,
 				174376ED1511F52C00D2EBC4 /* iTunesArtwork in Resources */,
-				1743795815124CA900D2EBC4 /* robot_animations.xml in Resources */,
-				1743795915124CA900D2EBC4 /* robot_sheets.xml in Resources */,
-				1743795A15124CA900D2EBC4 /* robotcharactermc_ArmL.png in Resources */,
-				1743795B15124CA900D2EBC4 /* robotcharactermc_ArmR.png in Resources */,
-				1743795C15124CA900D2EBC4 /* robotcharactermc_Body.png in Resources */,
-				1743795D15124CA900D2EBC4 /* robotcharactermc_ForeArmL.png in Resources */,
-				1743795E15124CA900D2EBC4 /* robotcharactermc_ForeArmR.png in Resources */,
-				1743795F15124CA900D2EBC4 /* robotcharactermc_HandL.png in Resources */,
-				1743796015124CA900D2EBC4 /* robotcharactermc_HandR.png in Resources */,
-				1743796115124CA900D2EBC4 /* robotcharactermc_Head.png in Resources */,
-				1743796215124CA900D2EBC4 /* robotcharactermc_Leg.png in Resources */,
-				1743796315124CA900D2EBC4 /* robotcharactermc_NeckBottom.png in Resources */,
-				1743796415124CA900D2EBC4 /* robotcharactermc_NeckTop.png in Resources */,
-				1743796515124CA900D2EBC4 /* robotcharactermc_ShoulderL.png in Resources */,
-				1743796615124CA900D2EBC4 /* robotcharactermc_ShoulderR.png in Resources */,
-				1743796715124CA900D2EBC4 /* robotcharactermc_Wheel.png in Resources */,
+				6325267A162DC35F009A3520 /* Default-568h@2x.png in Resources */,
+				63848D241636C86500D6E96D /* robot_animations.xml in Resources */,
+				63848D251636C86500D6E96D /* robot_sheets.xml in Resources */,
+				63848D261636C86500D6E96D /* robotcharactermc_ArmL-hd.png in Resources */,
+				63848D271636C86500D6E96D /* robotcharactermc_ArmL.png in Resources */,
+				63848D281636C86500D6E96D /* robotcharactermc_ArmR-hd.png in Resources */,
+				63848D291636C86500D6E96D /* robotcharactermc_ArmR.png in Resources */,
+				63848D2A1636C86500D6E96D /* robotcharactermc_Body-hd.png in Resources */,
+				63848D2B1636C86500D6E96D /* robotcharactermc_Body.png in Resources */,
+				63848D2C1636C86500D6E96D /* robotcharactermc_ForeArmL-hd.png in Resources */,
+				63848D2D1636C86600D6E96D /* robotcharactermc_ForeArmL.png in Resources */,
+				63848D2E1636C86600D6E96D /* robotcharactermc_ForeArmR-hd.png in Resources */,
+				63848D2F1636C86600D6E96D /* robotcharactermc_ForeArmR.png in Resources */,
+				63848D301636C86600D6E96D /* robotcharactermc_HandL-hd.png in Resources */,
+				63848D311636C86600D6E96D /* robotcharactermc_HandL.png in Resources */,
+				63848D321636C86600D6E96D /* robotcharactermc_HandR-hd.png in Resources */,
+				63848D331636C86600D6E96D /* robotcharactermc_HandR.png in Resources */,
+				63848D341636C86600D6E96D /* robotcharactermc_Head-hd.png in Resources */,
+				63848D351636C86600D6E96D /* robotcharactermc_Head.png in Resources */,
+				63848D361636C86600D6E96D /* robotcharactermc_Leg-hd.png in Resources */,
+				63848D371636C86600D6E96D /* robotcharactermc_Leg.png in Resources */,
+				63848D381636C86600D6E96D /* robotcharactermc_NeckBottom-hd.png in Resources */,
+				63848D391636C86600D6E96D /* robotcharactermc_NeckBottom.png in Resources */,
+				63848D3A1636C86600D6E96D /* robotcharactermc_NeckTop-hd.png in Resources */,
+				63848D3B1636C86600D6E96D /* robotcharactermc_NeckTop.png in Resources */,
+				63848D3C1636C86600D6E96D /* robotcharactermc_ShoulderL-hd.png in Resources */,
+				63848D3D1636C86600D6E96D /* robotcharactermc_ShoulderL.png in Resources */,
+				63848D3E1636C86600D6E96D /* robotcharactermc_ShoulderR-hd.png in Resources */,
+				63848D3F1636C86600D6E96D /* robotcharactermc_ShoulderR.png in Resources */,
+				63848D401636C86600D6E96D /* robotcharactermc_Wheel-hd.png in Resources */,
+				63848D411636C86600D6E96D /* robotcharactermc_Wheel.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632BD081166D18AE00677696 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632BD08E166D18AE00677696 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		632BD082166D18AE00677696 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		6FFE1B0703C8492BA830F066 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		174376C11511F52C00D2EBC4 /* Sources */ = {
@@ -1419,23 +519,38 @@
 			files = (
 				1743782D1511F52E00D2EBC4 /* main.m in Sources */,
 				174378301511F52E00D2EBC4 /* AppDelegate.m in Sources */,
-				174378331511F52E00D2EBC4 /* RootViewController.m in Sources */,
 				174378361511F52E00D2EBC4 /* HelloWorldLayer.m in Sources */,
-				174378F21511F7DF00D2EBC4 /* FTCAnimationInfo.m in Sources */,
-				174378F31511F7DF00D2EBC4 /* FTCAnimEvent.m in Sources */,
-				174378F41511F7DF00D2EBC4 /* FTCCharacter.m in Sources */,
-				174378F51511F7DF00D2EBC4 /* FTCEventInfo.m in Sources */,
-				174378F61511F7DF00D2EBC4 /* FTCFrameInfo.m in Sources */,
-				174378F71511F7DF00D2EBC4 /* FTCParser.m in Sources */,
-				174378F81511F7DF00D2EBC4 /* FTCSprite.m in Sources */,
-				174378FF1511F7F000D2EBC4 /* TBXML.m in Sources */,
 				174379021511F89000D2EBC4 /* CCRobot.m in Sources */,
-				1743796E1512527E00D2EBC4 /* TBXML+Compression.m in Sources */,
-				1743796F1512527E00D2EBC4 /* TBXML+HTTP.m in Sources */,
+				631964531664D113007633EA /* FTCAnimationInfo.m in Sources */,
+				631964541664D113007633EA /* FTCAnimEvent.m in Sources */,
+				631964551664D113007633EA /* FTCCharacter.m in Sources */,
+				631964561664D113007633EA /* FTCEventInfo.m in Sources */,
+				631964571664D113007633EA /* FTCFrameInfo.m in Sources */,
+				631964581664D113007633EA /* FTCParser.m in Sources */,
+				631964591664D113007633EA /* FTCSprite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632BD07F166D18AE00677696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632BD091166D18AE00677696 /* AppLogicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		632BD08C166D18AE00677696 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				632BD08D166D18AE00677696 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		174378381511F52E00D2EBC4 /* Debug */ = {
@@ -1476,39 +591,109 @@
 		};
 		1743783B1511F52E00D2EBC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686ED183BE17470FB2C92EAC /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = F2C_RobotTutorial/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
+				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Volumes/Users/jordi.martinez/The\\ Dam\\ Armada/Resources/ios/cocos2D\\ ARC/cocos2d-iphone-1.0.1/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		1743783C1511F52E00D2EBC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686ED183BE17470FB2C92EAC /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = F2C_RobotTutorial/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PROJECT_DIR}/../../FlashToCocosARC\"",
+				);
 				INFOPLIST_FILE = F2C_RobotTutorial/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Volumes/Users/jordi.martinez/The\\ Dam\\ Armada/Resources/ios/cocos2D\\ ARC/cocos2d-iphone-1.0.1/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../FlashToCocosARC\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		632BD093166D18AE00677696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppLogicTests/AppLogicTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				INFOPLIST_FILE = "AppLogicTests/AppLogicTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		632BD094166D18AE00677696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppLogicTests/AppLogicTests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "AppLogicTests/AppLogicTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1529,6 +714,15 @@
 			buildConfigurations = (
 				1743783B1511F52E00D2EBC4 /* Debug */,
 				1743783C1511F52E00D2EBC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632BD095166D18AF00677696 /* Build configuration list for PBXNativeTarget "AppLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632BD093166D18AE00677696 /* Debug */,
+				632BD094166D18AE00677696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

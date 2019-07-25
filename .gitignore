@@ -1,2 +1,43 @@
-.DS_Store
-.gitignore
+# Mac OS X
+*.DS_Store
+profile
+
+# Xcode
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+*.xcbkptlist
+
+# Generated files
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+# Xcode 4
+xcuserdata/
+project.xcworkspace/
+# Generated files
+VersionX-revision.h
+# build products
+build/
+*.[oa]
+Pods/
+*.lock
+
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/

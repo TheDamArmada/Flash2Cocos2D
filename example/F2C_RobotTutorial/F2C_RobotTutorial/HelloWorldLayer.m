@@ -35,16 +35,14 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
 		
-        
         theRobot = [[CCRobot alloc] init];
-        [theRobot setPosition:ccp(250, 150)];
-        [theRobot setScale:.5f];
+        [theRobot setPosition:ccp(160, 310)];
+        [theRobot setScale:1];
         [self addChild:theRobot];
         
         
         
         
-        NSArray *arr =  [[theRobot animationEventsTable] allKeys];
         CCMenu *starMenu = [CCMenu menuWithItems: nil];        
         [starMenu setPosition:ccp(10, 200)];
         
@@ -63,7 +61,7 @@
         [starMenu addChild:resumeBut];
         
         
-        
+        NSArray *arr =  [[theRobot animationEventsTable] allKeys];
         [arr enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             CCMenuItemLabel *labelBut = [CCMenuItemLabel itemWithLabel:[CCLabelTTF labelWithString:obj fontName:@"Verdana" fontSize:12] target:self selector:@selector(doPlay:)];
             labelBut.tag = idx;

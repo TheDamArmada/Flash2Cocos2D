@@ -9,22 +9,16 @@
 #import "FTCAnimEvent.h"
 
 @implementation FTCAnimEvent
-@synthesize eventsInfo, frameCount;
 
+@synthesize frameCount = _frameCount;
+@synthesize eventsInfo = _eventsInfo;
 
-
-
-- (id)init
+- (NSMutableArray*) eventsInfo
 {
-    self = [super init];
-    if (self) {
-
-        NSMutableArray *__eventsInfo = [[NSMutableArray alloc] init];
-        [self setEventsInfo:__eventsInfo];  
-        __eventsInfo = nil;
-    }
+    if (_eventsInfo == nil)
+        _eventsInfo = [[NSMutableArray alloc] init];
     
-    return self;
+    return _eventsInfo;
 }
 
 @end

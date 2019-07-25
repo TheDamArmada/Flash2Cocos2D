@@ -10,7 +10,7 @@
 
 @implementation FTCEventInfo
 
-@synthesize eventType, frameIndex;
-
+@synthesize frameIndex = _frameIndex;
+@synthesize eventType = _eventType;
 
 @end

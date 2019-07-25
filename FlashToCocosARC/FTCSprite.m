@@ -9,61 +9,71 @@
 #import "FTCSprite.h"
 #import "FTCCharacter.h"
 
+@interface FTCSprite ()
+
+@property (weak, nonatomic) NSArray       *currentAnimationInfo;
+@property (weak, nonatomic) FTCCharacter  *currentCharacter;
+
+@end
+
 @implementation FTCSprite
 
-@synthesize name;
-@synthesize ignorePosition, ignoreRotation, ignoreScale;
-@synthesize animationsArr;
+@synthesize name = _name;
+@synthesize ignoreAlpha = _ignoreAlpha;
+@synthesize ignorePosition = _ignorePosition;
+@synthesize ignoreRotation = _ignoreRotation;
+@synthesize ignoreScale = _ignoreScale;
+@synthesize animationsArr = _animationsArr;
 
-
-
-- (id)init
+-(void) setCurrentAnimation:(NSString *)framesId forCharacter:(FTCCharacter *)character
 {
-    self = [super init];
-    if (self) {
+    self.currentCharacter = character;
+    self.currentAnimationInfo = [self.animationsArr objectForKey:framesId];
+}
 
-        NSMutableDictionary *__animations = [[NSMutableDictionary alloc] init];
-        [self setAnimationsArr:__animations];
-   
+-(NSMutableDictionary*) animationsArr
+{
+    if (_animationsArr == nil)
+        _animationsArr = [[NSMutableDictionary alloc] init];
+    
+    return _animationsArr;
+}
+
+-(void) setCurrentAnimationFramesInfo:(NSArray *)framesInfoArr forCharacter:(FTCCharacter *)character
+{
+    self.currentCharacter = character;
+    self.currentAnimationInfo = framesInfoArr;
+}
+
+-(void) applyFrameInfo:(FTCFrameInfo *)frameInfo
+{
+    if (!_ignorePosition)
+        [self setPosition:CGPointMake(frameInfo.x, frameInfo.y)];
+    
+    if (!_ignoreRotation)
+        [self setRotation:frameInfo.rotation];
+    
+    if (!_ignoreScale)
+    {
+        if (frameInfo.scaleX!=0)
+            self.scaleX = frameInfo.scaleX;
+        
+        if (frameInfo.scaleY!=0)
+            self.scaleY = frameInfo.scaleY;
     }
     
-    return self;
-}
-
--(void) setCurrentAnimation:(NSString *)_framesId forCharacter:(FTCCharacter *)_character
-{
-    currentCharacter = _character;
-    currentAnimationInfo = [self.animationsArr objectForKey:_framesId];
-}
-
--(void) setCurrentAnimationFramesInfo:(NSArray *)_framesInfoArr forCharacter:(FTCCharacter *)_character
-{
-    currentCharacter = _character;
-    currentAnimationInfo = _framesInfoArr;
+    if (!_ignoreAlpha)
+        [self setOpacity:frameInfo.alpha * 255];
 }
 
 
--(void) applyFrameInfo:(FTCFrameInfo *)_frameInfo
+-(void) playFrame:(int)frameindex
 {
-    if (!ignorePosition) 
-        [self setPosition:CGPointMake(_frameInfo.x, _frameInfo.y)];   
+    if (!self.currentAnimationInfo)
+        return;
     
-    if (!ignoreRotation) 
-        [self setRotation:_frameInfo.rotation];   
-    
-    if (!ignoreScale) {
-        if (_frameInfo.scaleX!=0)   [self setScaleX:_frameInfo.scaleX];
-        if (_frameInfo.scaleY!=0)   [self setScaleY:_frameInfo.scaleY];
-    }
-}
-
-
--(void) playFrame:(int)_frameindex
-{
-    if (!currentAnimationInfo) return;
-    if (_frameindex < currentAnimationInfo.count) 
-        [self applyFrameInfo:[currentAnimationInfo objectAtIndex:_frameindex]];
-    
+    if (frameindex < self.currentAnimationInfo.count)
+        [self applyFrameInfo:[self.currentAnimationInfo objectAtIndex:frameindex]];
 }
 
 @end
